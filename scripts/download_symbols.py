@@ -1,4 +1,4 @@
-"""Grabaciones fonéticas de Commons. No sustituye una revisión auditiva."""
+"""Download Commons phonetic recordings. Listening review is still required."""
 import html
 import json
 import re
@@ -46,21 +46,21 @@ def main():
    clean=lambda key:html.unescape(re.sub('<[^>]+>','',meta.get(key,{}).get('value','')))
    license_name=clean('LicenseShortName')
    if not (license_name.startswith('CC BY') or license_name in ('Public domain','CC0')):
-    raise ValueError('Licencia no reconocida: '+license_name)
+    raise ValueError('Unrecognized license: '+license_name)
    data=fetch(info['url'])
    if not data.startswith(b'OggS'):
-    raise ValueError('Formato no Ogg')
+    raise ValueError('Not an Ogg file')
    audio='audio/phonemes/'+name.lower().replace(' ','_')+'.ogg'
    (ROOT/audio).write_bytes(data)
-   manifest[symbol]=dict(audio=audio,source_url=info['descriptionurl'],author=clean('Artist'),license=license_name,license_url=clean('LicenseUrl'),changes='Ninguno',listening_validated=False)
+   manifest[symbol]=dict(audio=audio,source_url=info['descriptionurl'],author=clean('Artist'),license=license_name,license_url=clean('LicenseUrl'),changes='None',listening_validated=False)
    path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
    print('OK:',name,flush=True)
   except HTTPError as exc:
-   print('Descarga detenida:',exc,flush=True)
+   print('Download stopped:',exc,flush=True)
    if exc.code == 429:
     break
   except Exception as exc:
-   print('Pendiente:',name,str(exc),flush=True)
+   print('Pending:',name,str(exc),flush=True)
   time.sleep(0.8)
  path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 

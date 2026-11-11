@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Valida sounds.json: esquema, IDs únicos y archivos de audio referenciados."""
+"""Validate sounds.json: schema, unique IDs, and referenced audio files."""
 
 from __future__ import annotations
 
@@ -31,7 +31,7 @@ def load_sounds() -> list[dict]:
     with SOUNDS_PATH.open(encoding="utf-8") as f:
         data = json.load(f)
     if not isinstance(data, list):
-        raise ValueError("sounds.json debe ser un array")
+        raise ValueError("sounds.json must be an array")
     return data
 
 
@@ -40,25 +40,25 @@ def validate_entry(
 ) -> None:
     missing = REQUIRED_FIELDS - set(entry)
     if missing:
-        errors.append(f"[{index}] faltan campos: {sorted(missing)}")
+        errors.append(f"[{index}] missing fields: {sorted(missing)}")
         return
 
     if entry["language"] not in VALID_LANGUAGES:
-        errors.append(f"[{index}] idioma inválido: {entry['language']}")
+        errors.append(f"[{index}] invalid language: {entry['language']}")
 
     if entry["kind"] not in VALID_KINDS:
-        errors.append(f"[{index}] kind inválido: {entry['kind']}")
+        errors.append(f"[{index}] invalid kind: {entry['kind']}")
 
     confusers = entry["confusers"]
     if not isinstance(confusers, list) or len(confusers) < 3:
-        errors.append(f"[{index}] confusers debe tener al menos 3 elementos")
+        errors.append(f"[{index}] confusers must contain at least 3 items")
 
     audio_path = ROOT / entry["audio"]
     if not audio_path.exists():
-        warnings.append(f"[{index}] audio pendiente: {entry['audio']}")
+        warnings.append(f"[{index}] audio pending: {entry['audio']}")
 
     if not entry.get("source_url"):
-        warnings.append(f"[{index}] source_url vacío: {entry.get('id')}")
+        warnings.append(f"[{index}] empty source_url: {entry.get('id')}")
 
 
 def main() -> int:
@@ -74,31 +74,31 @@ def main() -> int:
     seen_ids: set[str] = set()
     for index, entry in enumerate(sounds):
         if not isinstance(entry, dict):
-            errors.append(f"[{index}] entrada no es un objeto")
+            errors.append(f"[{index}] entry is not an object")
             continue
 
         entry_id = entry.get("id")
         if not entry_id:
-            errors.append(f"[{index}] id vacío")
+            errors.append(f"[{index}] empty id")
         elif entry_id in seen_ids:
-            errors.append(f"[{index}] id duplicado: {entry_id}")
+            errors.append(f"[{index}] duplicate id: {entry_id}")
         else:
             seen_ids.add(entry_id)
 
         validate_entry(entry, index, errors, warnings)
 
     if warnings:
-        print(f"Avisos ({len(warnings)}):")
+        print(f"Warnings ({len(warnings)}):")
         for warning in warnings:
             print(f"  - {warning}")
 
     if errors:
-        print(f"Dataset inválido ({len(errors)} problemas):")
+        print(f"Invalid dataset ({len(errors)} problems):")
         for error in errors:
             print(f"  - {error}")
         return 1
 
-    print(f"OK: {len(sounds)} entradas, IDs únicos, esquema correcto.")
+    print(f"OK: {len(sounds)} entries, unique IDs, valid schema.")
     return 0
 
 

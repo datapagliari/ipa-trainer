@@ -1,44 +1,49 @@
-# Fuentes de audio
+# Audio sources
 
-Registrar cada archivo descargado. No guardar audios sin URL y licencia.
+Record the source and license of every downloaded file. Keep original attribution information with the recording.
 
-## Fuentes recomendadas
+## Sources considered
 
-1. **Wiktionary** — palabra → IPA → audio
-2. **Wikimedia Commons** — grabaciones fonéticas / IPA aislado
-3. **Forvo** — solo referencia auditiva (licencias restrictivas para redistribución)
+1. **Wiktionary**: example words, IPA transcriptions, and pronunciation recordings.
+2. **Wikimedia Commons**: word recordings and phonetic demonstrations.
+3. **Forvo**: listening reference only in the original plan; not used as a bundled audio source.
 
-## Plantilla por entrada
+## Entry template
 
 ```text
 id: en_theta_thin
-archivo: audio/en/thin__theta.ogg
-palabra: thin
-fuente: Wiktionary
-url:
-licencia:
-validado: [ ]
-notas:
+file: audio/en/thin__theta.ogg
+word: thin
+source: Wiktionary / Wikimedia Commons
+source_url:
+license:
+license_url:
+author:
+listening_validated: false
+notes:
 ```
 
-## Checklist de aceptación
+## Acceptance checklist
 
-- [ ] Hablante nativo o fuente fonética confiable
-- [ ] El sonido objetivo es claro en la palabra
-- [ ] Sin ruido fuerte
-- [ ] URL y licencia anotadas
-- [ ] Reproducido y validado a oído
+- [ ] Native speaker or reliable phonetic source
+- [ ] Target sound is clear in the example
+- [ ] No excessive background noise
+- [ ] Source URL, author, and license recorded
+- [ ] Played and reviewed by listening
 
-## Muestra descargada para el prototipo (2026-11-06)
+## Prototype word recordings
 
-| Entrada | Autor | Licencia | Fuente |
+| Target | Author | License | Source |
 | --- | --- | --- | --- |
-| en_theta_thin | Muke | Dominio público | https://commons.wikimedia.org/wiki/File:En-us-thin.ogg |
-| fr_y_tu | Vion Nicolas | CC BY 2.0 Francia | https://commons.wikimedia.org/wiki/File:Fr-tu.ogg |
-| de_ich_ch | Jeuwre | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:De-Ich.ogg |
+| en_theta_thin | Muke | Public domain | [En-us-thin.ogg](https://commons.wikimedia.org/wiki/File:En-us-thin.ogg) |
+| fr_y_tu | Vion Nicolas | CC BY 2.0 France | [Fr-tu.ogg](https://commons.wikimedia.org/wiki/File:Fr-tu.ogg) |
+| de_ich_ch | Jeuwre | CC BY-SA 4.0 | [De-Ich.ogg](https://commons.wikimedia.org/wiki/File:De-Ich.ogg) |
+| de_pf_pferd | Kampy | CC BY-SA 3.0 | [De-Pferd.ogg](https://commons.wikimedia.org/wiki/File:De-Pferd.ogg) |
 
-Originales sin modificaciones. Enlaces de licencia en audio_manifest.json y créditos al pie de la web. Revisión auditiva pendiente. Son palabras completas.
+The first three were downloaded on 2026-11-06; Pferd was added on 2026-11-11. Files are unmodified originals and contain complete words. License URLs are stored in `audio_manifest.json` and shown in the game credits. Listening review is pending.
 
-## Ampliación 2026-11-11
+## Phonetic recordings
 
-Pferd: fuente y licencia en audio_manifest.json. Grabaciones fonéticas de /ʃ/ y /θ/: atribuciones en symbol_audio.json. Originales sin modificaciones; revisión auditiva pendiente. Otras descargas limitadas por Commons (429).
+Recordings for /ʃ/ and /θ/ were added on 2026-11-11. Their source pages and license metadata are stored in `symbol_audio.json`. Files are unmodified originals. Author metadata and listening quality still need review; some phonetic demonstrations include supporting vowels.
+
+Other downloads were rate-limited by Commons (HTTP 429).

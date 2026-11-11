@@ -1,21 +1,21 @@
 <!doctype html>
-<html lang="es">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IPA · Entrená el oído</title><link rel="stylesheet" href="web/style.css?v=5"></head>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IPA Lab · Train your ear</title><link rel="stylesheet" href="web/style.css?v=6"></head>
 <body>
-<header><a class="brand" href="./">ipa<span>lab</span><small>UN SONIDO A LA VEZ</small></a><span class="tag">Prototipo · AFI</span></header>
+<header><a class="brand" href="./">ipa<span>lab</span><small>ONE SOUND AT A TIME</small></a><span class="tag">Prototype · IPA</span></header>
 <main>
-  <section class="intro"><p class="eyebrow">AFI · JUGÁ CON LOS SONIDOS</p><h1>Dale forma<br>a tu <em>oído.</em></h1></section>
+  <section class="intro"><p class="eyebrow">IPA · PLAY WITH SOUNDS</p><h1>Tune in.<br>Train your <em>ear.</em></h1></section>
   <div class="workspace">
-  <section class="practice" aria-label="Ejercicio">
-    <div class="toolbar"><label>Práctica<select id="mode"><option value="visual">Palabra → símbolo</option><option value="listen">Audio → símbolo</option><option value="sound">Símbolo → audio</option></select></label><label>Idioma<select id="language"><option value="all">Todos los idiomas</option><option value="en">Inglés</option><option value="fr">Francés</option><option value="de">Alemán</option></select></label></div>
+  <section class="practice" aria-label="Exercise">
+    <div class="toolbar"><label>Practice<select id="mode"><option value="visual">Word → symbol</option><option value="listen">Audio → symbol</option><option value="sound">Symbol → audio</option></select></label><label>Language<select id="language"><option value="all">All languages</option><option value="en">English</option><option value="fr">French</option><option value="de">German</option></select></label></div>
     <div id="exercise"></div>
     <div id="feedback" role="status" aria-live="polite"></div>
-    <button id="next" class="primary" hidden>Siguiente <span>→</span></button>
+    <button id="next" class="primary" hidden>Next <span>→</span></button>
     <p class="hint" id="hint"></p>
   </section>
-  <aside><div class="progress-head"><p class="eyebrow">TU RECORRIDO</p><strong id="mastered">0 / 20</strong><p>sonidos aprendidos</p><progress id="progress" max="20" value="0" aria-label="Sonidos aprendidos"></progress></div><div id="collection" class="collection"></div><p class="aside-note">Aprendé un sonido para abrir el siguiente.</p><button id="reset" class="text-button">Reiniciar progreso</button></aside>
+  <aside><div class="progress-head"><p class="eyebrow">YOUR COLLECTION</p><strong id="mastered">0 / 20</strong><p>sounds learned</p><progress id="progress" max="20" value="0" aria-label="Sounds learned"></progress></div><div id="collection" class="collection"></div><p class="aside-note">Learn a sound to unlock the next.</p><button id="reset" class="text-button">Reset progress</button></aside>
   </div>
-  <section class="explore"><div><p class="eyebrow">EXPLORÁ</p><h2>Sonidos a mano.</h2><p>Tocá un símbolo para explorarlo.</p></div><div id="detail"></div></section>
-  <footer><span>AFI / IPA · Inglés, francés y alemán</span><button id="credits-toggle" class="text-button">Audios y créditos</button></footer><section id="credits" hidden></section>
-</main><script type="module" src="web/app.js?v=5"></script>
+  <section class="explore"><div><p class="eyebrow">EXPLORE</p><h2>Sounds at hand.</h2><p>Tap a symbol to explore.</p></div><div id="detail"></div></section>
+  <footer><span>IPA · English, French, and German</span><button id="credits-toggle" class="text-button">Audio and credits</button></footer><section id="credits" hidden></section>
+</main><script type="module" src="web/app.js?v=6"></script>
 </body></html>

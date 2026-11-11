@@ -12,7 +12,7 @@
       "tʃ",
       "ʒ"
     ],
-    "note": "SH inglesa. También aparece en francés (chat) y alemán (schön).",
+    "note": "English SH, also found in French chat and German schön.",
     "source_url": "",
     "license": ""
   },
@@ -29,7 +29,7 @@
       "dʒ",
       "ts"
     ],
-    "note": "CH como en chip. Africada sorda.",
+    "note": "CH as in chip. A voiceless affricate.",
     "source_url": "",
     "license": ""
   },
@@ -46,7 +46,7 @@
       "ʒ",
       "d"
     ],
-    "note": "J inglesa. Africada sonora.",
+    "note": "English J. A voiced affricate.",
     "source_url": "",
     "license": ""
   },
@@ -63,7 +63,7 @@
       "f",
       "t"
     ],
-    "note": "TH sorda. No vibra la garganta.",
+    "note": "Voiceless TH. The vocal folds do not vibrate.",
     "source_url": "https://commons.wikimedia.org/wiki/File:En-us-thin.ogg",
     "license": "Public domain"
   },
@@ -80,7 +80,7 @@
       "z",
       "v"
     ],
-    "note": "TH sonora. Vibra la garganta.",
+    "note": "Voiced TH. The vocal folds vibrate.",
     "source_url": "",
     "license": ""
   },
@@ -97,7 +97,7 @@
       "e",
       "ə"
     ],
-    "note": "Vocal corta inglesa. No confundir con /iː/ de sheep.",
+    "note": "The short vowel in ship. Contrast it with /iː/ in sheep.",
     "source_url": "",
     "license": ""
   },
@@ -114,7 +114,7 @@
       "i",
       "e"
     ],
-    "note": "Vocal larga inglesa. Contraste clave con /ɪ/.",
+    "note": "The long vowel in sheep. A key contrast with /ɪ/.",
     "source_url": "",
     "license": ""
   },
@@ -131,7 +131,7 @@
       "ʌ",
       "a"
     ],
-    "note": "Vocal abierta frontal inglesa.",
+    "note": "The near-open front vowel in English cat.",
     "source_url": "",
     "license": ""
   },
@@ -148,7 +148,7 @@
       "ə",
       "ɔ"
     ],
-    "note": "Vocal central abierta inglesa.",
+    "note": "The vowel conventionally transcribed /ʌ/ in English cut.",
     "source_url": "",
     "license": ""
   },
@@ -165,7 +165,7 @@
       "ɪ",
       "e"
     ],
-    "note": "Schwa. Vocal neutra muy común en inglés.",
+    "note": "Schwa, a very common unstressed vowel in English.",
     "source_url": "",
     "license": ""
   },
@@ -182,7 +182,7 @@
       "u",
       "ø"
     ],
-    "note": "Vocal cerrada anterior redondeada. Pensala como /i/ con labios de /u/.",
+    "note": "Close front rounded vowel. Think of /i/ with the lips rounded for /u/.",
     "source_url": "https://commons.wikimedia.org/wiki/File:Fr-tu.ogg",
     "license": "CC BY 2.0 fr"
   },
@@ -199,7 +199,7 @@
       "o",
       "y"
     ],
-    "note": "Vocal media cerrada redondeada. También en alemán (schön).",
+    "note": "Close-mid front rounded vowel, also found in German schön.",
     "source_url": "",
     "license": ""
   },
@@ -216,7 +216,7 @@
       "ɔ",
       "ə"
     ],
-    "note": "Vocal media abierta redondeada. Similar a ö alemán.",
+    "note": "Open-mid front rounded vowel, also found in German können.",
     "source_url": "",
     "license": ""
   },
@@ -233,7 +233,7 @@
       "ɔ",
       "ɛ̃"
     ],
-    "note": "Vocal nasal /ɑ̃/. La nariz participa en toda la vocal.",
+    "note": "Nasal /ɑ̃/. Air flows through the nose throughout the vowel.",
     "source_url": "",
     "license": ""
   },
@@ -250,7 +250,7 @@
       "æ",
       "ɔ̃"
     ],
-    "note": "Vocal nasal /ɛ̃/.",
+    "note": "The nasal vowel /ɛ̃/.",
     "source_url": "",
     "license": ""
   },
@@ -267,7 +267,7 @@
       "o",
       "ɑ̃"
     ],
-    "note": "Vocal nasal /ɔ̃/.",
+    "note": "The nasal vowel /ɔ̃/.",
     "source_url": "",
     "license": ""
   },
@@ -284,7 +284,7 @@
       "x",
       "h"
     ],
-    "note": "CH suave alemán. No confundir con /x/ de Bach.",
+    "note": "Soft German CH. Contrast it with /x/ in Bach.",
     "source_url": "https://commons.wikimedia.org/wiki/File:De-Ich.ogg",
     "license": "CC BY-SA 4.0"
   },
@@ -301,7 +301,7 @@
       "h",
       "k"
     ],
-    "note": "CH fuerte alemán (velar). Posterior a a/o/u.",
+    "note": "The back German CH (velar), found after a, o, or u.",
     "source_url": "",
     "license": ""
   },
@@ -318,7 +318,7 @@
       "s",
       "z"
     ],
-    "note": "Africada /ts/ al inicio de Zeit.",
+    "note": "The affricate /ts/ at the start of Zeit.",
     "source_url": "",
     "license": ""
   },
@@ -335,7 +335,7 @@
       "p",
       "b"
     ],
-    "note": "Africada /pf/ al inicio de Pferd.",
+    "note": "The affricate /pf/ at the start of Pferd.",
     "source_url": "https://commons.wikimedia.org/wiki/File:De-Pferd.ogg",
     "license": "CC BY-SA 3.0"
   }

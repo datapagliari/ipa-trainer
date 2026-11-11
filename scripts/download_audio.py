@@ -1,4 +1,4 @@
-"""Descarga una muestra de Commons y conserva sus metadatos de atribución."""
+"""Download a Commons sample and preserve its attribution metadata."""
 import json
 import re
 from pathlib import Path
@@ -35,15 +35,15 @@ def main():
             clean = lambda key: re.sub("<[^>]+>", "", meta.get(key, {}).get("value", ""))
             license_name = clean("LicenseShortName")
             if not (license_name.startswith("CC BY") or license_name in ("Public domain", "CC0")):
-                raise ValueError("Licencia no reconocida: " + license_name)
+                raise ValueError("Unrecognized license: " + license_name)
             content = fetch(info["url"])
             if not content.startswith(b"OggS"):
-                raise ValueError("La descarga no es un archivo Ogg")
+                raise ValueError("The downloaded file is not Ogg")
             (ROOT / sound["audio"]).write_bytes(content)
-            manifest[sound["id"]] = dict(audio=sound["audio"], source_url=info["descriptionurl"], author=clean("Artist"), license=license_name, license_url=clean("LicenseUrl"), changes="Ninguno", listening_validated=False)
-            print("Descargado:", sound["id"], len(content), "bytes")
+            manifest[sound["id"]] = dict(audio=sound["audio"], source_url=info["descriptionurl"], author=clean("Artist"), license=license_name, license_url=clean("LicenseUrl"), changes="None", listening_validated=False)
+            print("Downloaded:", sound["id"], len(content), "bytes")
         except Exception as exc:
-            print("Pendiente:", sound["id"], str(exc))
+            print("Pending:", sound["id"], str(exc))
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 

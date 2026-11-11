@@ -16,15 +16,15 @@ for(const s of sounds){const [start,end,label]=segments[s.id];assert.ok(start>=0
 assert.equal('ship'.slice(...segments.en_esh_ship.slice(0,2)),'sh');
 assert.equal('ship'.slice(...segments.en_ih_ship.slice(0,2)),'i');
 for(const m of Object.values(manifest)){assert.ok(existsSync(new URL(m.audio,root)));assert.equal(readFileSync(new URL(m.audio,root)).subarray(0,4).toString(),'OggS');assert.ok(m.source_url&&m.license&&m.author);}
-console.log('OK: rachas, errores, ponderación, 20 segmentos, distractores y archivos de audio.');
+console.log('OK: streaks, mistakes, weighting, 20 segments, distractors, and audio files.');
 
-// Aciertos intercalados: avanza la sesión y se conserva la racha de cada sonido.
+// Interleaved answers advance the session while preserving per-target streaks.
 let mixed={}, session=0;
 for(const id of ['a','b','a']){mixed=recordAnswer(mixed,id,true);session=nextSessionStreak(session,true);}
 assert.equal(session,3);assert.equal(mixed.a.streak,2);assert.equal(mixed.b.streak,1);
 mixed=recordAnswer(mixed,'b',false);session=nextSessionStreak(session,false);
 assert.equal(session,0);assert.equal(mixed.b.streak,0);assert.equal(mixed.a.streak,2);
-console.log('OK: racha de sesión con sonidos intercalados y reinicio por error.');
+console.log('OK: session streak across interleaved targets and reset on error.');
 
 const config=JSON.parse(readFileSync(new URL('dataset/config.json',root),'utf8'));
 let fresh={};assert.equal(unlockedIds(sounds,fresh,config).size,6);
@@ -38,11 +38,11 @@ assert.ok(unlockedIds(sounds,legacy,config).has(config.unlock_order.at(-1)));
 assert.equal(unlockedIds(sounds,legacy,config).size,8);
 const symbols=JSON.parse(readFileSync(new URL('dataset/symbol_audio.json',root),'utf8'));
 for(const m of Object.values(symbols)){assert.equal(readFileSync(new URL(m.audio,root)).subarray(0,4).toString(),'OggS');assert.ok(m.license&&m.source_url);}
-console.log('OK: 6 iniciales, desbloqueos permanentes, sin recompensas repetidas, progreso anterior y audios de símbolos.');
+console.log('OK: 6 initial targets, permanent unlocks, unique rewards, legacy progress, and symbol audio.');
 
 let journey={};for(let i=0;i<3;i++)journey=recordAnswer(journey,first,true);
 journey=recordAnswer(journey,config.unlock_order[6],true);
-assert.equal(unlockedIds(sounds,journey,config).size,7,'Practicar un recién desbloqueado no concede otro');
+assert.equal(unlockedIds(sounds,journey,config).size,7,'Practicing a newly unlocked target does not unlock another');
 for(let i=0;i<2;i++)journey=recordAnswer(journey,config.unlock_order[6],true);
 assert.equal(unlockedIds(sounds,journey,config).size,8);
-console.log('OK: un nuevo desbloqueo exige aprender, no solo practicar.');
+console.log('OK: unlocking requires learning, not just practicing.');

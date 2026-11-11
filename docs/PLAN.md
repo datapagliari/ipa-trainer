@@ -1,65 +1,47 @@
-1 ) juego de aprendizaje AFI
+# IPA learning game: dataset and progression plan
 
-# Plan paso a paso para armar el dataset + lógica de gamificación
+This document preserves the original design proposal in English. Its examples describe a proposed architecture, not necessarily the current implementation. The project now uses a web frontend, six initially available targets, and permanent unlock rewards; see [README.md](../README.md) for current behavior.
 
-## Objetivo inicial
+## Initial goal
 
-Armar un dataset pequeño, usable y portable:
+Build a small, usable, portable dataset with 20 initial sounds, reliable audio, examples by language, distractors, and a progress system. Curate the data before building the complete application.
 
-```text
-20 sonidos iniciales
-+ audios confiables
-+ ejemplos por idioma
-+ distractores
-+ sistema de progreso
-```
+## 1. Define the initial scope
 
-No arrancaría programando la app completa. Primero haría una **fase de curaduría de datos**.
+Start with 20 mixed targets in English, French, and German, prioritizing useful contrasts that can be challenging for Spanish speakers.
 
----
+| Proposed ID | Symbol | Main language(s) | Example(s) |
+| --- | --- | --- | --- |
+| en_ʃ | /ʃ/ | English / French / German | ship, chat, schön |
+| en_tʃ | /tʃ/ | English | chip |
+| en_dʒ | /dʒ/ | English | judge |
+| en_θ | /θ/ | English | thin |
+| en_ð | /ð/ | English | this |
+| en_ɪ | /ɪ/ | English / German | ship, ich |
+| en_iː | /iː/ | English / German | sheep, Liebe |
+| en_æ | /æ/ | English | cat |
+| en_ʌ | /ʌ/ | English | cut |
+| en_ə | /ə/ | English / French / German | about, le, bitte |
+| fr_y | /y/ | French / German | tu, über |
+| fr_ø | /ø/ | French / German | deux, schön |
+| fr_œ | /œ/ | French / German | sœur, können |
+| fr_ɑ̃ | /ɑ̃/ | French | sans |
+| fr_ɛ̃ | /ɛ̃/ | French | vin |
+| fr_ɔ̃ | /ɔ̃/ | French | bon |
+| de_ç | /ç/ | German | ich |
+| de_x | /x/ | German | Bach |
+| de_ts | /ts/ | German | Zeit |
+| de_pf | /pf/ | German | Pferd |
 
-# 1. Definir el scope inicial
+Symbols are not exclusive to one language. An ID can identify the main learning module without making an absolute phonetic claim.
 
-Como querés inglés, francés y alemán, yo arrancaría con **20 sonidos mezclados**, priorizando sonidos útiles y conflictivos para hispanohablantes.
-
-## Set inicial sugerido
-
-| ID      | Símbolo | Idioma principal          | Ejemplo                 |
-| ------- | ------: | ------------------------- | ----------------------- |
-| `en_ʃ`  |   `/ʃ/` | inglés / francés / alemán | *ship*, *chat*, *schön* |
-| `en_tʃ` |  `/tʃ/` | inglés                    | *chip*                  |
-| `en_dʒ` |  `/dʒ/` | inglés                    | *judge*                 |
-| `en_θ`  |   `/θ/` | inglés                    | *thin*                  |
-| `en_ð`  |   `/ð/` | inglés                    | *this*                  |
-| `en_ɪ`  |   `/ɪ/` | inglés / alemán           | *ship*, *ich*           |
-| `en_iː` |  `/iː/` | inglés / alemán           | *sheep*, *Liebe*        |
-| `en_æ`  |   `/æ/` | inglés                    | *cat*                   |
-| `en_ʌ`  |   `/ʌ/` | inglés                    | *cut*                   |
-| `en_ə`  |   `/ə/` | inglés / francés / alemán | *about*, *le*, *bitte*  |
-| `fr_y`  |   `/y/` | francés / alemán          | *tu*, *über*            |
-| `fr_ø`  |   `/ø/` | francés / alemán          | *deux*, *schön*         |
-| `fr_œ`  |   `/œ/` | francés / alemán          | *sœur*, *können*        |
-| `fr_ɑ̃` |  `/ɑ̃/` | francés                   | *sans*                  |
-| `fr_ɛ̃` |  `/ɛ̃/` | francés                   | *vin*                   |
-| `fr_ɔ̃` |  `/ɔ̃/` | francés                   | *bon*                   |
-| `de_ç`  |   `/ç/` | alemán                    | *ich*                   |
-| `de_x`  |   `/x/` | alemán                    | *Bach*                  |
-| `de_ts` |  `/ts/` | alemán                    | *Zeit*                  |
-| `de_pf` |  `/pf/` | alemán                    | *Pferd*                 |
-
-Nota: algunos símbolos no pertenecen exclusivamente a un idioma. El `id` puede marcar el módulo principal, no una verdad fonética absoluta.
-
----
-
-# 2. Crear la estructura de carpetas
-
-Usaría una estructura así:
+## 2. Create the directory structure
 
 ```text
-ipa_trainer_dataset/
+ipa_trainer/
   dataset/
     sounds.json
-    words.json
+    words.json         # optional separate word inventory
     sources.md
   audio/
     en/
@@ -70,112 +52,45 @@ ipa_trainer_dataset/
     validate_dataset.py
 ```
 
-Para empezar, podés tener solo esto:
+A minimal version can use one sounds.json and language audio directories, but separating dataset files from media from the start is preferable.
+
+## 3. Find audio
+
+For each target, first look for an example word, not necessarily an isolated sound:
 
 ```text
-ipa_trainer_dataset/
-  sounds.json
-  audio/
-    en/
-    fr/
-    de/
+/y/ → French: tu
+/ç/ → German: ich
+/θ/ → English: thin
 ```
 
-Pero recomiendo separar `dataset/` y `audio/` desde el principio.
-
----
-
-# 3. Buscar audios
-
-## Prioridad de búsqueda
-
-Para cada sonido, buscá primero una **palabra ejemplo**, no necesariamente el sonido aislado.
-
-Ejemplo:
-
-```text
-/y/  → francés: tu
-/ç/  → alemán: ich
-/θ/  → inglés: thin
-```
-
-## Fuentes recomendadas
-
-### Opción 1: Wiktionary
-
-Buena para:
-
-```text
-palabra → IPA → audio
-```
-
-Ejemplo de búsqueda manual:
+Wiktionary is useful for word → IPA → audio lookup. Commons is useful for phonetic demonstrations. Example searches:
 
 ```text
 Wiktionary tu French pronunciation audio
 Wiktionary ich German pronunciation audio
 Wiktionary thin English pronunciation audio
-```
-
-### Opción 2: Wikimedia Commons
-
-Buena para sonidos IPA aislados o grabaciones fonéticas.
-
-Búsquedas útiles:
-
-```text
 Wikimedia Commons voiceless dental fricative audio
 Wikimedia Commons close front rounded vowel audio
 Wikimedia Commons voiceless palatal fricative audio
 ```
 
-### Opción 3: Forvo
+The original plan considered Forvo a listening reference rather than the main bundled audio source. Check the terms of any recording before including it in a distributed application.
 
-Útil como referencia, pero ojo con licencias si algún día publicás la app.
+## 4. Audio acceptance criteria
 
-Para uso personal está bien como comparación auditiva, pero no lo usaría como fuente principal empaquetada.
+- [ ] Native speaker or reliable phonetic source
+- [ ] Example clearly contains the target sound
+- [ ] Target is not obscured or too fast
+- [ ] No excessive background noise
+- [ ] License recorded and checked for the intended use
+- [ ] Original source URL saved
 
----
+Do not collect unidentified recordings without recording their sources.
 
-# 4. Criterio para aceptar un audio
+## 5. File naming
 
-Cada archivo que bajes debería cumplir esto:
-
-```text
-[ ] Es de hablante nativo o fuente fonética confiable
-[ ] La palabra contiene claramente el sonido objetivo
-[ ] El sonido objetivo no queda tapado o demasiado rápido
-[ ] El audio no tiene ruido fuerte
-[ ] La licencia permite uso personal / redistribución futura si te importa
-[ ] Guardaste la URL de origen
-```
-
-Esto último es importante:
-
-```text
-No bajes audios sueltos sin anotar de dónde salieron.
-```
-
-Después no sabés qué es qué.
-
----
-
-# 5. Convención de nombres
-
-Evitá nombrar archivos directamente con símbolos raros al principio, porque puede traer quilombos en Windows, Android o Git.
-
-Mejor:
-
-```text
-audio/en/ship__sh.ogg
-audio/en/thin__theta.ogg
-audio/fr/tu__y.ogg
-audio/fr/vin__nasal_eh.ogg
-audio/de/ich__ç.ogg
-audio/de/bach__x.ogg
-```
-
-O más seguro todavía, sin caracteres IPA en filename:
+Prefer descriptive ASCII names for portability across Windows, Android, and Git:
 
 ```text
 audio/en/ship__esh.ogg
@@ -186,7 +101,7 @@ audio/de/ich__palatal_fricative.ogg
 audio/de/bach__velar_fricative.ogg
 ```
 
-En el JSON sí podés guardar el símbolo real:
+Keep the actual IPA symbols inside JSON:
 
 ```json
 {
@@ -195,78 +110,20 @@ En el JSON sí podés guardar el símbolo real:
 }
 ```
 
----
+## 6. Initial data model
 
-# 6. Primer modelo de datos
+Use a single sounds.json array. Each record includes an ID, language, symbol, sound type, example word, full transcription, audio path, at least three distractors, a note, source URL, and license. Complete examples appear in section 16.
 
-Yo haría un solo `sounds.json` así:
+## 7. Progress file
 
-```json
-[
-  {
-    "id": "fr_y_tu",
-    "language": "fr",
-    "symbol": "y",
-    "kind": "vowel",
-    "example_word": "tu",
-    "word_ipa": "ty",
-    "audio": "audio/fr/tu__close_front_rounded.ogg",
-    "confusers": ["i", "u", "ø"],
-    "note": "Vocal cerrada anterior redondeada. Pensala como /i/ con labios de /u/.",
-    "source_url": "PEGAR_URL_ACA",
-    "license": "PEGAR_LICENCIA_ACA"
-  }
-]
-```
-
-Para inglés:
-
-```json
-{
-  "id": "en_theta_thin",
-  "language": "en",
-  "symbol": "θ",
-  "kind": "consonant",
-  "example_word": "thin",
-  "word_ipa": "θɪn",
-  "audio": "audio/en/thin__theta.ogg",
-  "confusers": ["s", "f", "t"],
-  "note": "TH sorda. No vibra la garganta.",
-  "source_url": "PEGAR_URL_ACA",
-  "license": "PEGAR_LICENCIA_ACA"
-}
-```
-
-Para alemán:
-
-```json
-{
-  "id": "de_ich_ch",
-  "language": "de",
-  "symbol": "ç",
-  "kind": "consonant",
-  "example_word": "ich",
-  "word_ipa": "ɪç",
-  "audio": "audio/de/ich__palatal_fricative.ogg",
-  "confusers": ["ʃ", "x", "h"],
-  "note": "CH suave alemán, como en ich. No es /x/, que aparece en Bach.",
-  "source_url": "PEGAR_URL_ACA",
-  "license": "PEGAR_LICENCIA_ACA"
-}
-```
-
----
-
-# 7. Archivo de progreso
-
-Separaría el dataset del progreso personal.
+Keep fixed learning content separate from personal progress:
 
 ```text
-dataset/sounds.json       → datos fijos
-user_progress.json        → progreso del usuario
+dataset/sounds.json → fixed learning content
+user_progress.json  → personal progress (original proposal)
 ```
 
-Ejemplo:
+An early model used correct_count, wrong_count, approved, and weight_multiplier:
 
 ```json
 {
@@ -285,430 +142,147 @@ Ejemplo:
 }
 ```
 
----
+## 8. Progression logic
 
-# 8. Lógica de gamificación
+Initially, an available target has a streak of zero, is not approved, and has normal selection weight (1.0).
 
-Tu regla sería:
+A correct answer increases its consecutive-correct count. At three, the target is approved, its selection weight becomes 0.5, and another target is unlocked.
 
-## Estado inicial
+An incorrect answer resets the streak to zero. If the target was approved, it becomes active again with weight 1.0. An unapproved target also loses its streak on a mistake. This prevents correct → correct → incorrect → correct from counting as three consecutive successes.
 
-Todos los sonidos arrancan así:
+## 9. Active targets
 
-```json
-{
-  "correct_count": 0,
-  "approved": false,
-  "weight_multiplier": 1.0
-}
-```
+Use three states:
 
----
+| State | Meaning | Weight |
+| --- | --- | --- |
+| locked | Not yet available | 0.0 |
+| active | Currently being practiced | 1.0 |
+| approved | Learned, still reviewed | 0.5 |
 
-## Cuando el usuario acierta
-
-```python
-correct_count += 1
-```
-
-Si llega a 3 aciertos:
-
-```python
-approved = True
-weight_multiplier = 0.5
-```
-
-Y además:
-
-```text
-se desbloquea un sonido nuevo
-```
-
----
-
-## Cuando el usuario falla
-
-Si el sonido estaba aprobado:
-
-```python
-approved = False
-correct_count = 0
-weight_multiplier = 1.0
-```
-
-O sea:
-
-```text
-desaprobado → vuelve a aparecer con frecuencia normal
-```
-
-Si todavía no estaba aprobado:
-
-```python
-correct_count = 0
-```
-
-Esto evita que alguien haga:
-
-```text
-acierto, acierto, error, acierto
-```
-
-y quede como aprobado igual. Tiene que tener una racha de 3.
-
----
-
-# 9. Sistema de sonidos activos
-
-Tendrías tres conceptos:
-
-```text
-locked     → todavía no aparece
-active     → aparece con probabilidad normal
-approved   → aparece con mitad de probabilidad
-```
-
-Ejemplo de progreso:
+Avoid redundant lists of active and locked targets when a per-target state is sufficient:
 
 ```json
 {
-  "active_sound_ids": [
-    "en_esh_ship",
-    "en_theta_thin",
-    "fr_y_tu",
-    "de_ich_ch"
-  ],
-  "locked_sound_ids": [
-    "fr_nasal_a_sans",
-    "de_bach_x"
-  ]
+  "en_esh_ship": {"status": "active", "correct_streak": 1, "weight_multiplier": 1.0},
+  "en_theta_thin": {"status": "approved", "correct_streak": 3, "weight_multiplier": 0.5},
+  "fr_nasal_a_sans": {"status": "locked", "correct_streak": 0, "weight_multiplier": 0.0}
 }
 ```
 
-Pero yo no lo duplicaría demasiado. Mejor que cada entrada tenga un estado:
+## 10. Unlock rule
 
-```json
-{
-  "en_esh_ship": {
-    "status": "active",
-    "correct_streak": 1,
-    "weight_multiplier": 1.0
-  },
-  "en_theta_thin": {
-    "status": "approved",
-    "correct_streak": 3,
-    "weight_multiplier": 0.5
-  },
-  "fr_nasal_a_sans": {
-    "status": "locked",
-    "correct_streak": 0,
-    "weight_multiplier": 0.0
-  }
-}
-```
-
----
-
-# 10. Regla para desbloquear sonidos nuevos
-
-Tu idea dice:
-
-> si el usuario acierta tres veces un sonido, se agrega un sonido nuevo a la lista.
-
-Entonces:
-
-```text
-cada vez que un sonido pasa de active → approved
-desbloqueás 1 sonido locked
-```
-
-Importante: solo debería pasar **cuando cruza el umbral**, no cada vez que vuelve a acertar un sonido ya aprobado.
-
-Pseudológica:
+The original rule: when a target crosses from active to approved, unlock one locked target. Do not unlock another target on every correct answer after approval.
 
 ```python
 def handle_correct(sound_id):
     progress = user_progress[sound_id]
-
     if progress["status"] == "approved":
         return
-
     progress["correct_streak"] += 1
-
     if progress["correct_streak"] >= 3:
         progress["status"] = "approved"
         progress["weight_multiplier"] = 0.5
         unlock_next_sound()
-```
 
-Y error:
 
-```python
 def handle_wrong(sound_id):
     progress = user_progress[sound_id]
-
     progress["correct_streak"] = 0
-
     if progress["status"] == "approved":
         progress["status"] = "active"
         progress["weight_multiplier"] = 1.0
 ```
 
----
+Implementation update: unlock rewards are now granted only once per target, even after a mistake and subsequent relearning. Unlocked targets remain available.
 
-# 11. Probabilidad de aparición
+## 11. Selection probability
 
-La selección de pregunta debería usar pesos.
-
-Ejemplo:
-
-| Sonido | Estado   | Peso |
-| ------ | -------- | ---: |
-| `/θ/`  | active   |  1.0 |
-| `/ʃ/`  | approved |  0.5 |
-| `/y/`  | active   |  1.0 |
-| `/ç/`  | locked   |  0.0 |
-
-Entonces se sortea entre los sonidos activos/aprobados.
-
-Pseudocódigo:
+Choose questions using relative weights. An approved target has half the weight of an active one; this does not mean an absolute 50% probability of selection.
 
 ```python
 import random
 
+
 def pick_sound(sounds, progress):
     available = []
     weights = []
-
     for sound in sounds:
-        sound_id = sound["id"]
-        state = progress[sound_id]
-
+        state = progress[sound["id"]]
         if state["status"] == "locked":
             continue
-
         available.append(sound)
         weights.append(state["weight_multiplier"])
-
     return random.choices(available, weights=weights, k=1)[0]
 ```
 
----
+## 12. Visual states
 
-# 12. Color para aprobados
+Make approved targets visually distinct. The original palette suggestions were:
 
-Sí: los aprobados deberían tener otro color.
+| State | Suggested appearance | Meaning |
+| --- | --- | --- |
+| locked | Gray | Unavailable |
+| active | Normal / white | In practice |
+| approved | Green or blue | Learned |
+| failed recently | Brief red highlight | Just answered incorrectly |
+| newly unlocked | Brief yellow highlight | New target |
 
-En la UI:
+The current web prototype uses a warmer palette. A compact collection can display active, approved, and locked symbols together, for example: /θ/, /ʃ/ ✓, /y/, /ç/ 🔒.
 
-| Estado          | Color sugerido  | Significado     |
-| --------------- | --------------- | --------------- |
-| locked          | gris            | bloqueado       |
-| active          | normal / blanco | en práctica     |
-| approved        | verde o azul    | aprobado        |
-| failed recently | rojo breve      | acaba de fallar |
-| newly unlocked  | amarillo breve  | nuevo sonido    |
+## 13. Unlock order
 
-Ejemplo visual:
+Use a curated order rather than completely random unlocks. Read the actual sequence from dataset/config.json; proposal IDs are examples, not a definitive inventory.
 
-```text
-/θ/  active
-/ʃ/  approved
-/y/  active
-/ç/  locked
-```
-
-En una UI simple:
-
-```text
-[ /θ/ ] [ /ʃ/ ✓ ] [ /y/ ] [ /ç/ 🔒 ]
-```
-
----
-
-# 13. Orden de desbloqueo
-
-No lo haría completamente random. Usaría un orden curado.
-
-Ejemplo:
-
-```json
-{
-  "unlock_order": [
-    "en_esh_ship",
-    "en_tesh_chip",
-    "en_theta_thin",
-    "en_eth_this",
-    "en_ih_ship",
-    "en_ee_sheep",
-    "fr_y_tu",
-    "fr_u_tout",
-    "fr_oe_soeur",
-    "fr_o_deux",
-    "de_ich_ch",
-    "de_bach_ch",
-    "de_ts_zeit",
-    "de_pf_pferd"
-  ]
-}
-```
-
-Pero si querés empezar con 20 activos, entonces el orden de unlock aplica a partir del sonido 21.
-
-Estructura:
+If all 20 initial targets are active, unlocks need a backlog starting with target 21. An example configuration was:
 
 ```json
 {
   "initial_active_count": 20,
-  "unlock_order": [
-    "sound_001",
-    "sound_002",
-    "sound_003",
-    "... más sonidos ..."
-  ]
+  "unlock_order": ["sound_001", "sound_002", "sound_003"]
 }
 ```
 
-Al iniciar:
+This abbreviated array illustrates the format only. On initialization, the first initial_active_count targets become active and the rest stay locked. The current implementation starts with six of the 20 targets instead.
 
-```text
-primeros 20 → active
-resto → locked
-```
+## 14. Work phases
 
----
+### Phase 1: minimal dataset
 
-# 14. Plan de trabajo concreto
+Create the project and sounds.json. Define 20 targets with language, example word, transcription, distractors, and notes. Find recordings, save sources and licenses, normalize file names, and check playback. Expected result: 20 playable targets.
 
-## Fase 1 — Dataset mínimo
+### Phase 2: extended dataset
 
-1. Crear carpeta del proyecto.
-2. Crear `sounds.json`.
-3. Definir los primeros 20 sonidos.
-4. Para cada sonido, elegir:
+Add 10–20 locked targets and define unlock_order. Validate audio, symbol, word, distractors, and language for each target. Create a validator. Expected result: the initial set plus an unlockable backlog.
 
-   * idioma
-   * palabra ejemplo
-   * IPA
-   * distractores
-   * nota explicativa
-5. Buscar audio.
-6. Guardar URL y licencia.
-7. Normalizar nombres de archivo.
-8. Probar que todos los audios se reproduzcan.
+### Phase 3: console prototype
 
-Resultado de fase 1:
+Test audio → options → answer → progress before polishing the interface. Validate weighting, approval, and unlock logic.
 
-```text
-20 sonidos jugables
-```
+### Phase 4: Pygame prototype
 
----
+The original proposal called for a minimal screen with a playback button, a symbol question, four choices, score, active-target count, approved-target count, and a symbol collection. The implemented prototype uses a web interface instead.
 
-## Fase 2 — Dataset extendido
+### Phase 5: portability
 
-1. Agregar 10–20 sonidos bloqueados.
-2. Definir `unlock_order`.
-3. Validar que cada sonido tenga:
+Freeze the JSON format, keep audio in Ogg format, use portable paths, and separate game logic from the frontend. Potential later platforms included Godot, Kotlin Android, and the web.
 
-   * audio
-   * símbolo
-   * palabra
-   * distractores
-   * idioma
-4. Crear script validador.
+## 15. Per-entry checklist
 
-Resultado:
+- [ ] id
+- [ ] language
+- [ ] symbol
+- [ ] kind: vowel / consonant / diphthong / affricate
+- [ ] example_word
+- [ ] word_ipa
+- [ ] audio file
+- [ ] At least three confusers
+- [ ] note
+- [ ] source_url
+- [ ] license
+- [ ] Validated by listening
 
-```text
-20 iniciales + backlog desbloqueable
-```
-
----
-
-## Fase 3 — Prototipo consola
-
-Antes de UI:
-
-```text
-audio → opciones → respuesta → progreso
-```
-
-Objetivo:
-
-```text
-probar la lógica de pesos, aprobados y desbloqueos
-```
-
-No hace falta que sea lindo.
-
----
-
-## Fase 4 — Prototipo Pygame
-
-Pantalla mínima:
-
-```text
-[Play audio]
-
-¿Qué símbolo escuchás?
-
-A /θ/
-B /s/
-C /f/
-D /t/
-
-Score: 120
-Sonidos activos: 20
-Aprobados: 4
-```
-
-Abajo:
-
-```text
-/θ/  /ʃ/ ✓  /y/  /ç/ 🔒
-```
-
----
-
-## Fase 5 — Exportabilidad futura
-
-Cuando esto funcione:
-
-1. Congelar formato del JSON.
-2. Mantener audios en `.ogg`.
-3. Evitar paths raros.
-4. Separar lógica de juego del frontend.
-5. Después decidir:
-
-   * Godot
-   * Kotlin Android
-   * Web
-
----
-
-# 15. Checklist para cada entrada del dataset
-
-Podés usar esta plantilla:
-
-```text
-[ ] id
-[ ] language
-[ ] symbol
-[ ] kind: vowel/consonant/diphthong/affricate
-[ ] example_word
-[ ] word_ipa
-[ ] audio file
-[ ] 3 confusers
-[ ] note
-[ ] source_url
-[ ] license
-[ ] validated by listening
-```
-
----
-
-# 16. Ejemplo completo de `sounds.json`
+## 16. Complete sounds.json examples
 
 ```json
 [
@@ -721,7 +295,7 @@ Podés usar esta plantilla:
     "word_ipa": "θɪn",
     "audio": "audio/en/thin__theta.ogg",
     "confusers": ["s", "f", "t"],
-    "note": "TH sorda inglesa. No vibra la garganta.",
+    "note": "Voiceless English TH. The vocal folds do not vibrate.",
     "source_url": "",
     "license": ""
   },
@@ -734,7 +308,7 @@ Podés usar esta plantilla:
     "word_ipa": "ty",
     "audio": "audio/fr/tu__close_front_rounded.ogg",
     "confusers": ["i", "u", "ø"],
-    "note": "Vocal cerrada anterior redondeada. Similar a /i/ con labios de /u/.",
+    "note": "Close front rounded vowel. Think of /i/ with the lips rounded for /u/.",
     "source_url": "",
     "license": ""
   },
@@ -747,59 +321,21 @@ Podés usar esta plantilla:
     "word_ipa": "ɪç",
     "audio": "audio/de/ich__palatal_fricative.ogg",
     "confusers": ["ʃ", "x", "h"],
-    "note": "CH suave alemán. No confundir con /x/ de Bach.",
+    "note": "Soft German CH. Do not confuse it with /x/ in Bach.",
     "source_url": "",
     "license": ""
   }
 ]
 ```
 
----
+Source and license placeholders must be completed before accepting an audio file.
 
-# 17. Detalle importante: “sonido” vs “entrada”
+## 17. Sound versus learning entry
 
-Para el juego, yo no trataría cada símbolo como una entidad abstracta pura.
+Treat each learning entry as a combination of symbol + language + example word rather than a purely abstract symbol. Realizations of /r/, /ʁ/, /x/, /ə/, and /i/ can depend on language, accent, and context. For example, fr_ʁ_rue and de_ʁ_rot can be separate entries despite sharing a symbol.
 
-Mejor tratá cada elemento como una **entrada entrenable**:
+## 18. Final progression rule
 
-```text
-symbol + language + example_word
-```
+Every entry starts active or locked. Three consecutive correct answers for an active entry mark it as approved, change its appearance, reduce its selection weight by half, and unlock another entry. If an approved entry is answered incorrectly, it becomes active again, returns to its normal appearance and weight, and loses its streak.
 
-Porque `/r/`, `/ʁ/`, `/x/`, `/ə/`, `/i/` pueden variar bastante según idioma, acento y contexto.
-
-Entonces:
-
-```text
-fr_ʁ_rue
-de_ʁ_rot
-```
-
-pueden ser dos entradas distintas aunque compartan símbolo.
-
-Eso te da más control y evita que el juego se vuelva demasiado teórico.
-
----
-
-# 18. Regla final de gamificación
-
-La escribiría así:
-
-```text
-Cada entrada empieza activa o bloqueada.
-
-Una entrada activa se aprueba cuando el usuario la responde bien 3 veces consecutivas.
-
-Al aprobarse:
-- cambia a color de aprobado
-- su probabilidad baja a 50%
-- se desbloquea una entrada nueva
-
-Si el usuario falla una entrada aprobada:
-- pierde el estado de aprobado
-- vuelve al color normal
-- vuelve a probabilidad 100%
-- su racha vuelve a 0
-```
-
-Esto está bastante bien: mantiene los sonidos aprendidos en circulación, pero les baja el peso. No desaparecen del todo, que es importante.
+Learned targets remain in circulation at a reduced frequency. In the current implementation, unlocking is permanent and each target grants its unlock reward only once.

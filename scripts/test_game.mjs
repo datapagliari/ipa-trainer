@@ -10,8 +10,8 @@ assert.equal(p.target.streak,3);
 p=recordAnswer(p,'target',true);assert.equal(p.target.streak,3);
 p=recordAnswer(p,'target',false);assert.equal(p.target.streak,0);assert.equal(p.target.correct,4);assert.equal(p.target.wrong,1);
 const pool=[{id:'learned'},{id:'new'}];
-assert.equal(chooseWeighted(pool,{learned:{streak:3}},()=>0.32).id,'learned');
-assert.equal(chooseWeighted(pool,{learned:{streak:3}},()=>0.34).id,'new');
+assert.equal(chooseWeighted(pool,{learned:{streak:3}},()=>0.24).id,'learned');
+assert.equal(chooseWeighted(pool,{learned:{streak:3}},()=>0.26).id,'new');
 for(const s of sounds){const [start,end,label]=segments[s.id];assert.ok(start>=0&&end>start&&end<=s.example_word.length&&label);const options=symbolOptions(s);assert.equal(options.length,4);assert.ok(options.includes(s.symbol));assert.equal(new Set(options).size,4);}
 assert.equal('ship'.slice(...segments.en_esh_ship.slice(0,2)),'sh');
 assert.equal('ship'.slice(...segments.en_ih_ship.slice(0,2)),'i');
@@ -46,3 +46,18 @@ assert.equal(unlockedIds(sounds,journey,config).size,7,'Practicing a newly unloc
 for(let i=0;i<2;i++)journey=recordAnswer(journey,config.unlock_order[6],true);
 assert.equal(unlockedIds(sounds,journey,config).size,8);
 console.log('OK: unlocking requires learning, not just practicing.');
+
+// A learned target has one third of an active target's weight.
+const learnedState={learned:{streak:3,correct:3,wrong:0}};
+const sampled={learned:0,new:0};
+for(let i=0;i<400;i++)sampled[chooseWeighted(pool,learnedState,()=>(i+.5)/400).id]++;
+assert.deepEqual(sampled,{learned:100,new:300});
+const restored=recordAnswer(learnedState,'learned',false);
+assert.equal(chooseWeighted(pool,restored,()=>.49).id,'learned');
+assert.equal(chooseWeighted(pool,restored,()=>.51).id,'new');
+assert.equal(chooseWeighted(pool,{},()=>.49).id,'learned');
+assert.equal(chooseWeighted(pool,{},()=>.51).id,'new');
+assert.equal(chooseWeighted(pool,learnedState,()=>.49,1).id,'learned');
+assert.equal(chooseWeighted(pool,learnedState,()=>.51,1).id,'new');
+assert.equal(config.approved_weight_multiplier,1/3);
+console.log('OK: equal initial weights, one-third review weight, reset on error, and configurable reduction.');

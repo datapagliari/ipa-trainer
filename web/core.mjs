@@ -7,8 +7,8 @@ export const segments = {
  de_bach_x:[2,4,'final consonant'], de_ts_zeit:[0,1,'initial consonant'], de_pf_pferd:[0,2,'initial consonant']
 };
 export function shuffle(items, random=Math.random){return [...items].map(v=>({v,n:random()})).sort((a,b)=>a.n-b.n).map(x=>x.v);}
-export function chooseWeighted(items, progress, random=Math.random){
- const weights=items.map(s=>progress[s.id]?.streak>=3?0.5:1);
+export function chooseWeighted(items, progress, random=Math.random, learnedWeight=1/3){
+ const weights=items.map(s=>progress[s.id]?.streak>=3?learnedWeight:1);
  let n=random()*weights.reduce((a,b)=>a+b,0);
  return items.find((s,i)=>(n-=weights[i])<0)||items.at(-1);
 }

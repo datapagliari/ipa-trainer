@@ -1,3 +1,5 @@
+> Historical proposal. The current learning rule and implementation sequence are defined in [ROADMAP.md](ROADMAP.md). Earlier half-weight examples below are superseded by the one-third review weight.
+
 # IPA learning game: dataset and progression plan
 
 This document preserves the original design proposal in English. Its examples describe a proposed architecture, not necessarily the current implementation. The project now uses a web frontend, six initially available targets, and permanent unlock rewards; see [README.md](../README.md) for current behavior.

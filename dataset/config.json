@@ -1,7 +1,7 @@
 {
   "initial_active_count": 6,
   "approval_streak": 3,
-  "approved_weight_multiplier": 0.5,
+  "approved_weight_multiplier": 0.3333333333333333,
   "unlock_order": [
     "en_esh_ship",
     "en_theta_thin",

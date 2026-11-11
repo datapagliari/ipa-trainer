@@ -1,4 +1,4 @@
-import {segments,shuffle,chooseWeighted,recordAnswer,symbolOptions,nextSessionStreak,unlockedIds} from './core.mjs?v=8';
+import {segments,shuffle,chooseWeighted,recordAnswer,symbolOptions,nextSessionStreak,unlockedIds} from './core.mjs?v=9';
 const $=id=>document.getElementById(id), key='ipa-lab-progress-v1';
 const languages={en:'English',fr:'French',de:'German'};
 let config={},symbolAudio={},sounds=[],manifest={},progress={},question=null,answered=false,playing=null,storageOK=true,sessionStreak=0;
@@ -21,9 +21,9 @@ function renderProgress(){
  for(const sound of sounds){
   const locked=!unlocked.has(sound.id),approved=progress[sound.id]?.streak>=3;
   const button=el('button',undefined,'tile'+(approved?' approved':'')+(locked?' locked':''));
-  button.append(el('span',sound.symbol));if(locked)button.append(el('small','🔒'));
+  button.append(el('span',sound.symbol));if(approved)button.append(el('small','✓','learned-badge'));if(locked)button.append(el('small','🔒'));
   button.dataset.id=sound.id;button.title=languages[sound.language]+' · '+(locked?'Locked':sound.example_word+' · '+(progress[sound.id]?.streak||0)+'/3');
-  button.setAttribute('aria-label',button.title);
+  if(approved)button.title+=' · Learned';button.setAttribute('aria-label',button.title);
   button.onclick=()=>{if(locked){$('detail').replaceChildren(el('p','Learn a sound with 3 correct answers to unlock more.'));}else showDetail(sound);};
   $('collection').append(button);
  }
@@ -33,7 +33,7 @@ function answer(value){if(answered||!question)return;answered=true;const correct
  $('feedback').textContent=result+(newlyUnlocked.length?' · Unlocked: '+newlyUnlocked.map(s=>'/'+s.symbol+'/').join(' '):'');$('next').hidden=false;renderProgress();showDetail(question);}
 function newQuestion(){stopAudio();answered=false;$('feedback').textContent='';$('next').hidden=true;const mode=$('mode').value,lang=$('language').value;const unlocked=unlockedIds(sounds,progress,config);const all=sounds.filter(s=>unlocked.has(s.id)&&(lang==='all'||s.language===lang));const pool=mode==='visual'?all:all.filter(s=>manifest[s.id]);const box=$('exercise');box.replaceChildren();$('hint').textContent=storageOK?'':'Progress is temporary: browser storage is unavailable.';
  if(!pool.length||(mode==='sound'&&pool.length<2)){question=null;box.append(el('p','Not enough recordings for this language yet. Try All languages or Word → symbol.','empty'));return;}
- question=chooseWeighted(pool,progress);const meta=el('div',undefined,'question-meta');meta.append(el('span',languages[question.language]+' · '+(mode==='visual'?'Visual practice':'Listening practice')),Object.assign(el('span','Sound: '+(progress[question.id]?.streak||0)+'/3 · Streak: '+sessionStreak),{id:'sound-streak'}));box.append(meta);
+ question=chooseWeighted(pool,progress,Math.random,config.approved_weight_multiplier??1/3);const meta=el('div',undefined,'question-meta');meta.append(el('span',languages[question.language]+' · '+(mode==='visual'?'Visual practice':'Listening practice')),Object.assign(el('span','Sound: '+(progress[question.id]?.streak||0)+'/3 · Streak: '+sessionStreak),{id:'sound-streak'}));box.append(meta);
  if(mode==='sound'){
   box.append(el('h2','Which word contains this sound?','question-title'),el('div','/'+question.symbol+'/','word'),el('p','Listen and choose.','target-label'));
   const candidates=shuffle([question,...shuffle(pool.filter(s=>s.symbol!==question.symbol)).slice(0,3)]);const options=el('div',undefined,'sound-options');candidates.forEach((s,i)=>{const card=el('div',undefined,'sound-card');card.append(audioButton(s,'▶ Option '+(i+1)));const b=el('button','Choose '+(i+1),'option');b.dataset.value=s.symbol;b.onclick=()=>answer(s.symbol);card.append(b);options.append(card);});box.append(options);

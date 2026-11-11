@@ -17,7 +17,9 @@ Do not open `index.html` directly: the app loads its data over HTTP. No frontend
 ## Practice
 
 - 20 learning targets across three languages, with 6 available at the start.
-- Three correct answers in a row for a target mark it as learned and unlock another target.
+- Three correct answers in a row for a target mark it as learned (green ✓) and unlock another target.
+- Available unlearned targets have equal selection weight (1). Learned targets have weight 1/3; a mistake removes the mark, resets that target’s streak, and restores weight 1. These are relative weights within the current practice pool.
+- Set `approved_weight_multiplier` to `1` in `dataset/config.json` to disable the review-weight reduction without deleting progress.
 - Unlocks are permanent. Making a mistake or relearning a target does not grant another unlock.
 - Previously practiced targets remain available when older progress is loaded.
 - Separate session streak and per-target progress, saved in your browser.
@@ -45,7 +47,9 @@ Sources, authors, licenses, and modifications are recorded in [audio_manifest.js
 - `dataset/config.json`: initial target count and unlock order.
 - `dataset/sounds.json`: learning targets, example words, and explanations.
 - `web/core.mjs`: game logic and written word segments. Highlights are spelling correspondences, not audio timestamps.
-- `docs/PLAN.md`: the original design proposal; see this README for current behavior.
+- [docs/HANDOFF.md](docs/HANDOFF.md): current agent handoff, known limitations, and next implementation task.
+- [docs/ROADMAP.md](docs/ROADMAP.md): current phased plan toward the full IPA chart.
+- `docs/PLAN.md`: historical design proposal; the roadmap and this README take precedence.
 
 Visual and listening practice share progress. A learned target does not certify listening recognition, and the small audio pool makes it possible to memorize words.
 

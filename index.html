@@ -1,21 +1,56 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IPA Lab · Train your ear</title><link rel="stylesheet" href="web/style.css?v=6"></head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IPA Lab · Train your ear</title>
+  <link rel="stylesheet" href="web/style.css?v=8">
+</head>
 <body>
-<header><a class="brand" href="./">ipa<span>lab</span><small>ONE SOUND AT A TIME</small></a><span class="tag">Prototype · IPA</span></header>
-<main>
-  <section class="intro"><p class="eyebrow">IPA · PLAY WITH SOUNDS</p><h1>Tune in.<br>Train your <em>ear.</em></h1></section>
-  <div class="workspace">
-  <section class="practice" aria-label="Exercise">
-    <div class="toolbar"><label>Practice<select id="mode"><option value="visual">Word → symbol</option><option value="listen">Audio → symbol</option><option value="sound">Symbol → audio</option></select></label><label>Language<select id="language"><option value="all">All languages</option><option value="en">English</option><option value="fr">French</option><option value="de">German</option></select></label></div>
-    <div id="exercise"></div>
-    <div id="feedback" role="status" aria-live="polite"></div>
-    <button id="next" class="primary" hidden>Next <span>→</span></button>
-    <p class="hint" id="hint"></p>
-  </section>
-  <aside><div class="progress-head"><p class="eyebrow">YOUR COLLECTION</p><strong id="mastered">0 / 20</strong><p>sounds learned</p><progress id="progress" max="20" value="0" aria-label="Sounds learned"></progress></div><div id="collection" class="collection"></div><p class="aside-note">Learn a sound to unlock the next.</p><button id="reset" class="text-button">Reset progress</button></aside>
-  </div>
-  <section class="explore"><div><p class="eyebrow">EXPLORE</p><h2>Sounds at hand.</h2><p>Tap a symbol to explore.</p></div><div id="detail"></div></section>
-  <footer><span>IPA · English, French, and German</span><button id="credits-toggle" class="text-button">Audio and credits</button></footer><section id="credits" hidden></section>
-</main><script type="module" src="web/app.js?v=6"></script>
-</body></html>
+<div class="app-shell">
+  <nav class="rail" aria-label="Main navigation">
+    <a class="rail-logo" href="#top" aria-label="IPA Lab home">✦</a>
+    <div class="rail-links">
+      <a class="rail-link active" href="#practice" aria-label="Practice" title="Practice"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-2a8 8 0 0 1 16 0v2M4 12h3v8H4a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1Zm16 0h-3v8h3a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1Z"/></svg></a>
+      <a class="rail-link" href="#collection-panel" aria-label="Collection" title="Collection"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="2"/><rect x="14" y="4" width="6" height="6" rx="2"/><rect x="4" y="14" width="6" height="6" rx="2"/><rect x="14" y="14" width="6" height="6" rx="2"/></svg></a>
+      <a class="rail-link" href="#explore" aria-label="Explore sounds" title="Explore sounds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6a3 3 0 0 1 2 1 3 3 0 0 1 2-1h6v15h-6a3 3 0 0 0-2 1 3 3 0 0 0-2-1H4Zm8 1v15"/></svg></a>
+    </div>
+    <span class="rail-bottom" aria-label="International Phonetic Alphabet">/a/</span>
+  </nav>
+  <main id="top">
+    <header class="page-header">
+      <div><a class="brand" href="#top">ipa<span>lab</span><span class="brand-dot" aria-hidden="true"></span></a><h1>Small sounds.<br>Big <span>discoveries.</span></h1></div>
+      <a class="header-action" href="#practice">Practice <span aria-hidden="true">↗</span></a>
+    </header>
+    <section class="summary" aria-label="Practice overview">
+      <div class="stat-card"><div class="stat-heading"><span class="stat-icon" aria-hidden="true">✓</span>Learned</div><strong id="mastered">0 / 20</strong><span class="stat-note">Three correct per sound</span></div>
+      <div class="stat-card lime"><div class="stat-heading"><span class="stat-icon" aria-hidden="true">↗</span>Unlocked</div><strong id="unlocked-count">6 / 20</strong><span class="stat-note">A growing collection</span></div>
+      <div class="stat-card dark"><div class="stat-heading"><span class="stat-icon" aria-hidden="true">ϟ</span>Session streak</div><strong id="session-streak">0</strong><span class="stat-note">Keep the connection going</span></div>
+    </section>
+    <div class="workspace">
+      <section id="practice" class="practice" aria-label="Exercise">
+        <div class="toolbar"><label>Practice<select id="mode"><option value="visual">Word → symbol</option><option value="listen">Audio → symbol</option><option value="sound">Symbol → audio</option></select></label><label>Language<select id="language"><option value="all">All languages</option><option value="en">English</option><option value="fr">French</option><option value="de">German</option></select></label></div>
+        <div id="exercise"></div>
+        <div id="feedback" role="status" aria-live="polite"></div>
+        <button id="next" class="primary" hidden>Next sound <span aria-hidden="true">↗</span></button>
+        <p class="hint" id="hint"></p>
+      </section>
+      <aside id="collection-panel" aria-label="Sound collection">
+        <div class="panel-heading"><h2>Your collection</h2><span class="panel-symbol" aria-hidden="true">◈</span></div>
+        <progress id="progress" max="20" value="0" aria-label="Sounds learned"></progress>
+        <div id="collection" class="collection"></div>
+        <p class="aside-note">Learn a sound. Unlock the next.</p>
+        <button id="reset" class="text-button">Reset progress</button>
+      </aside>
+      <section id="explore" class="explore" aria-label="Explore sounds">
+        <div class="panel-heading"><h2>Sound notes</h2><span class="panel-symbol" aria-hidden="true">↗</span></div>
+        <div id="detail"></div>
+      </section>
+    </div>
+    <footer><span>IPA Lab · English, French &amp; German</span><button id="credits-toggle" class="text-button" aria-expanded="false" aria-controls="credits">Audio &amp; credits</button></footer>
+    <section id="credits" hidden></section>
+  </main>
+</div>
+<script type="module" src="web/app.js?v=8"></script>
+</body>
+</html>

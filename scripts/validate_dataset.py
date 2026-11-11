@@ -17,6 +17,7 @@ REQUIRED_FIELDS = {
     "kind",
     "example_word",
     "word_ipa",
+    "definition",
     "audio",
     "confusers",
     "note",
@@ -42,6 +43,9 @@ def validate_entry(
     if missing:
         errors.append(f"[{index}] missing fields: {sorted(missing)}")
         return
+
+    if not isinstance(entry["definition"], str) or not entry["definition"].strip():
+        errors.append(f"[{index}] definition must be a nonempty string")
 
     if entry["language"] not in VALID_LANGUAGES:
         errors.append(f"[{index}] invalid language: {entry['language']}")

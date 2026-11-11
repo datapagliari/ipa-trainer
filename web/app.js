@@ -1,4 +1,4 @@
-import {segments,shuffle,chooseWeighted,recordAnswer,symbolOptions,nextSessionStreak,unlockedIds} from './core.mjs?v=6';
+import {segments,shuffle,chooseWeighted,recordAnswer,symbolOptions,nextSessionStreak,unlockedIds} from './core.mjs?v=8';
 const $=id=>document.getElementById(id), key='ipa-lab-progress-v1';
 const languages={en:'English',fr:'French',de:'German'};
 let config={},symbolAudio={},sounds=[],manifest={},progress={},question=null,answered=false,playing=null,storageOK=true,sessionStreak=0;
@@ -10,13 +10,13 @@ function playFile(audio){stopAudio();playing=new Audio(audio);playing.play().cat
 function play(sound){playFile(manifest[sound.id].audio);}
 function audioButton(sound,label='▶ Play word'){const b=el('button',label,'audio-button');b.onclick=()=>play(sound);return b;}
 function highlighted(sound){const [start,end]=segments[sound.id];const word=el('div',undefined,'word');word.append(document.createTextNode(sound.example_word.slice(0,start)),el('mark',sound.example_word.slice(start,end)),document.createTextNode(sound.example_word.slice(end)));return word;}
-function showDetail(sound){const box=$('detail');box.replaceChildren();const heading=el('div');heading.append(el('span','/'+sound.symbol+'/','detail-symbol'),el('span',sound.example_word,'detail-word'));box.append(el('p',languages[sound.language],'eyebrow'),heading,el('p',sound.note,'detail-note'),el('p','Full word: /'+sound.word_ipa+'/'));
+function showDetail(sound){const box=$('detail');box.replaceChildren();const heading=el('div');heading.append(el('span','/'+sound.symbol+'/','detail-symbol'),el('span',sound.example_word,'detail-word'));box.append(el('p',languages[sound.language],'eyebrow'),heading,el('p',sound.note,'detail-note'),el('p','Full word: /'+sound.word_ipa+'/'));if(sound.definition){const meaning=el('p',undefined,'definition');meaning.append(el('strong','Meaning: '),document.createTextNode(sound.definition));box.append(meaning);}
  if(manifest[sound.id]){box.append(audioButton(sound));}else box.append(el('span','Audio pending','pending'));
  document.querySelectorAll('.tile').forEach(b=>b.classList.toggle('selected',b.dataset.id===sound.id));}
 function renderProgress(){
  const unlocked=unlockedIds(sounds,progress,config);
  const count=sounds.filter(s=>progress[s.id]?.streak>=3).length;
- $('mastered').textContent=count+' / '+sounds.length;$('progress').value=count;$('progress').max=sounds.length;
+ $('mastered').textContent=count+' / '+sounds.length;$('unlocked-count').textContent=unlocked.size+' / '+sounds.length;$('session-streak').textContent=sessionStreak;$('progress').value=count;$('progress').max=sounds.length;
  $('collection').replaceChildren();
  for(const sound of sounds){
   const locked=!unlocked.has(sound.id),approved=progress[sound.id]?.streak>=3;
@@ -50,6 +50,8 @@ function renderCredits(){const box=$('credits');box.append(el('h2','Recordings a
 }
 $('mode').onchange=newQuestion;$('language').onchange=newQuestion;$('next').onclick=newQuestion;
 $('reset').onclick=()=>{if(confirm('Clear progress in this browser?')){progress={};sessionStreak=0;save();renderProgress();newQuestion();}};
-$('credits-toggle').onclick=()=>{$('credits').hidden=!$('credits').hidden;};
+$('credits-toggle').onclick=()=>{$('credits').hidden=!$('credits').hidden;$('credits-toggle').setAttribute('aria-expanded',String(!$('credits').hidden));};
 document.addEventListener('keydown',e=>{if(['SELECT','INPUT','BUTTON'].includes(document.activeElement.tagName))return;if(/^[1-4]$/.test(e.key)&&!answered){const b=document.querySelectorAll('.option')[Number(e.key)-1];b?.click();}else if(e.key==='Enter'&&answered)newQuestion();});
 try{const responses=await Promise.all([fetch('dataset/sounds.json',{cache:'no-store'}),fetch('dataset/audio_manifest.json',{cache:'no-store'}),fetch('dataset/config.json',{cache:'no-store'}),fetch('dataset/symbol_audio.json',{cache:'no-store'})]);if(responses.some(r=>!r.ok))throw Error('dataset');[sounds,manifest,config,symbolAudio]=await Promise.all(responses.map(r=>r.json()));renderProgress();renderCredits();newQuestion();}catch{$('exercise').append(el('p','Unable to load the data. Run start.cmd and check the server output.','empty'));}
+
+document.querySelectorAll('.rail-link').forEach(link=>link.addEventListener('click',()=>{document.querySelectorAll('.rail-link').forEach(item=>item.classList.toggle('active',item===link));}));

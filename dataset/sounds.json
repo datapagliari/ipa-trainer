@@ -14,7 +14,8 @@
     ],
     "note": "English SH, also found in French chat and German schön.",
     "source_url": "",
-    "license": ""
+    "license": "",
+    "definition": "A large boat used to carry people or goods over water."
   },
   {
     "id": "en_tesh_chip",
@@ -31,7 +32,8 @@
     ],
     "note": "CH as in chip. A voiceless affricate.",
     "source_url": "",
-    "license": ""
+    "license": "",
+    "definition": "A small piece broken off a larger object."
   },
   {
     "id": "en_dzh_judge",
@@ -48,7 +50,8 @@
     ],
     "note": "English J. A voiced affricate.",
     "source_url": "",
-    "license": ""
+    "license": "",
+    "definition": "A person who makes official decisions in a court of law."
   },
   {
     "id": "en_theta_thin",
@@ -65,7 +68,8 @@
     ],
     "note": "Voiceless TH. The vocal folds do not vibrate.",
     "source_url": "https://commons.wikimedia.org/wiki/File:En-us-thin.ogg",
-    "license": "Public domain"
+    "license": "Public domain",
+    "definition": "Having little distance between opposite sides; not thick."
   },
   {
     "id": "en_eth_this",
@@ -82,7 +86,8 @@
     ],
     "note": "Voiced TH. The vocal folds vibrate.",
     "source_url": "",
-    "license": ""
+    "license": "",
+    "definition": "Used to refer to a particular person or thing that is nearby."
   },
   {
     "id": "en_ih_ship",
@@ -99,7 +104,8 @@
     ],
     "note": "The short vowel in ship. Contrast it with /iː/ in sheep.",
     "source_url": "",
-    "license": ""
+    "license": "",
+    "definition": "A large boat used to carry people or goods over water."
   },
   {
     "id": "en_ee_sheep",
@@ -116,7 +122,8 @@
     ],
     "note": "The long vowel in sheep. A key contrast with /ɪ/.",
     "source_url": "",
-    "license": ""
+    "license": "",
+    "definition": "A farm animal kept for its wool, milk, or meat."
   },
   {
     "id": "en_ae_cat",
@@ -133,7 +140,8 @@
     ],
     "note": "The near-open front vowel in English cat.",
     "source_url": "",
-    "license": ""
+    "license": "",
+    "definition": "A small animal with soft fur, often kept as a pet."
   },
   {
     "id": "en_ah_cut",
@@ -150,7 +158,8 @@
     ],
     "note": "The vowel conventionally transcribed /ʌ/ in English cut.",
     "source_url": "",
-    "license": ""
+    "license": "",
+    "definition": "To divide or make an opening in something with a sharp edge."
   },
   {
     "id": "en_schwa_about",
@@ -167,7 +176,8 @@
     ],
     "note": "Schwa, a very common unstressed vowel in English.",
     "source_url": "",
-    "license": ""
+    "license": "",
+    "definition": "On the subject of; concerning something."
   },
   {
     "id": "fr_y_tu",
@@ -184,7 +194,8 @@
     ],
     "note": "Close front rounded vowel. Think of /i/ with the lips rounded for /u/.",
     "source_url": "https://commons.wikimedia.org/wiki/File:Fr-tu.ogg",
-    "license": "CC BY 2.0 fr"
+    "license": "CC BY 2.0 fr",
+    "definition": "You: used when speaking informally to one person."
   },
   {
     "id": "fr_o_deux",
@@ -201,7 +212,8 @@
     ],
     "note": "Close-mid front rounded vowel, also found in German schön.",
     "source_url": "",
-    "license": ""
+    "license": "",
+    "definition": "Two: the number after one and before three."
   },
   {
     "id": "fr_oe_soeur",
@@ -218,7 +230,8 @@
     ],
     "note": "Open-mid front rounded vowel, also found in German können.",
     "source_url": "",
-    "license": ""
+    "license": "",
+    "definition": "Sister: a female sibling."
   },
   {
     "id": "fr_nasal_a_sans",
@@ -235,7 +248,8 @@
     ],
     "note": "Nasal /ɑ̃/. Air flows through the nose throughout the vowel.",
     "source_url": "",
-    "license": ""
+    "license": "",
+    "definition": "Without: not having or including something."
   },
   {
     "id": "fr_nasal_e_vin",
@@ -252,7 +266,8 @@
     ],
     "note": "The nasal vowel /ɛ̃/.",
     "source_url": "",
-    "license": ""
+    "license": "",
+    "definition": "Wine: an alcoholic drink made from fermented grapes."
   },
   {
     "id": "fr_nasal_o_bon",
@@ -269,7 +284,8 @@
     ],
     "note": "The nasal vowel /ɔ̃/.",
     "source_url": "",
-    "license": ""
+    "license": "",
+    "definition": "Good: of a pleasing or satisfactory quality."
   },
   {
     "id": "de_ich_ch",
@@ -286,7 +302,8 @@
     ],
     "note": "Soft German CH. Contrast it with /x/ in Bach.",
     "source_url": "https://commons.wikimedia.org/wiki/File:De-Ich.ogg",
-    "license": "CC BY-SA 4.0"
+    "license": "CC BY-SA 4.0",
+    "definition": "I: the pronoun used by a speaker to refer to themselves."
   },
   {
     "id": "de_bach_x",
@@ -303,7 +320,8 @@
     ],
     "note": "The back German CH (velar), found after a, o, or u.",
     "source_url": "",
-    "license": ""
+    "license": "",
+    "definition": "A stream: a small, naturally flowing body of water."
   },
   {
     "id": "de_ts_zeit",
@@ -320,7 +338,8 @@
     ],
     "note": "The affricate /ts/ at the start of Zeit.",
     "source_url": "",
-    "license": ""
+    "license": "",
+    "definition": "Time: the passing of moments, or a period of time."
   },
   {
     "id": "de_pf_pferd",
@@ -337,6 +356,7 @@
     ],
     "note": "The affricate /pf/ at the start of Pferd.",
     "source_url": "https://commons.wikimedia.org/wiki/File:De-Pferd.ogg",
-    "license": "CC BY-SA 3.0"
+    "license": "CC BY-SA 3.0",
+    "definition": "Horse: a large four-legged animal used for riding or pulling loads."
   }
 ]

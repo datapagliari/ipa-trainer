@@ -1,0 +1,11 @@
+venv/
+.venv/
+__pycache__/
+data/user_progress.json
+audio/**/*.ogg
+audio/**/*.wav
+audio/**/*.mp3
+.env
+.env.*
+node_modules/
+*.py[cod]

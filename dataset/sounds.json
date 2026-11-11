@@ -1,0 +1,342 @@
+[
+  {
+    "id": "en_esh_ship",
+    "language": "en",
+    "symbol": "ʃ",
+    "kind": "consonant",
+    "example_word": "ship",
+    "word_ipa": "ʃɪp",
+    "audio": "audio/en/ship__esh.ogg",
+    "confusers": [
+      "s",
+      "tʃ",
+      "ʒ"
+    ],
+    "note": "SH inglesa. También aparece en francés (chat) y alemán (schön).",
+    "source_url": "",
+    "license": ""
+  },
+  {
+    "id": "en_tesh_chip",
+    "language": "en",
+    "symbol": "tʃ",
+    "kind": "affricate",
+    "example_word": "chip",
+    "word_ipa": "tʃɪp",
+    "audio": "audio/en/chip__tesh.ogg",
+    "confusers": [
+      "ʃ",
+      "dʒ",
+      "ts"
+    ],
+    "note": "CH como en chip. Africada sorda.",
+    "source_url": "",
+    "license": ""
+  },
+  {
+    "id": "en_dzh_judge",
+    "language": "en",
+    "symbol": "dʒ",
+    "kind": "affricate",
+    "example_word": "judge",
+    "word_ipa": "dʒʌdʒ",
+    "audio": "audio/en/judge__dezh.ogg",
+    "confusers": [
+      "tʃ",
+      "ʒ",
+      "d"
+    ],
+    "note": "J inglesa. Africada sonora.",
+    "source_url": "",
+    "license": ""
+  },
+  {
+    "id": "en_theta_thin",
+    "language": "en",
+    "symbol": "θ",
+    "kind": "consonant",
+    "example_word": "thin",
+    "word_ipa": "θɪn",
+    "audio": "audio/en/thin__theta.ogg",
+    "confusers": [
+      "s",
+      "f",
+      "t"
+    ],
+    "note": "TH sorda. No vibra la garganta.",
+    "source_url": "https://commons.wikimedia.org/wiki/File:En-us-thin.ogg",
+    "license": "Public domain"
+  },
+  {
+    "id": "en_eth_this",
+    "language": "en",
+    "symbol": "ð",
+    "kind": "consonant",
+    "example_word": "this",
+    "word_ipa": "ðɪs",
+    "audio": "audio/en/this__eth.ogg",
+    "confusers": [
+      "d",
+      "z",
+      "v"
+    ],
+    "note": "TH sonora. Vibra la garganta.",
+    "source_url": "",
+    "license": ""
+  },
+  {
+    "id": "en_ih_ship",
+    "language": "en",
+    "symbol": "ɪ",
+    "kind": "vowel",
+    "example_word": "ship",
+    "word_ipa": "ʃɪp",
+    "audio": "audio/en/ship__ih.ogg",
+    "confusers": [
+      "iː",
+      "e",
+      "ə"
+    ],
+    "note": "Vocal corta inglesa. No confundir con /iː/ de sheep.",
+    "source_url": "",
+    "license": ""
+  },
+  {
+    "id": "en_ee_sheep",
+    "language": "en",
+    "symbol": "iː",
+    "kind": "vowel",
+    "example_word": "sheep",
+    "word_ipa": "ʃiːp",
+    "audio": "audio/en/sheep__ee.ogg",
+    "confusers": [
+      "ɪ",
+      "i",
+      "e"
+    ],
+    "note": "Vocal larga inglesa. Contraste clave con /ɪ/.",
+    "source_url": "",
+    "license": ""
+  },
+  {
+    "id": "en_ae_cat",
+    "language": "en",
+    "symbol": "æ",
+    "kind": "vowel",
+    "example_word": "cat",
+    "word_ipa": "kæt",
+    "audio": "audio/en/cat__ae.ogg",
+    "confusers": [
+      "ɛ",
+      "ʌ",
+      "a"
+    ],
+    "note": "Vocal abierta frontal inglesa.",
+    "source_url": "",
+    "license": ""
+  },
+  {
+    "id": "en_ah_cut",
+    "language": "en",
+    "symbol": "ʌ",
+    "kind": "vowel",
+    "example_word": "cut",
+    "word_ipa": "kʌt",
+    "audio": "audio/en/cut__ah.ogg",
+    "confusers": [
+      "æ",
+      "ə",
+      "ɔ"
+    ],
+    "note": "Vocal central abierta inglesa.",
+    "source_url": "",
+    "license": ""
+  },
+  {
+    "id": "en_schwa_about",
+    "language": "en",
+    "symbol": "ə",
+    "kind": "vowel",
+    "example_word": "about",
+    "word_ipa": "əˈbaʊt",
+    "audio": "audio/en/about__schwa.ogg",
+    "confusers": [
+      "ʌ",
+      "ɪ",
+      "e"
+    ],
+    "note": "Schwa. Vocal neutra muy común en inglés.",
+    "source_url": "",
+    "license": ""
+  },
+  {
+    "id": "fr_y_tu",
+    "language": "fr",
+    "symbol": "y",
+    "kind": "vowel",
+    "example_word": "tu",
+    "word_ipa": "ty",
+    "audio": "audio/fr/tu__close_front_rounded.ogg",
+    "confusers": [
+      "i",
+      "u",
+      "ø"
+    ],
+    "note": "Vocal cerrada anterior redondeada. Pensala como /i/ con labios de /u/.",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fr-tu.ogg",
+    "license": "CC BY 2.0 fr"
+  },
+  {
+    "id": "fr_o_deux",
+    "language": "fr",
+    "symbol": "ø",
+    "kind": "vowel",
+    "example_word": "deux",
+    "word_ipa": "dø",
+    "audio": "audio/fr/deux__close_mid_rounded.ogg",
+    "confusers": [
+      "œ",
+      "o",
+      "y"
+    ],
+    "note": "Vocal media cerrada redondeada. También en alemán (schön).",
+    "source_url": "",
+    "license": ""
+  },
+  {
+    "id": "fr_oe_soeur",
+    "language": "fr",
+    "symbol": "œ",
+    "kind": "vowel",
+    "example_word": "sœur",
+    "word_ipa": "sœʁ",
+    "audio": "audio/fr/soeur__open_mid_rounded.ogg",
+    "confusers": [
+      "ø",
+      "ɔ",
+      "ə"
+    ],
+    "note": "Vocal media abierta redondeada. Similar a ö alemán.",
+    "source_url": "",
+    "license": ""
+  },
+  {
+    "id": "fr_nasal_a_sans",
+    "language": "fr",
+    "symbol": "ɑ̃",
+    "kind": "vowel",
+    "example_word": "sans",
+    "word_ipa": "sɑ̃",
+    "audio": "audio/fr/sans__nasal_a.ogg",
+    "confusers": [
+      "ɑ",
+      "ɔ",
+      "ɛ̃"
+    ],
+    "note": "Vocal nasal /ɑ̃/. La nariz participa en toda la vocal.",
+    "source_url": "",
+    "license": ""
+  },
+  {
+    "id": "fr_nasal_e_vin",
+    "language": "fr",
+    "symbol": "ɛ̃",
+    "kind": "vowel",
+    "example_word": "vin",
+    "word_ipa": "vɛ̃",
+    "audio": "audio/fr/vin__nasal_e.ogg",
+    "confusers": [
+      "ɛ",
+      "æ",
+      "ɔ̃"
+    ],
+    "note": "Vocal nasal /ɛ̃/.",
+    "source_url": "",
+    "license": ""
+  },
+  {
+    "id": "fr_nasal_o_bon",
+    "language": "fr",
+    "symbol": "ɔ̃",
+    "kind": "vowel",
+    "example_word": "bon",
+    "word_ipa": "bɔ̃",
+    "audio": "audio/fr/bon__nasal_o.ogg",
+    "confusers": [
+      "ɔ",
+      "o",
+      "ɑ̃"
+    ],
+    "note": "Vocal nasal /ɔ̃/.",
+    "source_url": "",
+    "license": ""
+  },
+  {
+    "id": "de_ich_ch",
+    "language": "de",
+    "symbol": "ç",
+    "kind": "consonant",
+    "example_word": "ich",
+    "word_ipa": "ɪç",
+    "audio": "audio/de/ich__palatal_fricative.ogg",
+    "confusers": [
+      "ʃ",
+      "x",
+      "h"
+    ],
+    "note": "CH suave alemán. No confundir con /x/ de Bach.",
+    "source_url": "https://commons.wikimedia.org/wiki/File:De-Ich.ogg",
+    "license": "CC BY-SA 4.0"
+  },
+  {
+    "id": "de_bach_x",
+    "language": "de",
+    "symbol": "x",
+    "kind": "consonant",
+    "example_word": "Bach",
+    "word_ipa": "bax",
+    "audio": "audio/de/bach__velar_fricative.ogg",
+    "confusers": [
+      "ç",
+      "h",
+      "k"
+    ],
+    "note": "CH fuerte alemán (velar). Posterior a a/o/u.",
+    "source_url": "",
+    "license": ""
+  },
+  {
+    "id": "de_ts_zeit",
+    "language": "de",
+    "symbol": "ts",
+    "kind": "affricate",
+    "example_word": "Zeit",
+    "word_ipa": "tsaɪt",
+    "audio": "audio/de/zeit__ts.ogg",
+    "confusers": [
+      "tʃ",
+      "s",
+      "z"
+    ],
+    "note": "Africada /ts/ al inicio de Zeit.",
+    "source_url": "",
+    "license": ""
+  },
+  {
+    "id": "de_pf_pferd",
+    "language": "de",
+    "symbol": "pf",
+    "kind": "affricate",
+    "example_word": "Pferd",
+    "word_ipa": "pfeːɐ̯t",
+    "audio": "audio/de/pferd__pf.ogg",
+    "confusers": [
+      "f",
+      "p",
+      "b"
+    ],
+    "note": "Africada /pf/ al inicio de Pferd.",
+    "source_url": "https://commons.wikimedia.org/wiki/File:De-Pferd.ogg",
+    "license": "CC BY-SA 3.0"
+  }
+]

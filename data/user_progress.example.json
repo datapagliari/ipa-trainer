@@ -1,0 +1,20 @@
+{
+  "en_theta_thin": {
+    "status": "active",
+    "correct_streak": 0,
+    "wrong_count": 0,
+    "weight_multiplier": 1.0
+  },
+  "en_esh_ship": {
+    "status": "approved",
+    "correct_streak": 3,
+    "wrong_count": 0,
+    "weight_multiplier": 0.5
+  },
+  "fr_nasal_a_sans": {
+    "status": "locked",
+    "correct_streak": 0,
+    "wrong_count": 0,
+    "weight_multiplier": 0.0
+  }
+}

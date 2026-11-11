@@ -1,0 +1,20 @@
+{
+  "ʃ": {
+    "audio": "audio/phonemes/voiceless_palato-alveolar_sibilant.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Voiceless_palato-alveolar_sibilant.ogg",
+    "author": "Peter Isotalo",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "Ninguno",
+    "listening_validated": false
+  },
+  "θ": {
+    "audio": "audio/phonemes/voiceless_dental_fricative.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Voiceless_dental_fricative.ogg",
+    "author": "",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "Ninguno",
+    "listening_validated": false
+  }
+}

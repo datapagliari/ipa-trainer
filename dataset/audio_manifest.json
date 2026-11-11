@@ -1,0 +1,38 @@
+{
+  "en_theta_thin": {
+    "audio": "audio/en/thin__theta.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:En-us-thin.ogg",
+    "author": "Muke",
+    "license": "Public domain",
+    "license_url": "",
+    "changes": "Ninguno",
+    "listening_validated": false
+  },
+  "fr_y_tu": {
+    "audio": "audio/fr/tu__close_front_rounded.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fr-tu.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "Ninguno",
+    "listening_validated": false
+  },
+  "de_ich_ch": {
+    "audio": "audio/de/ich__palatal_fricative.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:De-Ich.ogg",
+    "author": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "Ninguno",
+    "listening_validated": false
+  },
+  "de_pf_pferd": {
+    "audio": "audio/de/pferd__pf.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:De-Pferd.ogg",
+    "author": "Kampy",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "changes": "Ninguno",
+    "listening_validated": false
+  }
+}

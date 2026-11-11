@@ -1,0 +1,27 @@
+{
+  "initial_active_count": 6,
+  "approval_streak": 3,
+  "approved_weight_multiplier": 0.5,
+  "unlock_order": [
+    "en_esh_ship",
+    "en_theta_thin",
+    "en_ih_ship",
+    "fr_y_tu",
+    "de_ich_ch",
+    "de_pf_pferd",
+    "en_tesh_chip",
+    "en_dzh_judge",
+    "en_eth_this",
+    "en_ee_sheep",
+    "en_ae_cat",
+    "en_ah_cut",
+    "en_schwa_about",
+    "fr_o_deux",
+    "fr_oe_soeur",
+    "fr_nasal_a_sans",
+    "fr_nasal_e_vin",
+    "fr_nasal_o_bon",
+    "de_bach_x",
+    "de_ts_zeit"
+  ]
+}

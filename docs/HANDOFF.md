@@ -82,33 +82,20 @@ Four local word recordings: thin, tu, Ich, Pferd. Two phonetic demonstrations: /
 - Visual and listening practice currently share progress. Limited word recordings allow memorization; learned is a game state, not verified lasting mastery.
 - Before adding more word-audio options, validate the actual sounds in each word: a word can contain several target sounds. Filtering candidates only by their target symbol does not guarantee an unambiguous question.
 
-## Next task: ROADMAP Stage 1
+## Current continuation point
 
-Separate learning targets from examples before a larger audio download effort.
+Stage 1 is implemented locally. The earlier sections describe the pre-migration baseline.
+Use the current README for file roles and storage keys. The target catalog has 20
+stable IDs and 21 examples. The extra visual example, *shoe*, shares /ʃ/ with *ship*.
+The old entries map one-to-one through `dataset/legacy_targets.json`. No streaks
+are combined. The original v1 save remains available after writing v2.
 
-Recommended sequence:
+Word recording records live in `audio_manifest.json`. Entries marked
+`available: false` reserve a path for a pending recording and do not enable
+audio practice. A null example recording reference also means audio is pending.
+Phonetic previews use `symbol_audio.json`, with a nullable supporting-vowels flag.
 
-1. Inventory the current 20 records and define explicit target IDs, including compound objectives (long vowels, nasal vowels, affricates).
-2. Propose the minimal schema for targets, examples, chapters, and audio records. Keep original example words, definitions, transcriptions, and highlights.
-3. Implement loading and rendering through the new model. Select a target first, then an eligible example, so additional examples do not increase target frequency.
-4. Add progress backup and migration preserving availability, learned status, and one-time unlock rewards. Keep the current save readable until migration succeeds.
-5. Verify that all existing modes still work, saved progress is preserved, and adding a second word for one symbol neither duplicates rewards nor changes weighting.
-6. Update the README and handoff with the actual new schema and migration behavior.
-
-Then start Stage 2: inventory and complete every word, target sound, and distractor recording for the six-target starter chapter. Later stages complete the 20-target chapter, expand through core IPA symbols, and add diacritics and prosody. Do not attempt the whole inventory at once.
-
-## Verification at handoff
-
-```powershell
-node scripts/test_game.mjs
-node --check web/app.js
-python scripts/validate_dataset.py
-```
-
-The tests require the local audio files, so they may fail on a fresh clone until fixtures are restored. They cover target/session streaks, resets, weighting, unlocks, legacy availability, written segments, distractors, and Ogg headers. Added checks explicitly establish equal initial weights, the 1:3 learned/unlearned weighting, restored weight after a mistake, and disabling the reduction.
-
-At handoff these commands passed; the dataset validator emitted 32 expected warnings for missing audio and empty source URLs. The previous dashboard was checked in desktop and mobile layouts, and its menus/audio/credits were exercised. The latest one-third selection rule has automated checks. The learned badge is implemented in the renderer and CSS; a fresh browser check of that badge and phonetic listening review remain pending.
-
-## Suggested continuation prompt
-
-Continue IPA Lab from docs/HANDOFF.md and docs/ROADMAP.md. Implement Stage 1: separate learning targets from examples and audio metadata, preserving the current UI and saved browser progress. Keep the agreed three-answer learning rule, one-third review weight, and permanent one-time unlock rewards. Keep all repository and game text in English, work locally, and run the relevant regression checks. Do not publish, push, force-add audio, or reset user progress without a new instruction.
+Next implement Stage 2 in ROADMAP.md. Inventory all recordings needed by the six
+starter targets, including distractors. Repair restoration on a fresh clone,
+review attribution and listen to each recording. Keep local audio outside Git.
+Run the game tests and dataset validator as documented in the README.

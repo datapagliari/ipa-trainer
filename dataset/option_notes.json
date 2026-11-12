@@ -1,0 +1,135 @@
+{
+  "s": {
+    "language": "en",
+    "example_word": "sip",
+    "word_ipa": "sɪp",
+    "note": "Air hisses through a narrow passage behind the teeth.",
+    "definition": "To drink a small amount."
+  },
+  "ʒ": {
+    "language": "fr",
+    "example_word": "jour",
+    "word_ipa": "ʒuʁ",
+    "note": "Like /ʃ/ with the vocal folds vibrating.",
+    "definition": "Day."
+  },
+  "d": {
+    "language": "en",
+    "example_word": "dog",
+    "word_ipa": "dɒɡ",
+    "note": "The tongue briefly closes the airflow behind the upper teeth.",
+    "definition": "A domesticated canine."
+  },
+  "f": {
+    "language": "en",
+    "example_word": "fin",
+    "word_ipa": "fɪn",
+    "note": "Air passes between the lower lip and upper teeth.",
+    "definition": "A body part a fish uses for swimming."
+  },
+  "t": {
+    "language": "en",
+    "example_word": "ten",
+    "word_ipa": "tɛn",
+    "note": "The tongue releases a brief closure behind the upper teeth.",
+    "definition": "The number after nine."
+  },
+  "z": {
+    "language": "en",
+    "example_word": "zoo",
+    "word_ipa": "zuː",
+    "note": "A hiss like /s/ with vibration in the throat.",
+    "definition": "A place where animals are kept for visitors."
+  },
+  "v": {
+    "language": "en",
+    "example_word": "vet",
+    "word_ipa": "vɛt",
+    "note": "Like /f/ with the vocal folds vibrating.",
+    "definition": "A doctor who treats animals."
+  },
+  "e": {
+    "language": "fr",
+    "example_word": "été",
+    "word_ipa": "ete",
+    "note": "A close-mid front vowel with unrounded lips.",
+    "definition": "Summer."
+  },
+  "i": {
+    "language": "fr",
+    "example_word": "si",
+    "word_ipa": "si",
+    "note": "A close front vowel with unrounded lips.",
+    "definition": "If."
+  },
+  "ɛ": {
+    "language": "fr",
+    "example_word": "sel",
+    "word_ipa": "sɛl",
+    "note": "The mouth is more open than for /e/.",
+    "definition": "Salt."
+  },
+  "a": {
+    "language": "fr",
+    "example_word": "patte",
+    "word_ipa": "pat",
+    "note": "An open vowel with unrounded lips.",
+    "definition": "An animal’s paw."
+  },
+  "ɔ": {
+    "language": "fr",
+    "example_word": "porte",
+    "word_ipa": "pɔʁt",
+    "note": "An open-mid back vowel with rounded lips.",
+    "definition": "Door."
+  },
+  "u": {
+    "language": "fr",
+    "example_word": "roue",
+    "word_ipa": "ʁu",
+    "note": "The tongue is high and back and the lips are rounded.",
+    "definition": "Wheel."
+  },
+  "o": {
+    "language": "fr",
+    "example_word": "eau",
+    "word_ipa": "o",
+    "note": "A close-mid back vowel with rounded lips.",
+    "definition": "Water."
+  },
+  "ɑ": {
+    "language": "en",
+    "example_word": "father",
+    "word_ipa": "ˈfɑðɚ",
+    "note": "An open back vowel with unrounded lips in this American pronunciation.",
+    "definition": "A male parent."
+  },
+  "h": {
+    "language": "en",
+    "example_word": "hat",
+    "word_ipa": "hæt",
+    "note": "Air flows freely through the open glottis.",
+    "definition": "A covering for the head."
+  },
+  "k": {
+    "language": "en",
+    "example_word": "key",
+    "word_ipa": "kiː",
+    "note": "The back of the tongue briefly touches the soft palate.",
+    "definition": "A small tool for opening a lock."
+  },
+  "p": {
+    "language": "en",
+    "example_word": "pen",
+    "word_ipa": "pɛn",
+    "note": "Air is released after both lips close.",
+    "definition": "A tool for writing with ink."
+  },
+  "b": {
+    "language": "en",
+    "example_word": "bin",
+    "word_ipa": "bɪn",
+    "note": "Both lips close to make this voiced stop.",
+    "definition": "A container for storage or waste."
+  }
+}

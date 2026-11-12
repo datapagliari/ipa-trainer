@@ -1,0 +1,22 @@
+{
+  "en_esh_ship": "esh",
+  "en_tesh_chip": "tesh",
+  "en_dzh_judge": "dezh",
+  "en_theta_thin": "theta",
+  "en_eth_this": "eth",
+  "en_ih_ship": "small-cap-i",
+  "en_ee_sheep": "long-i",
+  "en_ae_cat": "ash",
+  "en_ah_cut": "wedge",
+  "en_schwa_about": "schwa",
+  "fr_y_tu": "close-front-rounded",
+  "fr_o_deux": "close-mid-front-rounded",
+  "fr_oe_soeur": "open-mid-front-rounded",
+  "fr_nasal_a_sans": "nasal-open-back",
+  "fr_nasal_e_vin": "nasal-open-mid-front",
+  "fr_nasal_o_bon": "nasal-open-mid-back",
+  "de_ich_ch": "palatal-fricative",
+  "de_bach_x": "velar-fricative",
+  "de_ts_zeit": "ts-affricate",
+  "de_pf_pferd": "pf-affricate"
+}

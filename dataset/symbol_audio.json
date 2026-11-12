@@ -6,7 +6,8 @@
     "license": "CC BY-SA 3.0",
     "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
     "changes": "None",
-    "listening_validated": false
+    "listening_validated": false,
+    "supporting_vowels": null
   },
   "θ": {
     "audio": "audio/phonemes/voiceless_dental_fricative.ogg",
@@ -15,6 +16,7 @@
     "license": "CC BY-SA 3.0",
     "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
     "changes": "None",
-    "listening_validated": false
+    "listening_validated": false,
+    "supporting_vowels": true
   }
 }

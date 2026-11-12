@@ -1,11 +1,3 @@
-export const segments = {
- en_esh_ship:[0,2,'initial consonant'], en_tesh_chip:[0,2,'initial consonant'], en_dzh_judge:[0,1,'initial consonant'],
- en_theta_thin:[0,2,'initial consonant'], en_eth_this:[0,2,'initial consonant'], en_ih_ship:[2,3,'vowel'],
- en_ee_sheep:[2,4,'vowel'], en_ae_cat:[1,2,'vowel'], en_ah_cut:[1,2,'vowel'], en_schwa_about:[0,1,'initial vowel'],
- fr_y_tu:[1,2,'vowel'], fr_o_deux:[1,3,'vowel'], fr_oe_soeur:[1,2,'vowel'], fr_nasal_a_sans:[1,3,'nasal vowel'],
- fr_nasal_e_vin:[1,3,'nasal vowel'], fr_nasal_o_bon:[1,3,'nasal vowel'], de_ich_ch:[1,3,'final consonant'],
- de_bach_x:[2,4,'final consonant'], de_ts_zeit:[0,1,'initial consonant'], de_pf_pferd:[0,2,'initial consonant']
-};
 export function shuffle(items, random=Math.random){return [...items].map(v=>({v,n:random()})).sort((a,b)=>a.n-b.n).map(x=>x.v);}
 export function chooseWeighted(items, progress, random=Math.random, learnedWeight=1/3){
  const weights=items.map(s=>progress[s.id]?.streak>=3?learnedWeight:1);
@@ -30,4 +22,47 @@ export function unlockedIds(sounds,progress,config){
  let rewards=earned;
  for(const id of order){if(rewards>0&&!unlocked.has(id)){unlocked.add(id);rewards--;}}
  return unlocked;
+}
+
+// One pool entry per target, regardless of how many eligible words it has.
+export function practicePool(targets, examples, unlocked, language, recordings, mode) {
+ const pool = [];
+ for (const target of targets) {
+  if (!unlocked.has(target.id)) continue;
+  const eligible = examples.filter(example =>
+   example.target_id === target.id &&
+   (language === 'all' || example.language === language) &&
+   (mode === 'visual' || recordings[example.recording_id])
+  );
+  if (eligible.length) pool.push({...target, examples: eligible});
+ }
+ return pool;
+}
+
+export function withExample(target, random = Math.random) {
+ const example = target.examples[Math.floor(random() * target.examples.length)];
+ return {...example, ...target, exampleId: example.id};
+}
+
+export function migrateProgress(stored, legacyTargets) {
+ const progress = {};
+ for (const [oldId, id] of Object.entries(legacyTargets)) {
+  const record = stored[oldId];
+  if (!record || !['correct','wrong','streak'].every(key =>
+   Number.isInteger(record[key]) && record[key] >= 0)) continue;
+  progress[id] = {...record,
+   legacyUnlocked: Boolean(record.legacyUnlocked ||
+    (!record.unlockVersion && record.correct + record.wrong > 0)),
+   everApproved: Boolean(record.everApproved || record.streak >= 3)
+  };
+ }
+ return progress;
+}
+
+export const progressKey = 'ipa-lab-progress-v2';
+export function loadProgress(storage, legacyTargets) {
+ const current = storage.getItem(progressKey);
+ if (current !== null) return JSON.parse(current);
+ const previous = storage.getItem('ipa-lab-progress-v1');
+ return previous === null ? {} : migrateProgress(JSON.parse(previous), legacyTargets);
 }

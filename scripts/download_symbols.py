@@ -52,7 +52,7 @@ def main():
     raise ValueError('Not an Ogg file')
    audio='audio/phonemes/'+name.lower().replace(' ','_')+'.ogg'
    (ROOT/audio).write_bytes(data)
-   manifest[symbol]=dict(audio=audio,source_url=info['descriptionurl'],author=clean('Artist'),license=license_name,license_url=clean('LicenseUrl'),changes='None',listening_validated=False)
+   manifest[symbol]=dict(audio=audio,source_url=info['descriptionurl'],author=clean('Artist'),license=license_name,license_url=clean('LicenseUrl'),changes='None',listening_validated=False,supporting_vowels=None)
    path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
    print('OK:',name,flush=True)
   except HTTPError as exc:

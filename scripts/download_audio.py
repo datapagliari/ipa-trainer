@@ -19,16 +19,14 @@ def fetch(url):
 
 
 def main():
-    sounds = json.loads((ROOT / "dataset/sounds.json").read_text(encoding="utf-8"))
     manifest_path = ROOT / "dataset/audio_manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {}
-    for sound in sounds:
-        if sound["id"] not in SAMPLES:
-            continue
-        if sound["id"] in manifest and (ROOT / sound["audio"]).exists():
+    for recording_id, title in SAMPLES.items():
+        audio_path = manifest[recording_id]["audio"]
+        if manifest[recording_id].get("available", True) and (ROOT / audio_path).exists():
             continue
         try:
-            query = urlencode(dict(action="query", format="json", prop="imageinfo", iiprop="url|extmetadata", titles="File:" + SAMPLES[sound["id"]]))
+            query = urlencode(dict(action="query", format="json", prop="imageinfo", iiprop="url|extmetadata", titles="File:" + title))
             pages = json.loads(fetch("https://commons.wikimedia.org/w/api.php?" + query))["query"]["pages"]
             info = next(iter(pages.values()))["imageinfo"][0]
             meta = info["extmetadata"]
@@ -39,11 +37,11 @@ def main():
             content = fetch(info["url"])
             if not content.startswith(b"OggS"):
                 raise ValueError("The downloaded file is not Ogg")
-            (ROOT / sound["audio"]).write_bytes(content)
-            manifest[sound["id"]] = dict(audio=sound["audio"], source_url=info["descriptionurl"], author=clean("Artist"), license=license_name, license_url=clean("LicenseUrl"), changes="None", listening_validated=False)
-            print("Downloaded:", sound["id"], len(content), "bytes")
+            (ROOT / audio_path).write_bytes(content)
+            manifest[recording_id] = dict(audio=audio_path, source_url=info["descriptionurl"], author=clean("Artist"), license=license_name, license_url=clean("LicenseUrl"), changes="None", listening_validated=False)
+            print("Downloaded:", recording_id, len(content), "bytes")
         except Exception as exc:
-            print("Pending:", sound["id"], str(exc))
+            print("Pending:", recording_id, str(exc))
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 

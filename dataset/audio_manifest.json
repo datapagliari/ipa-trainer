@@ -34,5 +34,117 @@
     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "changes": "None",
     "listening_validated": false
+  },
+  "en_esh_ship": {
+    "audio": "audio/en/ship__esh.ogg",
+    "source_url": "",
+    "license": "",
+    "available": false,
+    "listening_validated": false
+  },
+  "en_tesh_chip": {
+    "audio": "audio/en/chip__tesh.ogg",
+    "source_url": "",
+    "license": "",
+    "available": false,
+    "listening_validated": false
+  },
+  "en_dzh_judge": {
+    "audio": "audio/en/judge__dezh.ogg",
+    "source_url": "",
+    "license": "",
+    "available": false,
+    "listening_validated": false
+  },
+  "en_eth_this": {
+    "audio": "audio/en/this__eth.ogg",
+    "source_url": "",
+    "license": "",
+    "available": false,
+    "listening_validated": false
+  },
+  "en_ih_ship": {
+    "audio": "audio/en/ship__ih.ogg",
+    "source_url": "",
+    "license": "",
+    "available": false,
+    "listening_validated": false
+  },
+  "en_ee_sheep": {
+    "audio": "audio/en/sheep__ee.ogg",
+    "source_url": "",
+    "license": "",
+    "available": false,
+    "listening_validated": false
+  },
+  "en_ae_cat": {
+    "audio": "audio/en/cat__ae.ogg",
+    "source_url": "",
+    "license": "",
+    "available": false,
+    "listening_validated": false
+  },
+  "en_ah_cut": {
+    "audio": "audio/en/cut__ah.ogg",
+    "source_url": "",
+    "license": "",
+    "available": false,
+    "listening_validated": false
+  },
+  "en_schwa_about": {
+    "audio": "audio/en/about__schwa.ogg",
+    "source_url": "",
+    "license": "",
+    "available": false,
+    "listening_validated": false
+  },
+  "fr_o_deux": {
+    "audio": "audio/fr/deux__close_mid_rounded.ogg",
+    "source_url": "",
+    "license": "",
+    "available": false,
+    "listening_validated": false
+  },
+  "fr_oe_soeur": {
+    "audio": "audio/fr/soeur__open_mid_rounded.ogg",
+    "source_url": "",
+    "license": "",
+    "available": false,
+    "listening_validated": false
+  },
+  "fr_nasal_a_sans": {
+    "audio": "audio/fr/sans__nasal_a.ogg",
+    "source_url": "",
+    "license": "",
+    "available": false,
+    "listening_validated": false
+  },
+  "fr_nasal_e_vin": {
+    "audio": "audio/fr/vin__nasal_e.ogg",
+    "source_url": "",
+    "license": "",
+    "available": false,
+    "listening_validated": false
+  },
+  "fr_nasal_o_bon": {
+    "audio": "audio/fr/bon__nasal_o.ogg",
+    "source_url": "",
+    "license": "",
+    "available": false,
+    "listening_validated": false
+  },
+  "de_bach_x": {
+    "audio": "audio/de/bach__velar_fricative.ogg",
+    "source_url": "",
+    "license": "",
+    "available": false,
+    "listening_validated": false
+  },
+  "de_ts_zeit": {
+    "audio": "audio/de/zeit__ts.ogg",
+    "source_url": "",
+    "license": "",
+    "available": false,
+    "listening_validated": false
   }
 }

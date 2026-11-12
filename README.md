@@ -4,7 +4,7 @@ A small browser game for learning the International Phonetic Alphabet through En
 
 ## Run locally
 
-Run `start.cmd`, then open [localhost:8765](http://localhost:8765). Python must be on your PATH. Keep the terminal open; press Ctrl+C to stop the server.
+Double-click `start.bat` to start the game and open the default browser. For server-only use, run `start.cmd`, then open [localhost:8765](http://localhost:8765). Python must be on your PATH. Keep the terminal open; press Ctrl+C to stop the server.
 
 Alternatively, run this command from the project directory:
 
@@ -45,8 +45,11 @@ Sources, authors, licenses, and modifications are recorded in [audio_manifest.js
 ## Project structure
 
 - `dataset/config.json`: initial target count and unlock order.
-- `dataset/sounds.json`: learning targets, example words, and explanations.
-- `web/core.mjs`: game logic and written word segments. Highlights are spelling correspondences, not audio timestamps.
+- `dataset/targets.json` defines stable target IDs, IPA notation, objective, chapter, prerequisites, and answer options.
+- `dataset/examples.json` links each word to a target and an optional word recording. Each example has a transcription, written highlight, language, accent when known, definition, and note.
+- Questions draw an eligible target first and then a word for it. For example, *ship* and *shoe* both teach /ʃ/ and share its progress.
+- `dataset/legacy_targets.json` maps the 20 original entry IDs one-to-one. On the first answer or confirmed reset, the game saves target-based progress under `ipa-lab-progress-v2`. The original v1 save stays in browser storage as a backup. Subsequent loads prefer v2, including an empty reset save.
+- `web/core.mjs`: game logic and save migration. Highlights are spelling correspondences, not audio timestamps.
 - [docs/HANDOFF.md](docs/HANDOFF.md): current agent handoff, known limitations, and next implementation task.
 - [docs/ROADMAP.md](docs/ROADMAP.md): current phased plan toward the full IPA chart.
 - `docs/PLAN.md`: historical design proposal; the roadmap and this README take precedence.

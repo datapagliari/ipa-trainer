@@ -1,110 +1,52 @@
-#!/usr/bin/env python3
-"""Validate sounds.json: schema, unique IDs, and referenced audio files."""
-
-from __future__ import annotations
-
+"""Validate the local target catalog, examples, migration map and recordings."""
 import json
-import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SOUNDS_PATH = ROOT / "dataset" / "sounds.json"
-
-REQUIRED_FIELDS = {
-    "id",
-    "language",
-    "symbol",
-    "kind",
-    "example_word",
-    "word_ipa",
-    "definition",
-    "audio",
-    "confusers",
-    "note",
-    "source_url",
-    "license",
-}
-VALID_KINDS = {"vowel", "consonant", "affricate", "diphthong"}
-VALID_LANGUAGES = {"en", "fr", "de"}
 
 
-def load_sounds() -> list[dict]:
-    with SOUNDS_PATH.open(encoding="utf-8") as f:
-        data = json.load(f)
-    if not isinstance(data, list):
-        raise ValueError("sounds.json must be an array")
-    return data
+def load(name):
+    return json.loads((ROOT / "dataset" / f"{name}.json").read_text(encoding="utf-8"))
 
 
-def validate_entry(
-    entry: dict, index: int, errors: list[str], warnings: list[str]
-) -> None:
-    missing = REQUIRED_FIELDS - set(entry)
-    if missing:
-        errors.append(f"[{index}] missing fields: {sorted(missing)}")
-        return
-
-    if not isinstance(entry["definition"], str) or not entry["definition"].strip():
-        errors.append(f"[{index}] definition must be a nonempty string")
-
-    if entry["language"] not in VALID_LANGUAGES:
-        errors.append(f"[{index}] invalid language: {entry['language']}")
-
-    if entry["kind"] not in VALID_KINDS:
-        errors.append(f"[{index}] invalid kind: {entry['kind']}")
-
-    confusers = entry["confusers"]
-    if not isinstance(confusers, list) or len(confusers) < 3:
-        errors.append(f"[{index}] confusers must contain at least 3 items")
-
-    audio_path = ROOT / entry["audio"]
-    if not audio_path.exists():
-        warnings.append(f"[{index}] audio pending: {entry['audio']}")
-
-    if not entry.get("source_url"):
-        warnings.append(f"[{index}] empty source_url: {entry.get('id')}")
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
 
 
-def main() -> int:
-    errors: list[str] = []
-    warnings: list[str] = []
+def main():
+    targets = load("targets")
+    examples = load("examples")
+    recordings = load("audio_manifest")
+    ids = {t["id"] for t in targets}
+    order = load("config")["unlock_order"]
+    require(len(ids) == len(targets), "Duplicate target ID")
+    require(len(order) == len(ids) and set(order) == ids, "Invalid unlock order")
+    legacy = list(load("legacy_targets").values())
+    require(len(legacy) == len(set(legacy)) and set(legacy) <= ids, "Invalid legacy mapping")
+    for target in targets:
+        require(target["chapter"] and target["objective"] and target["kind"], target["id"])
+        require(set(target["prerequisites"]) <= ids, target["id"])
+        options = [target["symbol"], *target["confusers"]]
+        require(len(options) == len(set(options)) == 4, target["id"])
 
-    try:
-        sounds = load_sounds()
-    except (OSError, json.JSONDecodeError, ValueError) as exc:
-        print(f"ERROR: {exc}", file=sys.stderr)
-        return 1
+    require(len({e["id"] for e in examples}) == len(examples), "Duplicate example ID")
+    require({e["target_id"] for e in examples} == ids, "Invalid example coverage")
+    for example in examples:
+        start, end, label = example["segment"]
+        require(0 <= start < end <= len(example["example_word"]) and label, example["id"])
+        require(all(example[k].strip() for k in ("word_ipa", "definition", "note")), example["id"])
+        require(example["language"] in {"en", "fr", "de"}, example["id"])
+        key = example["recording_id"]
+        require(key is None or key in recordings, example["id"])
 
-    seen_ids: set[str] = set()
-    for index, entry in enumerate(sounds):
-        if not isinstance(entry, dict):
-            errors.append(f"[{index}] entry is not an object")
-            continue
-
-        entry_id = entry.get("id")
-        if not entry_id:
-            errors.append(f"[{index}] empty id")
-        elif entry_id in seen_ids:
-            errors.append(f"[{index}] duplicate id: {entry_id}")
+    for key, record in [*recordings.items(), *load("symbol_audio").items()]:
+        if not record.get("available", True) or not (ROOT / record["audio"]).is_file():
+            print(f"Audio pending: {key}")
         else:
-            seen_ids.add(entry_id)
-
-        validate_entry(entry, index, errors, warnings)
-
-    if warnings:
-        print(f"Warnings ({len(warnings)}):")
-        for warning in warnings:
-            print(f"  - {warning}")
-
-    if errors:
-        print(f"Invalid dataset ({len(errors)} problems):")
-        for error in errors:
-            print(f"  - {error}")
-        return 1
-
-    print(f"OK: {len(sounds)} entries, unique IDs, valid schema.")
-    return 0
+            require(record["source_url"] and record["license"], key)
+    print(f"OK: {len(targets)} targets, {len(examples)} examples, valid references.")
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()

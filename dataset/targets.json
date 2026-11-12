@@ -1,0 +1,262 @@
+[
+  {
+    "id": "esh",
+    "symbol": "ʃ",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "starter",
+    "prerequisites": [],
+    "confusers": [
+      "s",
+      "tʃ",
+      "ʒ"
+    ]
+  },
+  {
+    "id": "tesh",
+    "symbol": "tʃ",
+    "kind": "affricate",
+    "objective": "affricate",
+    "chapter": "expansion",
+    "prerequisites": [],
+    "confusers": [
+      "ʃ",
+      "dʒ",
+      "ts"
+    ]
+  },
+  {
+    "id": "dezh",
+    "symbol": "dʒ",
+    "kind": "affricate",
+    "objective": "affricate",
+    "chapter": "expansion",
+    "prerequisites": [],
+    "confusers": [
+      "tʃ",
+      "ʒ",
+      "d"
+    ]
+  },
+  {
+    "id": "theta",
+    "symbol": "θ",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "starter",
+    "prerequisites": [],
+    "confusers": [
+      "s",
+      "f",
+      "t"
+    ]
+  },
+  {
+    "id": "eth",
+    "symbol": "ð",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "expansion",
+    "prerequisites": [],
+    "confusers": [
+      "d",
+      "z",
+      "v"
+    ]
+  },
+  {
+    "id": "small-cap-i",
+    "symbol": "ɪ",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "starter",
+    "prerequisites": [],
+    "confusers": [
+      "iː",
+      "e",
+      "ə"
+    ]
+  },
+  {
+    "id": "long-i",
+    "symbol": "iː",
+    "kind": "vowel",
+    "objective": "long-vowel",
+    "chapter": "expansion",
+    "prerequisites": [],
+    "confusers": [
+      "ɪ",
+      "i",
+      "e"
+    ]
+  },
+  {
+    "id": "ash",
+    "symbol": "æ",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "expansion",
+    "prerequisites": [],
+    "confusers": [
+      "ɛ",
+      "ʌ",
+      "a"
+    ]
+  },
+  {
+    "id": "wedge",
+    "symbol": "ʌ",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "expansion",
+    "prerequisites": [],
+    "confusers": [
+      "æ",
+      "ə",
+      "ɔ"
+    ]
+  },
+  {
+    "id": "schwa",
+    "symbol": "ə",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "expansion",
+    "prerequisites": [],
+    "confusers": [
+      "ʌ",
+      "ɪ",
+      "e"
+    ]
+  },
+  {
+    "id": "close-front-rounded",
+    "symbol": "y",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "starter",
+    "prerequisites": [],
+    "confusers": [
+      "i",
+      "u",
+      "ø"
+    ]
+  },
+  {
+    "id": "close-mid-front-rounded",
+    "symbol": "ø",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "expansion",
+    "prerequisites": [],
+    "confusers": [
+      "œ",
+      "o",
+      "y"
+    ]
+  },
+  {
+    "id": "open-mid-front-rounded",
+    "symbol": "œ",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "expansion",
+    "prerequisites": [],
+    "confusers": [
+      "ø",
+      "ɔ",
+      "ə"
+    ]
+  },
+  {
+    "id": "nasal-open-back",
+    "symbol": "ɑ̃",
+    "kind": "vowel",
+    "objective": "nasal-vowel",
+    "chapter": "expansion",
+    "prerequisites": [],
+    "confusers": [
+      "ɑ",
+      "ɔ",
+      "ɛ̃"
+    ]
+  },
+  {
+    "id": "nasal-open-mid-front",
+    "symbol": "ɛ̃",
+    "kind": "vowel",
+    "objective": "nasal-vowel",
+    "chapter": "expansion",
+    "prerequisites": [],
+    "confusers": [
+      "ɛ",
+      "æ",
+      "ɔ̃"
+    ]
+  },
+  {
+    "id": "nasal-open-mid-back",
+    "symbol": "ɔ̃",
+    "kind": "vowel",
+    "objective": "nasal-vowel",
+    "chapter": "expansion",
+    "prerequisites": [],
+    "confusers": [
+      "ɔ",
+      "o",
+      "ɑ̃"
+    ]
+  },
+  {
+    "id": "palatal-fricative",
+    "symbol": "ç",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "starter",
+    "prerequisites": [],
+    "confusers": [
+      "ʃ",
+      "x",
+      "h"
+    ]
+  },
+  {
+    "id": "velar-fricative",
+    "symbol": "x",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "expansion",
+    "prerequisites": [],
+    "confusers": [
+      "ç",
+      "h",
+      "k"
+    ]
+  },
+  {
+    "id": "ts-affricate",
+    "symbol": "ts",
+    "kind": "affricate",
+    "objective": "affricate",
+    "chapter": "expansion",
+    "prerequisites": [],
+    "confusers": [
+      "tʃ",
+      "s",
+      "z"
+    ]
+  },
+  {
+    "id": "pf-affricate",
+    "symbol": "pf",
+    "kind": "affricate",
+    "objective": "affricate",
+    "chapter": "starter",
+    "prerequisites": [],
+    "confusers": [
+      "f",
+      "p",
+      "b"
+    ]
+  }
+]

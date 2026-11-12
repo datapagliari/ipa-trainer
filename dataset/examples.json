@@ -1,0 +1,338 @@
+[
+  {
+    "id": "en_esh_ship",
+    "language": "en",
+    "example_word": "ship",
+    "word_ipa": "ʃɪp",
+    "definition": "A large boat used to carry people or goods over water.",
+    "note": "English SH, also found in French chat and German schön.",
+    "target_id": "esh",
+    "accent": null,
+    "segment": [
+      0,
+      2,
+      "initial consonant"
+    ],
+    "recording_id": "en_esh_ship"
+  },
+  {
+    "id": "en_tesh_chip",
+    "language": "en",
+    "example_word": "chip",
+    "word_ipa": "tʃɪp",
+    "definition": "A small piece broken off a larger object.",
+    "note": "CH as in chip. A voiceless affricate.",
+    "target_id": "tesh",
+    "accent": null,
+    "segment": [
+      0,
+      2,
+      "initial consonant"
+    ],
+    "recording_id": "en_tesh_chip"
+  },
+  {
+    "id": "en_dzh_judge",
+    "language": "en",
+    "example_word": "judge",
+    "word_ipa": "dʒʌdʒ",
+    "definition": "A person who makes official decisions in a court of law.",
+    "note": "English J. A voiced affricate.",
+    "target_id": "dezh",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "en_dzh_judge"
+  },
+  {
+    "id": "en_theta_thin",
+    "language": "en",
+    "example_word": "thin",
+    "word_ipa": "θɪn",
+    "definition": "Having little distance between opposite sides; not thick.",
+    "note": "Voiceless TH. The vocal folds do not vibrate.",
+    "target_id": "theta",
+    "accent": "US",
+    "segment": [
+      0,
+      2,
+      "initial consonant"
+    ],
+    "recording_id": "en_theta_thin"
+  },
+  {
+    "id": "en_eth_this",
+    "language": "en",
+    "example_word": "this",
+    "word_ipa": "ðɪs",
+    "definition": "Used to refer to a particular person or thing that is nearby.",
+    "note": "Voiced TH. The vocal folds vibrate.",
+    "target_id": "eth",
+    "accent": null,
+    "segment": [
+      0,
+      2,
+      "initial consonant"
+    ],
+    "recording_id": "en_eth_this"
+  },
+  {
+    "id": "en_ih_ship",
+    "language": "en",
+    "example_word": "ship",
+    "word_ipa": "ʃɪp",
+    "definition": "A large boat used to carry people or goods over water.",
+    "note": "The short vowel in ship. Contrast it with /iː/ in sheep.",
+    "target_id": "small-cap-i",
+    "accent": null,
+    "segment": [
+      2,
+      3,
+      "vowel"
+    ],
+    "recording_id": "en_ih_ship"
+  },
+  {
+    "id": "en_ee_sheep",
+    "language": "en",
+    "example_word": "sheep",
+    "word_ipa": "ʃiːp",
+    "definition": "A farm animal kept for its wool, milk, or meat.",
+    "note": "The long vowel in sheep. A key contrast with /ɪ/.",
+    "target_id": "long-i",
+    "accent": null,
+    "segment": [
+      2,
+      4,
+      "vowel"
+    ],
+    "recording_id": "en_ee_sheep"
+  },
+  {
+    "id": "en_ae_cat",
+    "language": "en",
+    "example_word": "cat",
+    "word_ipa": "kæt",
+    "definition": "A small animal with soft fur, often kept as a pet.",
+    "note": "The near-open front vowel in English cat.",
+    "target_id": "ash",
+    "accent": null,
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "recording_id": "en_ae_cat"
+  },
+  {
+    "id": "en_ah_cut",
+    "language": "en",
+    "example_word": "cut",
+    "word_ipa": "kʌt",
+    "definition": "To divide or make an opening in something with a sharp edge.",
+    "note": "The vowel conventionally transcribed /ʌ/ in English cut.",
+    "target_id": "wedge",
+    "accent": null,
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "recording_id": "en_ah_cut"
+  },
+  {
+    "id": "en_schwa_about",
+    "language": "en",
+    "example_word": "about",
+    "word_ipa": "əˈbaʊt",
+    "definition": "On the subject of; concerning something.",
+    "note": "Schwa, a very common unstressed vowel in English.",
+    "target_id": "schwa",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial vowel"
+    ],
+    "recording_id": "en_schwa_about"
+  },
+  {
+    "id": "fr_y_tu",
+    "language": "fr",
+    "example_word": "tu",
+    "word_ipa": "ty",
+    "definition": "You: used when speaking informally to one person.",
+    "note": "Close front rounded vowel. Think of /i/ with the lips rounded for /u/.",
+    "target_id": "close-front-rounded",
+    "accent": null,
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "recording_id": "fr_y_tu"
+  },
+  {
+    "id": "fr_o_deux",
+    "language": "fr",
+    "example_word": "deux",
+    "word_ipa": "dø",
+    "definition": "Two: the number after one and before three.",
+    "note": "Close-mid front rounded vowel, also found in German schön.",
+    "target_id": "close-mid-front-rounded",
+    "accent": null,
+    "segment": [
+      1,
+      3,
+      "vowel"
+    ],
+    "recording_id": "fr_o_deux"
+  },
+  {
+    "id": "fr_oe_soeur",
+    "language": "fr",
+    "example_word": "sœur",
+    "word_ipa": "sœʁ",
+    "definition": "Sister: a female sibling.",
+    "note": "Open-mid front rounded vowel, also found in German können.",
+    "target_id": "open-mid-front-rounded",
+    "accent": null,
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "recording_id": "fr_oe_soeur"
+  },
+  {
+    "id": "fr_nasal_a_sans",
+    "language": "fr",
+    "example_word": "sans",
+    "word_ipa": "sɑ̃",
+    "definition": "Without: not having or including something.",
+    "note": "Nasal /ɑ̃/. Air flows through the nose throughout the vowel.",
+    "target_id": "nasal-open-back",
+    "accent": null,
+    "segment": [
+      1,
+      3,
+      "nasal vowel"
+    ],
+    "recording_id": "fr_nasal_a_sans"
+  },
+  {
+    "id": "fr_nasal_e_vin",
+    "language": "fr",
+    "example_word": "vin",
+    "word_ipa": "vɛ̃",
+    "definition": "Wine: an alcoholic drink made from fermented grapes.",
+    "note": "The nasal vowel /ɛ̃/.",
+    "target_id": "nasal-open-mid-front",
+    "accent": null,
+    "segment": [
+      1,
+      3,
+      "nasal vowel"
+    ],
+    "recording_id": "fr_nasal_e_vin"
+  },
+  {
+    "id": "fr_nasal_o_bon",
+    "language": "fr",
+    "example_word": "bon",
+    "word_ipa": "bɔ̃",
+    "definition": "Good: of a pleasing or satisfactory quality.",
+    "note": "The nasal vowel /ɔ̃/.",
+    "target_id": "nasal-open-mid-back",
+    "accent": null,
+    "segment": [
+      1,
+      3,
+      "nasal vowel"
+    ],
+    "recording_id": "fr_nasal_o_bon"
+  },
+  {
+    "id": "de_ich_ch",
+    "language": "de",
+    "example_word": "ich",
+    "word_ipa": "ɪç",
+    "definition": "I: the pronoun used by a speaker to refer to themselves.",
+    "note": "Soft German CH. Contrast it with /x/ in Bach.",
+    "target_id": "palatal-fricative",
+    "accent": null,
+    "segment": [
+      1,
+      3,
+      "final consonant"
+    ],
+    "recording_id": "de_ich_ch"
+  },
+  {
+    "id": "de_bach_x",
+    "language": "de",
+    "example_word": "Bach",
+    "word_ipa": "bax",
+    "definition": "A stream: a small, naturally flowing body of water.",
+    "note": "The back German CH (velar), found after a, o, or u.",
+    "target_id": "velar-fricative",
+    "accent": null,
+    "segment": [
+      2,
+      4,
+      "final consonant"
+    ],
+    "recording_id": "de_bach_x"
+  },
+  {
+    "id": "de_ts_zeit",
+    "language": "de",
+    "example_word": "Zeit",
+    "word_ipa": "tsaɪt",
+    "definition": "Time: the passing of moments, or a period of time.",
+    "note": "The affricate /ts/ at the start of Zeit.",
+    "target_id": "ts-affricate",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "de_ts_zeit"
+  },
+  {
+    "id": "de_pf_pferd",
+    "language": "de",
+    "example_word": "Pferd",
+    "word_ipa": "pfeːɐ̯t",
+    "definition": "Horse: a large four-legged animal used for riding or pulling loads.",
+    "note": "The affricate /pf/ at the start of Pferd.",
+    "target_id": "pf-affricate",
+    "accent": null,
+    "segment": [
+      0,
+      2,
+      "initial consonant"
+    ],
+    "recording_id": "de_pf_pferd"
+  },
+  {
+    "id": "en_esh_shoe",
+    "target_id": "esh",
+    "language": "en",
+    "accent": null,
+    "example_word": "shoe",
+    "word_ipa": "ʃuː",
+    "definition": "A covering worn on the foot.",
+    "note": "SH represents the initial consonant.",
+    "segment": [
+      0,
+      2,
+      "initial consonant"
+    ],
+    "recording_id": null
+  }
+]

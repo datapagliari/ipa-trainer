@@ -23,7 +23,7 @@ Scope reference: [the official IPA chart](https://www.internationalphoneticassoc
 - The reduction is experimental. Setting `approved_weight_multiplier` to `1` disables it without clearing progress. No spaced-repetition schedule is added at this stage.
 - Weighting applies after language, mode, unlock, and audio-availability filters. Future selection must choose a symbol first and an example second, so symbols with more examples do not appear more often.
 
-Current status: the one-third weight, learned mark, reset behavior, and configurable reduction are implemented for the existing 20 entries. The symbol/example separation below remains future work.
+Current status: the one-third weight, learned mark, reset behavior, and configurable reduction are implemented for the existing 20 entries. Stage 1 is implemented locally with 20 targets and 21 examples. Stage 2 is next.
 
 ## Stage 1 — Separate symbols from examples
 
@@ -120,7 +120,7 @@ Deliverables:
 ## Immediate sequence
 
 1. Implement and test the agreed review rule — done for the current dataset.
-2. Separate learning targets, examples, and audio records, including progress migration.
+2. Separate learning targets, examples, and audio records, including progress migration (complete).
 3. Finish and review the starter chapter's recordings.
 4. Complete the current 20 targets.
 5. Expand through the chart chapters, then modifiers and prosody.

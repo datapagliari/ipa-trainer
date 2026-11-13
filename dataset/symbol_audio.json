@@ -1,13 +1,13 @@
 {
   "ʃ": {
-    "audio": "audio/phonemes/voiceless_palato-alveolar_sibilant.ogg",
+    "audio": "audio/phonemes/esh-short.ogg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Voiceless_palato-alveolar_sibilant.ogg",
     "author": "Peter Isotalo",
     "license": "CC BY-SA 3.0",
     "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
-    "changes": "None",
-    "listening_validated": false,
-    "supporting_vowels": null
+    "changes": "Excerpt from 0.20 to 0.44 seconds with short edge fades",
+    "listening_validated": true,
+    "supporting_vowels": false
   },
   "θ": {
     "audio": "audio/phonemes/voiceless_dental_fricative.ogg",

@@ -117,6 +117,13 @@ Deliverables:
 
 **Complete when:** a fresh checkout can be prepared and played locally using documented steps, progress can be preserved, and the full declared route has passed a content and gameplay audit.
 
+## Desktop and mobile playtesting follow-up
+
+- Prioritize the desktop web game during Stage 2. Check Sound notes at normal desktop zoom: increase the legibility of the language label, full-word pronunciation and heading arrow.
+- Revisit left-rail controls once their intended actions are defined.
+- In a later mobile pass, test the entire answer, feedback and tooltip flow on narrow touch screens in both themes.
+- Add reviewed examples to existing targets to reduce repeated words, retaining target-first selection and shared progress.
+
 ## Immediate sequence
 
 1. Implement and test the agreed review rule — done for the current dataset.

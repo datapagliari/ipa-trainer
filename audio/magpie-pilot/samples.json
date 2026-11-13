@@ -1,0 +1,40 @@
+{
+  "model": "NVIDIA MagpieTTS Multilingual 357M",
+  "source": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+  "voice": "Aria",
+  "language": "English",
+  "text_normalization": false,
+  "clips": [
+    {
+      "file": "sheep.wav",
+      "input": "sheep",
+      "synthetic": true,
+      "listening_validated": false
+    },
+    {
+      "file": "ship.wav",
+      "input": "ship",
+      "synthetic": true,
+      "listening_validated": false
+    },
+    {
+      "file": "shoe.wav",
+      "input": "shoe",
+      "synthetic": true,
+      "listening_validated": false
+    }
+  ],
+  "isolated_esh": "Rejected after listening: multiple speech sounds, target unclear.",
+  "reference_excerpt": {
+    "audio": "audio/phonemes/voiceless_palato-alveolar_sibilant.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Voiceless_palato-alveolar_sibilant.ogg",
+    "author": "Peter Isotalo",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "Excerpt from 0.20 to 0.44 seconds with short edge fades",
+    "listening_validated": false,
+    "supporting_vowels": null,
+    "file": "esh-reference-short.wav",
+    "synthetic": false
+  }
+}

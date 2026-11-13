@@ -37,10 +37,14 @@
   },
   "en_esh_ship": {
     "audio": "audio/en/ship__esh.ogg",
-    "source_url": "",
-    "license": "",
-    "available": false,
-    "listening_validated": false
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": true,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Tempo set to 80%, converted to Ogg Vorbis"
   },
   "en_tesh_chip": {
     "audio": "audio/en/chip__tesh.ogg",
@@ -58,13 +62,6 @@
   },
   "en_eth_this": {
     "audio": "audio/en/this__eth.ogg",
-    "source_url": "",
-    "license": "",
-    "available": false,
-    "listening_validated": false
-  },
-  "en_ih_ship": {
-    "audio": "audio/en/ship__ih.ogg",
     "source_url": "",
     "license": "",
     "available": false,

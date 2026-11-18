@@ -1,5 +1,5 @@
 {
-  "initial_active_count": 6,
+  "initial_active_count": 24,
   "approval_streak": 3,
   "approved_weight_multiplier": 0.3333333333333333,
   "unlock_order": [
@@ -22,6 +22,33 @@
     "nasal-open-mid-front",
     "nasal-open-mid-back",
     "velar-fricative",
-    "ts-affricate"
+    "ts-affricate",
+    "ipa-73",
+    "ipa-292",
+    "ipa-64",
+    "ipa-66",
+    "ipa-74",
+    "ipa-7a",
+    "ipa-76",
+    "ipa-65",
+    "ipa-69",
+    "ipa-25b",
+    "ipa-61",
+    "ipa-254",
+    "ipa-75",
+    "ipa-6f",
+    "ipa-251",
+    "ipa-68",
+    "ipa-6b",
+    "ipa-70",
+    "ipa-62",
+    "upsilon",
+    "bilabial-nasal",
+    "alveolar-nasal",
+    "alveolar-lateral",
+    "voiced-velar-stop",
+    "uvular-fricative",
+    "labial-palatal-approximant",
+    "near-close-front-rounded"
   ]
 }

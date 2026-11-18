@@ -29,7 +29,7 @@
       2,
       "initial consonant"
     ],
-    "recording_id": "en_tesh_chip"
+    "recording_id": "archive-en-chip"
   },
   {
     "id": "en_dzh_judge",
@@ -45,7 +45,7 @@
       1,
       "initial consonant"
     ],
-    "recording_id": "en_dzh_judge"
+    "recording_id": "archive-en-judge"
   },
   {
     "id": "en_theta_thin",
@@ -77,7 +77,7 @@
       2,
       "initial consonant"
     ],
-    "recording_id": "en_eth_this"
+    "recording_id": "archive-en-this"
   },
   {
     "id": "en_ih_ship",
@@ -125,7 +125,7 @@
       2,
       "vowel"
     ],
-    "recording_id": "en_ae_cat"
+    "recording_id": "archive-en-cat"
   },
   {
     "id": "en_ah_cut",
@@ -141,7 +141,7 @@
       2,
       "vowel"
     ],
-    "recording_id": "en_ah_cut"
+    "recording_id": "archive-en-cut"
   },
   {
     "id": "en_schwa_about",
@@ -157,7 +157,7 @@
       1,
       "initial vowel"
     ],
-    "recording_id": "en_schwa_about"
+    "recording_id": "archive-en-about"
   },
   {
     "id": "fr_y_tu",
@@ -189,7 +189,7 @@
       3,
       "vowel"
     ],
-    "recording_id": "fr_o_deux"
+    "recording_id": "magpie-fr-deux"
   },
   {
     "id": "fr_oe_soeur",
@@ -205,7 +205,7 @@
       2,
       "vowel"
     ],
-    "recording_id": "fr_oe_soeur"
+    "recording_id": "archive-fr-s-ur"
   },
   {
     "id": "fr_nasal_a_sans",
@@ -221,7 +221,7 @@
       3,
       "nasal vowel"
     ],
-    "recording_id": "fr_nasal_a_sans"
+    "recording_id": "archive-fr-sans"
   },
   {
     "id": "fr_nasal_e_vin",
@@ -237,7 +237,7 @@
       3,
       "nasal vowel"
     ],
-    "recording_id": "fr_nasal_e_vin"
+    "recording_id": "review-fr-vin-v2"
   },
   {
     "id": "fr_nasal_o_bon",
@@ -253,7 +253,7 @@
       3,
       "nasal vowel"
     ],
-    "recording_id": "fr_nasal_o_bon"
+    "recording_id": "archive-fr-bon"
   },
   {
     "id": "de_ich_ch",
@@ -285,7 +285,7 @@
       4,
       "final consonant"
     ],
-    "recording_id": "de_bach_x"
+    "recording_id": "archive-de-bach"
   },
   {
     "id": "de_ts_zeit",
@@ -301,7 +301,7 @@
       1,
       "initial consonant"
     ],
-    "recording_id": "de_ts_zeit"
+    "recording_id": "archive-de-zeit"
   },
   {
     "id": "de_pf_pferd",
@@ -333,6 +333,1510 @@
       2,
       "initial consonant"
     ],
-    "recording_id": null
+    "recording_id": "en_esh_shoe"
+  },
+  {
+    "id": "en_theta_bath",
+    "target_id": "theta",
+    "language": "en",
+    "accent": null,
+    "example_word": "bath",
+    "word_ipa": "bæθ",
+    "segment": [
+      2,
+      4,
+      "final consonant"
+    ],
+    "definition": "A wash in a tub of water.",
+    "note": "The final TH is voiceless.",
+    "recording_id": "en_theta_bath"
+  },
+  {
+    "id": "en_ih_thin",
+    "target_id": "small-cap-i",
+    "language": "en",
+    "accent": null,
+    "example_word": "thin",
+    "word_ipa": "θɪn",
+    "segment": [
+      2,
+      3,
+      "vowel"
+    ],
+    "definition": "Having little thickness.",
+    "note": "Listen for the short vowel between TH and N.",
+    "recording_id": "en_theta_thin"
+  },
+  {
+    "id": "fr_y_lune",
+    "target_id": "close-front-rounded",
+    "language": "fr",
+    "accent": null,
+    "example_word": "lune",
+    "word_ipa": "lyn",
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "definition": "The moon.",
+    "note": "The lips are rounded for the vowel written U.",
+    "recording_id": "fr_y_lune"
+  },
+  {
+    "id": "de_ich_licht",
+    "target_id": "palatal-fricative",
+    "language": "de",
+    "accent": null,
+    "example_word": "Licht",
+    "word_ipa": "lɪçt",
+    "segment": [
+      2,
+      4,
+      "consonant before the final T"
+    ],
+    "definition": "Light.",
+    "note": "CH follows a front vowel.",
+    "recording_id": "de_ich_licht"
+  },
+  {
+    "id": "de_pf_pfanne",
+    "target_id": "pf-affricate",
+    "language": "de",
+    "accent": null,
+    "example_word": "Pfanne",
+    "word_ipa": "ˈpfanə",
+    "segment": [
+      0,
+      2,
+      "initial consonant"
+    ],
+    "definition": "A pan used for cooking.",
+    "note": "The word begins with the affricate /pf/.",
+    "recording_id": "de_pf_pfanne"
+  },
+  {
+    "id": "en_chair_tesh",
+    "target_id": "tesh",
+    "example_word": "chair",
+    "word_ipa": "tʃɛɹ",
+    "language": "en",
+    "accent": "US",
+    "segment": [
+      0,
+      2,
+      "initial consonant"
+    ],
+    "definition": "A seat for one person.",
+    "note": "The highlighted initial consonant is written CH.",
+    "recording_id": "en_chair"
+  },
+  {
+    "id": "en_jam_dezh",
+    "target_id": "dezh",
+    "example_word": "jam",
+    "word_ipa": "dʒæm",
+    "language": "en",
+    "accent": "US",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "A sweet spread made from fruit.",
+    "note": "The highlighted initial consonant is written J.",
+    "recording_id": "en_jam"
+  },
+  {
+    "id": "en_they_eth",
+    "target_id": "eth",
+    "example_word": "they",
+    "word_ipa": "ðeɪ",
+    "language": "en",
+    "accent": "US",
+    "segment": [
+      0,
+      2,
+      "initial consonant"
+    ],
+    "definition": "A pronoun used to refer to people or things.",
+    "note": "The highlighted initial consonant is written TH.",
+    "recording_id": "en_they"
+  },
+  {
+    "id": "en_jam_ash",
+    "target_id": "ash",
+    "example_word": "jam",
+    "word_ipa": "dʒæm",
+    "language": "en",
+    "accent": "US",
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "definition": "A sweet spread made from fruit.",
+    "note": "The highlighted vowel is written A.",
+    "recording_id": "en_jam"
+  },
+  {
+    "id": "en_map_ash",
+    "target_id": "ash",
+    "example_word": "map",
+    "word_ipa": "mæp",
+    "language": "en",
+    "accent": "US",
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "definition": "A drawing of an area that shows where places are.",
+    "note": "The highlighted vowel is written A.",
+    "recording_id": "en_map"
+  },
+  {
+    "id": "en_sun_wedge",
+    "target_id": "wedge",
+    "example_word": "sun",
+    "word_ipa": "sʌn",
+    "language": "en",
+    "accent": "US",
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "definition": "The star that gives Earth light and heat.",
+    "note": "The highlighted vowel is written U.",
+    "recording_id": "en_sun"
+  },
+  {
+    "id": "en_feet_long-i",
+    "target_id": "long-i",
+    "language": "en",
+    "accent": null,
+    "example_word": "feet",
+    "word_ipa": "fiːt",
+    "segment": [
+      1,
+      3,
+      "vowel"
+    ],
+    "definition": "The plural of foot.",
+    "note": "EE represents the long vowel /iː/.",
+    "recording_id": "en_feet"
+  },
+  {
+    "id": "fr_petit_schwa",
+    "target_id": "schwa",
+    "language": "fr",
+    "accent": null,
+    "example_word": "petit",
+    "word_ipa": "pəti",
+    "segment": [
+      1,
+      2,
+      "first vowel"
+    ],
+    "definition": "Small.",
+    "note": "The first E represents schwa in this full pronunciation.",
+    "recording_id": "fr_petit"
+  },
+  {
+    "id": "fr_feu_close-mid-front-rounded",
+    "target_id": "close-mid-front-rounded",
+    "language": "fr",
+    "accent": null,
+    "example_word": "feu",
+    "word_ipa": "fø",
+    "segment": [
+      1,
+      3,
+      "vowel"
+    ],
+    "definition": "Fire.",
+    "note": "EU represents the rounded vowel /ø/.",
+    "recording_id": "review-fr-feu-v2"
+  },
+  {
+    "id": "fr_peur_open-mid-front-rounded",
+    "target_id": "open-mid-front-rounded",
+    "language": "fr",
+    "accent": null,
+    "example_word": "peur",
+    "word_ipa": "pœʁ",
+    "segment": [
+      1,
+      3,
+      "vowel"
+    ],
+    "definition": "Fear.",
+    "note": "EU represents the open-mid rounded vowel /œ/.",
+    "recording_id": "fr_peur"
+  },
+  {
+    "id": "de_buch_velar-fricative",
+    "target_id": "velar-fricative",
+    "language": "de",
+    "accent": null,
+    "example_word": "Buch",
+    "word_ipa": "buːx",
+    "segment": [
+      2,
+      4,
+      "final consonant"
+    ],
+    "definition": "A book.",
+    "note": "CH follows a back vowel.",
+    "recording_id": "de_buch"
+  },
+  {
+    "language": "en",
+    "example_word": "sip",
+    "word_ipa": "sɪp",
+    "note": "Air hisses through a narrow passage behind the teeth.",
+    "definition": "To drink a small amount.",
+    "id": "ipa-73-example",
+    "target_id": "ipa-73",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "magpie-en-sip"
+  },
+  {
+    "language": "fr",
+    "example_word": "jour",
+    "word_ipa": "ʒuʁ",
+    "note": "Like /ʃ/ with the vocal folds vibrating.",
+    "definition": "Day.",
+    "id": "ipa-292-example",
+    "target_id": "ipa-292",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "archive-fr-jour"
+  },
+  {
+    "language": "en",
+    "example_word": "dog",
+    "word_ipa": "dɒɡ",
+    "note": "The tongue briefly closes the airflow behind the upper teeth.",
+    "definition": "A domesticated canine.",
+    "id": "ipa-64-example",
+    "target_id": "ipa-64",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "archive-en-dog"
+  },
+  {
+    "language": "en",
+    "example_word": "fin",
+    "word_ipa": "fɪn",
+    "note": "Air passes between the lower lip and upper teeth.",
+    "definition": "A body part a fish uses for swimming.",
+    "id": "ipa-66-example",
+    "target_id": "ipa-66",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "archive-en-fin"
+  },
+  {
+    "language": "en",
+    "example_word": "ten",
+    "word_ipa": "tɛn",
+    "note": "The tongue releases a brief closure behind the upper teeth.",
+    "definition": "The number after nine.",
+    "id": "ipa-74-example",
+    "target_id": "ipa-74",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "archive-en-ten"
+  },
+  {
+    "language": "en",
+    "example_word": "zoo",
+    "word_ipa": "zuː",
+    "note": "A hiss like /s/ with vibration in the throat.",
+    "definition": "A place where animals are kept for visitors.",
+    "id": "ipa-7a-example",
+    "target_id": "ipa-7a",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "archive-en-zoo"
+  },
+  {
+    "language": "en",
+    "example_word": "vet",
+    "word_ipa": "vɛt",
+    "note": "Like /f/ with the vocal folds vibrating.",
+    "definition": "A doctor who treats animals.",
+    "id": "ipa-76-example",
+    "target_id": "ipa-76",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "magpie-en-vet"
+  },
+  {
+    "language": "fr",
+    "example_word": "été",
+    "word_ipa": "ete",
+    "note": "A close-mid front vowel with unrounded lips.",
+    "definition": "Summer.",
+    "id": "ipa-65-example",
+    "target_id": "ipa-65",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "vowel"
+    ],
+    "recording_id": "magpie-fr-ete"
+  },
+  {
+    "language": "fr",
+    "example_word": "si",
+    "word_ipa": "si",
+    "note": "A close front vowel with unrounded lips.",
+    "definition": "If.",
+    "id": "ipa-69-example",
+    "target_id": "ipa-69",
+    "accent": null,
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "recording_id": "magpie-fr-si"
+  },
+  {
+    "language": "fr",
+    "example_word": "sel",
+    "word_ipa": "sɛl",
+    "note": "The mouth is more open than for /e/.",
+    "definition": "Salt.",
+    "id": "ipa-25b-example",
+    "target_id": "ipa-25b",
+    "accent": null,
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "recording_id": "archive-fr-sel"
+  },
+  {
+    "language": "fr",
+    "example_word": "patte",
+    "word_ipa": "pat",
+    "note": "An open vowel with unrounded lips.",
+    "definition": "An animal’s paw.",
+    "id": "ipa-61-example",
+    "target_id": "ipa-61",
+    "accent": null,
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "recording_id": "archive-fr-patte"
+  },
+  {
+    "language": "fr",
+    "example_word": "porte",
+    "word_ipa": "pɔʁt",
+    "note": "An open-mid back vowel with rounded lips.",
+    "definition": "Door.",
+    "id": "ipa-254-example",
+    "target_id": "ipa-254",
+    "accent": null,
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "recording_id": "archive-fr-porte"
+  },
+  {
+    "language": "fr",
+    "example_word": "roue",
+    "word_ipa": "ʁu",
+    "note": "The tongue is high and back and the lips are rounded.",
+    "definition": "Wheel.",
+    "id": "ipa-75-example",
+    "target_id": "ipa-75",
+    "accent": null,
+    "segment": [
+      1,
+      4,
+      "vowel"
+    ],
+    "recording_id": "archive-fr-roue"
+  },
+  {
+    "language": "fr",
+    "example_word": "eau",
+    "word_ipa": "o",
+    "note": "A close-mid back vowel with rounded lips.",
+    "definition": "Water.",
+    "id": "ipa-6f-example",
+    "target_id": "ipa-6f",
+    "accent": null,
+    "segment": [
+      0,
+      3,
+      "vowel"
+    ],
+    "recording_id": "magpie-fr-eau"
+  },
+  {
+    "language": "en",
+    "example_word": "father",
+    "word_ipa": "ˈfɑðɚ",
+    "note": "An open back vowel with unrounded lips in this American pronunciation.",
+    "definition": "A male parent.",
+    "id": "ipa-251-example",
+    "target_id": "ipa-251",
+    "accent": "US",
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "recording_id": "archive-en-father"
+  },
+  {
+    "language": "en",
+    "example_word": "hat",
+    "word_ipa": "hæt",
+    "note": "Air flows freely through the open glottis.",
+    "definition": "A covering for the head.",
+    "id": "ipa-68-example",
+    "target_id": "ipa-68",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "archive-en-hat"
+  },
+  {
+    "language": "en",
+    "example_word": "key",
+    "word_ipa": "kiː",
+    "note": "The back of the tongue briefly touches the soft palate.",
+    "definition": "A small tool for opening a lock.",
+    "id": "ipa-6b-example",
+    "target_id": "ipa-6b",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "archive-en-key"
+  },
+  {
+    "language": "en",
+    "example_word": "pen",
+    "word_ipa": "pɛn",
+    "note": "Air is released after both lips close.",
+    "definition": "A tool for writing with ink.",
+    "id": "ipa-70-example",
+    "target_id": "ipa-70",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "archive-en-pen"
+  },
+  {
+    "language": "en",
+    "example_word": "bin",
+    "word_ipa": "bɪn",
+    "note": "Both lips close to make this voiced stop.",
+    "definition": "A container for storage or waste.",
+    "id": "ipa-62-example",
+    "target_id": "ipa-62",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "archive-en-bin"
+  },
+  {
+    "id": "en_upsilon_book",
+    "target_id": "upsilon",
+    "language": "en",
+    "accent": null,
+    "example_word": "book",
+    "word_ipa": "bʊk",
+    "definition": "A set of pages bound together for reading.",
+    "note": "OO represents the near-close back rounded vowel.",
+    "segment": [
+      1,
+      3,
+      "vowel"
+    ],
+    "recording_id": "archive-en-book"
+  },
+  {
+    "id": "ipa-73-sun",
+    "target_id": "ipa-73",
+    "example_word": "sun",
+    "word_ipa": "sʌn",
+    "language": "en",
+    "accent": "US",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "The star that gives Earth light and heat.",
+    "note": "The highlighted letters represent /s/.",
+    "recording_id": "en_sun"
+  },
+  {
+    "id": "ipa-66-feet",
+    "target_id": "ipa-66",
+    "language": "en",
+    "accent": null,
+    "example_word": "feet",
+    "word_ipa": "fiːt",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "The plural of foot.",
+    "note": "The highlighted letters represent /f/.",
+    "recording_id": "en_feet"
+  },
+  {
+    "id": "ipa-74-tu",
+    "language": "fr",
+    "example_word": "tu",
+    "word_ipa": "ty",
+    "definition": "You: used when speaking informally to one person.",
+    "note": "The highlighted letters represent /t/.",
+    "target_id": "ipa-74",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "fr_y_tu"
+  },
+  {
+    "id": "ipa-70-map",
+    "target_id": "ipa-70",
+    "example_word": "map",
+    "word_ipa": "mæp",
+    "language": "en",
+    "accent": "US",
+    "segment": [
+      2,
+      3,
+      "final consonant"
+    ],
+    "definition": "A drawing of an area that shows where places are.",
+    "note": "The highlighted letters represent /p/.",
+    "recording_id": "en_map"
+  },
+  {
+    "id": "ipa-62-bath",
+    "target_id": "ipa-62",
+    "language": "en",
+    "accent": null,
+    "example_word": "bath",
+    "word_ipa": "bæθ",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "A wash in a tub of water.",
+    "note": "The highlighted letters represent /b/.",
+    "recording_id": "en_theta_bath"
+  },
+  {
+    "language": "en",
+    "example_word": "bed",
+    "word_ipa": "bɛd",
+    "note": "The highlighted letters represent /d/.",
+    "definition": "A piece of furniture used for sleeping.",
+    "id": "ipa-64-archive-bed",
+    "target_id": "ipa-64",
+    "accent": null,
+    "segment": [
+      2,
+      3,
+      "final consonant"
+    ],
+    "recording_id": "archive-en-bed"
+  },
+  {
+    "language": "en",
+    "example_word": "hat",
+    "word_ipa": "hæt",
+    "note": "The highlighted letters represent /h/.",
+    "definition": "A covering worn on the head.",
+    "id": "ipa-68-archive-hat",
+    "target_id": "ipa-68",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "archive-en-hat"
+  },
+  {
+    "language": "en",
+    "example_word": "cat",
+    "word_ipa": "kæt",
+    "note": "The highlighted letters represent /k/.",
+    "definition": "A small domesticated feline.",
+    "id": "ipa-6b-archive-cat",
+    "target_id": "ipa-6b",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "archive-en-cat"
+  },
+  {
+    "id": "upsilon-archive-book",
+    "target_id": "upsilon",
+    "language": "en",
+    "accent": null,
+    "example_word": "book",
+    "word_ipa": "bʊk",
+    "definition": "A set of pages bound together for reading.",
+    "note": "The highlighted letters represent /ʊ/.",
+    "segment": [
+      1,
+      3,
+      "vowel"
+    ],
+    "recording_id": "archive-en-book"
+  },
+  {
+    "id": "sample-en-ago",
+    "target_id": "schwa",
+    "language": "en",
+    "accent": null,
+    "example_word": "ago",
+    "word_ipa": "əˈɡoʊ",
+    "segment": [
+      0,
+      1,
+      "vowel"
+    ],
+    "definition": "Before the present time.",
+    "note": "The highlighted letters represent /ə/.",
+    "recording_id": "sample-en-ago"
+  },
+  {
+    "id": "sample-en-big",
+    "target_id": "small-cap-i",
+    "language": "en",
+    "accent": null,
+    "example_word": "big",
+    "word_ipa": "bɪɡ",
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "definition": "Large in size.",
+    "note": "The highlighted letters represent /ɪ/.",
+    "recording_id": "sample-en-big"
+  },
+  {
+    "id": "sample-en-blue",
+    "target_id": "ipa-62",
+    "language": "en",
+    "accent": null,
+    "example_word": "blue",
+    "word_ipa": "bluː",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "The color of a clear daytime sky.",
+    "note": "The highlighted letters represent /b/.",
+    "recording_id": "sample-en-blue"
+  },
+  {
+    "id": "sample-en-cheese",
+    "target_id": "long-i",
+    "language": "en",
+    "accent": null,
+    "example_word": "cheese",
+    "word_ipa": "tʃiːz",
+    "segment": [
+      2,
+      4,
+      "vowel"
+    ],
+    "definition": "A food made from milk.",
+    "note": "The highlighted letters represent /iː/.",
+    "recording_id": "sample-en-cheese"
+  },
+  {
+    "id": "sample-en-cup",
+    "target_id": "wedge",
+    "language": "en",
+    "accent": null,
+    "example_word": "cup",
+    "word_ipa": "kʌp",
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "definition": "A small container used for drinking.",
+    "note": "The highlighted letters represent /ʌ/.",
+    "recording_id": "sample-en-cup"
+  },
+  {
+    "id": "sample-en-fish",
+    "target_id": "esh",
+    "language": "en",
+    "accent": null,
+    "example_word": "fish",
+    "word_ipa": "fɪʃ",
+    "segment": [
+      2,
+      4,
+      "final consonant"
+    ],
+    "definition": "An animal that lives in water and breathes through gills.",
+    "note": "The highlighted letters represent /ʃ/.",
+    "recording_id": "sample-en-fish"
+  },
+  {
+    "id": "sample-en-food",
+    "target_id": "ipa-66",
+    "language": "en",
+    "accent": null,
+    "example_word": "food",
+    "word_ipa": "fuːd",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "Something eaten to provide nourishment.",
+    "note": "The highlighted letters represent /f/.",
+    "recording_id": "sample-en-food"
+  },
+  {
+    "id": "sample-en-good",
+    "target_id": "upsilon",
+    "language": "en",
+    "accent": null,
+    "example_word": "good",
+    "word_ipa": "ɡʊd",
+    "segment": [
+      1,
+      3,
+      "vowel"
+    ],
+    "definition": "Of a satisfactory or desirable quality.",
+    "note": "The highlighted letters represent /ʊ/.",
+    "recording_id": "sample-en-good"
+  },
+  {
+    "id": "sample-en-juice",
+    "target_id": "dezh",
+    "language": "en",
+    "accent": null,
+    "example_word": "juice",
+    "word_ipa": "dʒuːs",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "Liquid obtained from fruit or vegetables.",
+    "note": "The highlighted letters represent /dʒ/.",
+    "recording_id": "sample-en-juice"
+  },
+  {
+    "id": "sample-fr-beurre",
+    "target_id": "open-mid-front-rounded",
+    "language": "fr",
+    "accent": null,
+    "example_word": "beurre",
+    "word_ipa": "bœʁ",
+    "segment": [
+      1,
+      4,
+      "vowel"
+    ],
+    "definition": "Butter.",
+    "note": "The highlighted letters represent /œ/.",
+    "recording_id": "sample-fr-beurre"
+  },
+  {
+    "id": "sample-fr-blanc",
+    "target_id": "nasal-open-back",
+    "language": "fr",
+    "accent": null,
+    "example_word": "blanc",
+    "word_ipa": "blɑ̃",
+    "segment": [
+      2,
+      4,
+      "vowel"
+    ],
+    "definition": "White.",
+    "note": "The highlighted letters represent /ɑ̃/.",
+    "recording_id": "sample-fr-blanc"
+  },
+  {
+    "id": "sample-fr-bleu",
+    "target_id": "close-mid-front-rounded",
+    "language": "fr",
+    "accent": null,
+    "example_word": "bleu",
+    "word_ipa": "blø",
+    "segment": [
+      2,
+      4,
+      "vowel"
+    ],
+    "definition": "Blue.",
+    "note": "The highlighted letters represent /ø/.",
+    "recording_id": "sample-fr-bleu"
+  },
+  {
+    "id": "sample-fr-grand",
+    "target_id": "nasal-open-back",
+    "language": "fr",
+    "accent": null,
+    "example_word": "grand",
+    "word_ipa": "ɡʁɑ̃",
+    "segment": [
+      2,
+      4,
+      "vowel"
+    ],
+    "definition": "Big or tall.",
+    "note": "The highlighted letters represent /ɑ̃/.",
+    "recording_id": "sample-fr-grand"
+  },
+  {
+    "id": "sample-fr-nom",
+    "target_id": "nasal-open-mid-back",
+    "language": "fr",
+    "accent": null,
+    "example_word": "nom",
+    "word_ipa": "nɔ̃",
+    "segment": [
+      1,
+      3,
+      "vowel"
+    ],
+    "definition": "A name.",
+    "note": "The highlighted letters represent /ɔ̃/.",
+    "recording_id": "sample-fr-nom"
+  },
+  {
+    "id": "sample-fr-peu",
+    "target_id": "close-mid-front-rounded",
+    "language": "fr",
+    "accent": null,
+    "example_word": "peu",
+    "word_ipa": "pø",
+    "segment": [
+      1,
+      3,
+      "vowel"
+    ],
+    "definition": "A small amount.",
+    "note": "The highlighted letters represent /ø/.",
+    "recording_id": "sample-fr-peu"
+  },
+  {
+    "id": "sample-fr-pont",
+    "target_id": "nasal-open-mid-back",
+    "language": "fr",
+    "accent": null,
+    "example_word": "pont",
+    "word_ipa": "pɔ̃",
+    "segment": [
+      1,
+      3,
+      "vowel"
+    ],
+    "definition": "A bridge.",
+    "note": "The highlighted letters represent /ɔ̃/.",
+    "recording_id": "sample-fr-pont"
+  },
+  {
+    "id": "sample-de-dach",
+    "target_id": "velar-fricative",
+    "language": "de",
+    "accent": null,
+    "example_word": "Dach",
+    "word_ipa": "dax",
+    "segment": [
+      2,
+      4,
+      "final consonant"
+    ],
+    "definition": "A roof.",
+    "note": "The highlighted letters represent /x/.",
+    "recording_id": "sample-de-dach"
+  },
+  {
+    "id": "sample-de-milch",
+    "target_id": "palatal-fricative",
+    "language": "de",
+    "accent": null,
+    "example_word": "Milch",
+    "word_ipa": "mɪlç",
+    "segment": [
+      3,
+      5,
+      "final consonant"
+    ],
+    "definition": "Milk.",
+    "note": "The highlighted letters represent /ç/.",
+    "recording_id": "sample-de-milch"
+  },
+  {
+    "id": "sample-de-nacht",
+    "target_id": "velar-fricative",
+    "language": "de",
+    "accent": null,
+    "example_word": "Nacht",
+    "word_ipa": "naxt",
+    "segment": [
+      2,
+      4,
+      "final consonant"
+    ],
+    "definition": "Night.",
+    "note": "The highlighted letters represent /x/.",
+    "recording_id": "sample-de-nacht"
+  },
+  {
+    "id": "sample-de-zahn",
+    "target_id": "ts-affricate",
+    "language": "de",
+    "accent": null,
+    "example_word": "Zahn",
+    "word_ipa": "tsaːn",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "A tooth.",
+    "note": "The highlighted letters represent /ts/.",
+    "recording_id": "sample-de-zahn"
+  },
+  {
+    "id": "sample-de-nicht",
+    "target_id": "palatal-fricative",
+    "language": "de",
+    "accent": null,
+    "example_word": "nicht",
+    "word_ipa": "nɪçt",
+    "segment": [
+      2,
+      4,
+      "final consonant"
+    ],
+    "definition": "Not.",
+    "note": "The highlighted letters represent /ç/.",
+    "recording_id": "sample-de-nicht"
+  },
+  {
+    "id": "sample-de-zehn",
+    "target_id": "ts-affricate",
+    "language": "de",
+    "accent": null,
+    "example_word": "zehn",
+    "word_ipa": "tseːn",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "The number ten.",
+    "note": "The highlighted letters represent /ts/.",
+    "recording_id": "sample-de-zehn"
+  },
+  {
+    "id": "magpie-fr-pain",
+    "target_id": "nasal-open-mid-front",
+    "language": "fr",
+    "accent": null,
+    "example_word": "pain",
+    "word_ipa": "pɛ̃",
+    "segment": [
+      1,
+      4,
+      "vowel"
+    ],
+    "definition": "Bread.",
+    "note": "The highlighted letters indicate the target sound.",
+    "recording_id": "magpie-fr-pain"
+  },
+  {
+    "id": "magpie-fr-jeu",
+    "target_id": "ipa-292",
+    "language": "fr",
+    "accent": null,
+    "example_word": "jeu",
+    "word_ipa": "ʒø",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "A game.",
+    "note": "The highlighted letters indicate the target sound.",
+    "recording_id": "magpie-fr-jeu"
+  },
+  {
+    "id": "magpie-en-zip",
+    "target_id": "ipa-7a",
+    "language": "en",
+    "accent": null,
+    "example_word": "zip",
+    "word_ipa": "zɪp",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "To fasten with a zipper.",
+    "note": "The highlighted letters indicate the target sound.",
+    "recording_id": "magpie-en-zip"
+  },
+  {
+    "id": "magpie-en-van",
+    "target_id": "ipa-76",
+    "language": "en",
+    "accent": null,
+    "example_word": "van",
+    "word_ipa": "væn",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "A vehicle used to carry people or goods.",
+    "note": "The highlighted letters indicate the target sound.",
+    "recording_id": "magpie-en-van"
+  },
+  {
+    "id": "magpie-fr-nez",
+    "target_id": "ipa-65",
+    "language": "fr",
+    "accent": null,
+    "example_word": "nez",
+    "word_ipa": "ne",
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "definition": "A nose.",
+    "note": "The highlighted letters indicate the target sound.",
+    "recording_id": "magpie-fr-nez"
+  },
+  {
+    "id": "magpie-fr-lit",
+    "target_id": "ipa-69",
+    "language": "fr",
+    "accent": null,
+    "example_word": "lit",
+    "word_ipa": "li",
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "definition": "A bed.",
+    "note": "The highlighted letters indicate the target sound.",
+    "recording_id": "magpie-fr-lit"
+  },
+  {
+    "id": "magpie-fr-mer",
+    "target_id": "ipa-25b",
+    "language": "fr",
+    "accent": null,
+    "example_word": "mer",
+    "word_ipa": "mɛʁ",
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "definition": "The sea.",
+    "note": "The highlighted letters indicate the target sound.",
+    "recording_id": "magpie-fr-mer"
+  },
+  {
+    "id": "magpie-fr-chat",
+    "target_id": "ipa-61",
+    "language": "fr",
+    "accent": null,
+    "example_word": "chat",
+    "word_ipa": "ʃa",
+    "segment": [
+      2,
+      3,
+      "vowel"
+    ],
+    "definition": "A cat.",
+    "note": "The highlighted letters indicate the target sound.",
+    "recording_id": "magpie-fr-chat"
+  },
+  {
+    "id": "commons-fr-bol",
+    "target_id": "ipa-254",
+    "language": "fr",
+    "accent": null,
+    "example_word": "bol",
+    "word_ipa": "bɔl",
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "definition": "A bowl.",
+    "note": "The highlighted letters indicate the target sound.",
+    "recording_id": "commons-fr-bol"
+  },
+  {
+    "id": "commons-fr-tout",
+    "target_id": "ipa-75",
+    "language": "fr",
+    "accent": null,
+    "example_word": "tout",
+    "word_ipa": "tu",
+    "segment": [
+      1,
+      3,
+      "vowel"
+    ],
+    "definition": "All or everything.",
+    "note": "The highlighted letters indicate the target sound.",
+    "recording_id": "commons-fr-tout"
+  },
+  {
+    "id": "commons-fr-mot",
+    "target_id": "ipa-6f",
+    "language": "fr",
+    "accent": null,
+    "example_word": "mot",
+    "word_ipa": "mo",
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "definition": "A word.",
+    "note": "The highlighted letters indicate the target sound.",
+    "recording_id": "commons-fr-mot"
+  },
+  {
+    "id": "commons-en-calm",
+    "target_id": "ipa-251",
+    "language": "en",
+    "accent": null,
+    "example_word": "calm",
+    "word_ipa": "kɑm",
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "definition": "Peaceful and free from agitation.",
+    "note": "The highlighted letters indicate the target sound.",
+    "recording_id": "commons-en-calm"
+  },
+  {
+    "id": "commons-en-head",
+    "target_id": "ipa-68",
+    "language": "en",
+    "accent": "US",
+    "example_word": "head",
+    "word_ipa": "hɛd",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "The part of the body containing the brain, eyes and mouth.",
+    "note": "H represents the initial breathy consonant.",
+    "recording_id": "commons-en-head"
+  },
+  {
+    "id": "bilabial-nasal-map",
+    "target_id": "bilabial-nasal",
+    "example_word": "map",
+    "word_ipa": "mæp",
+    "language": "en",
+    "accent": "US",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "A drawing of an area that shows where places are.",
+    "note": "The highlighted letters represent /m/.",
+    "recording_id": "en_map"
+  },
+  {
+    "id": "bilabial-nasal-mer",
+    "target_id": "bilabial-nasal",
+    "language": "fr",
+    "accent": null,
+    "example_word": "mer",
+    "word_ipa": "mɛʁ",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "The sea.",
+    "note": "The highlighted letters represent /m/.",
+    "recording_id": "magpie-fr-mer"
+  },
+  {
+    "id": "alveolar-nasal-nez",
+    "target_id": "alveolar-nasal",
+    "language": "fr",
+    "accent": null,
+    "example_word": "nez",
+    "word_ipa": "ne",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "A nose.",
+    "note": "The highlighted letters represent /n/.",
+    "recording_id": "magpie-fr-nez"
+  },
+  {
+    "id": "alveolar-nasal-sun",
+    "target_id": "alveolar-nasal",
+    "example_word": "sun",
+    "word_ipa": "sʌn",
+    "language": "en",
+    "accent": "US",
+    "segment": [
+      2,
+      3,
+      "final consonant"
+    ],
+    "definition": "The star that gives Earth light and heat.",
+    "note": "The highlighted letters represent /n/.",
+    "recording_id": "en_sun"
+  },
+  {
+    "id": "alveolar-lateral-lit",
+    "target_id": "alveolar-lateral",
+    "language": "fr",
+    "accent": null,
+    "example_word": "lit",
+    "word_ipa": "li",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "A bed.",
+    "note": "The highlighted letters represent /l/.",
+    "recording_id": "magpie-fr-lit"
+  },
+  {
+    "id": "alveolar-lateral-lune",
+    "target_id": "alveolar-lateral",
+    "language": "fr",
+    "accent": null,
+    "example_word": "lune",
+    "word_ipa": "lyn",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "The moon.",
+    "note": "The highlighted letters represent /l/.",
+    "recording_id": "fr_y_lune"
+  },
+  {
+    "id": "voiced-velar-stop-good",
+    "target_id": "voiced-velar-stop",
+    "language": "en",
+    "accent": null,
+    "example_word": "good",
+    "word_ipa": "ɡʊd",
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "definition": "Of a satisfactory or desirable quality.",
+    "note": "The highlighted letters represent /ɡ/.",
+    "recording_id": "sample-en-good"
+  },
+  {
+    "id": "voiced-velar-stop-ago",
+    "target_id": "voiced-velar-stop",
+    "language": "en",
+    "accent": null,
+    "example_word": "ago",
+    "word_ipa": "əˈɡoʊ",
+    "segment": [
+      1,
+      2,
+      "medial consonant"
+    ],
+    "definition": "Before the present time.",
+    "note": "The highlighted letters represent /ɡ/.",
+    "recording_id": "sample-en-ago"
+  },
+  {
+    "language": "fr",
+    "example_word": "roue",
+    "word_ipa": "ʁu",
+    "note": "The highlighted letters represent /ʁ/.",
+    "definition": "Wheel.",
+    "id": "uvular-fricative-roue",
+    "target_id": "uvular-fricative",
+    "accent": null,
+    "segment": [
+      0,
+      1,
+      "initial consonant"
+    ],
+    "recording_id": "archive-fr-roue"
+  },
+  {
+    "id": "uvular-fricative-mer",
+    "target_id": "uvular-fricative",
+    "language": "fr",
+    "accent": null,
+    "example_word": "mer",
+    "word_ipa": "mɛʁ",
+    "segment": [
+      2,
+      3,
+      "final consonant"
+    ],
+    "definition": "The sea.",
+    "note": "The highlighted letters represent /ʁ/.",
+    "recording_id": "magpie-fr-mer"
+  },
+  {
+    "id": "labial-palatal-approximant-huit",
+    "target_id": "labial-palatal-approximant",
+    "language": "fr",
+    "accent": null,
+    "example_word": "huit",
+    "word_ipa": "ɥit",
+    "segment": [
+      1,
+      2,
+      "initial glide"
+    ],
+    "definition": "The number eight.",
+    "note": "H is silent. U represents the rounded palatal glide /ɥ/ before /i/.",
+    "recording_id": "coverage-huit"
+  },
+  {
+    "id": "labial-palatal-approximant-huile",
+    "target_id": "labial-palatal-approximant",
+    "language": "fr",
+    "accent": null,
+    "example_word": "huile",
+    "word_ipa": "ɥil",
+    "segment": [
+      1,
+      2,
+      "initial glide"
+    ],
+    "definition": "Oil.",
+    "note": "H is silent. U represents the rounded palatal glide /ɥ/ before /i/.",
+    "recording_id": "coverage-huile"
+  },
+  {
+    "id": "near-close-front-rounded-hütte",
+    "target_id": "near-close-front-rounded",
+    "language": "de",
+    "accent": null,
+    "example_word": "Hütte",
+    "word_ipa": "ˈhʏtə",
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "definition": "A hut.",
+    "note": "Ü represents a near-close front rounded vowel.",
+    "recording_id": "coverage-huette"
+  },
+  {
+    "id": "near-close-front-rounded-mütter",
+    "target_id": "near-close-front-rounded",
+    "language": "de",
+    "accent": null,
+    "example_word": "Mütter",
+    "word_ipa": "ˈmʏtɐ",
+    "segment": [
+      1,
+      2,
+      "vowel"
+    ],
+    "definition": "Mothers.",
+    "note": "The short rounded vowel contrasts with the closer /yː/.",
+    "recording_id": "coverage-muetter"
   }
 ]

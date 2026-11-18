@@ -9,3 +9,15 @@ audio/**/*.mp3
 .env.*
 node_modules/
 *.py[cod]
+
+data/phoneme_downloads/
+
+data/word_sample/
+
+data/audio_reports.json
+data/audio_reports.tmp
+
+data/audio_report_resolutions.json
+
+# Local audio diagnostic output
+data/vin-wave.png

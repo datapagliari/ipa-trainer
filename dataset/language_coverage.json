@@ -1,0 +1,713 @@
+{
+  "schema_version": 1,
+  "scope": "Working inventory of broad segmental teaching objectives, including selected contextual sounds and notation variants. Further dialectal and narrow transcription objectives remain open.",
+  "profiles": {
+    "en": {
+      "name": "English",
+      "accent": "US-oriented broad transcription; actual recording accent requires review",
+      "source": "https://phonetics.ucla.edu/course/contents.html"
+    },
+    "fr": {
+      "name": "French",
+      "accent": "France-oriented, with marked regional contrasts",
+      "source": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E2BC8B1DD975FE4B272B088B8345B933/S0025100300004874a.pdf/french.pdf"
+    },
+    "de": {
+      "name": "German",
+      "accent": "Standard German-oriented with contextual realizations",
+      "source": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/D74393072AA2D66032B8A6E58BE15082/S0025100300004084a.pdf/div-class-title-german-div.pdf"
+    }
+  },
+  "rows": [
+    {
+      "symbol": "ʃ",
+      "target_id": "esh",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "tʃ",
+      "target_id": "tesh",
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "dʒ",
+      "target_id": "dezh",
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "loanwords"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "θ",
+      "target_id": "theta",
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "outside-profile"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ð",
+      "target_id": "eth",
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "outside-profile"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ɪ",
+      "target_id": "small-cap-i",
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "iː",
+      "target_id": "long-i",
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": "English FLEECE and German long /iː/ need language-specific recordings. Current isolated preview is German."
+    },
+    {
+      "symbol": "æ",
+      "target_id": "ash",
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "outside-profile"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ʌ",
+      "target_id": "wedge",
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "outside-profile"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ə",
+      "target_id": "schwa",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "y",
+      "target_id": "close-front-rounded",
+      "usage": {
+        "en": "outside-profile",
+        "fr": "reference",
+        "de": "contextual"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ø",
+      "target_id": "close-mid-front-rounded",
+      "usage": {
+        "en": "outside-profile",
+        "fr": "reference",
+        "de": "contextual"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "œ",
+      "target_id": "open-mid-front-rounded",
+      "usage": {
+        "en": "outside-profile",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ɑ̃",
+      "target_id": "nasal-open-back",
+      "usage": {
+        "en": "outside-profile",
+        "fr": "reference",
+        "de": "outside-profile"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ɛ̃",
+      "target_id": "nasal-open-mid-front",
+      "usage": {
+        "en": "outside-profile",
+        "fr": "reference",
+        "de": "outside-profile"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ɔ̃",
+      "target_id": "nasal-open-mid-back",
+      "usage": {
+        "en": "outside-profile",
+        "fr": "reference",
+        "de": "outside-profile"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ç",
+      "target_id": "palatal-fricative",
+      "usage": {
+        "en": "outside-profile",
+        "fr": "outside-profile",
+        "de": "contextual"
+      },
+      "note": "German contextual realization associated with front-vowel and other environments; teaching it separately supports phonetic recognition."
+    },
+    {
+      "symbol": "x",
+      "target_id": "velar-fricative",
+      "usage": {
+        "en": "outside-profile",
+        "fr": "outside-profile",
+        "de": "contextual"
+      },
+      "note": "German back fricative realizations vary with environment; the narrow realization in Bach can be uvular [χ]."
+    },
+    {
+      "symbol": "ts",
+      "target_id": "ts-affricate",
+      "usage": {
+        "en": "outside-profile",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": "Affricate objective, potentially written /t͡s/ with a tie bar."
+    },
+    {
+      "symbol": "pf",
+      "target_id": "pf-affricate",
+      "usage": {
+        "en": "outside-profile",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": "Affricate objective, potentially written /p͡f/ with a tie bar."
+    },
+    {
+      "symbol": "s",
+      "target_id": "ipa-73",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ʒ",
+      "target_id": "ipa-292",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "loanwords"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "d",
+      "target_id": "ipa-64",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "f",
+      "target_id": "ipa-66",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "t",
+      "target_id": "ipa-74",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "z",
+      "target_id": "ipa-7a",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "v",
+      "target_id": "ipa-76",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "e",
+      "target_id": "ipa-65",
+      "usage": {
+        "en": "outside-profile",
+        "fr": "reference",
+        "de": "contextual"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "i",
+      "target_id": "ipa-69",
+      "usage": {
+        "en": "notation-variant",
+        "fr": "reference",
+        "de": "contextual"
+      },
+      "note": "English /i/ and /iː/ can be alternate broad conventions for the FLEECE vowel; separate targets do not imply a universal phonemic contrast."
+    },
+    {
+      "symbol": "ɛ",
+      "target_id": "ipa-25b",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "a",
+      "target_id": "ipa-61",
+      "usage": {
+        "en": "outside-profile",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ɔ",
+      "target_id": "ipa-254",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": "English cot–caught patterns vary by accent; do not assume every US speaker maintains the contrast."
+    },
+    {
+      "symbol": "u",
+      "target_id": "ipa-75",
+      "usage": {
+        "en": "notation-variant",
+        "fr": "reference",
+        "de": "contextual"
+      },
+      "note": "English /u/ and /uː/ may be alternate broad conventions. French /u/ is a plain vowel target."
+    },
+    {
+      "symbol": "o",
+      "target_id": "ipa-6f",
+      "usage": {
+        "en": "outside-profile",
+        "fr": "reference",
+        "de": "contextual"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ɑ",
+      "target_id": "ipa-251",
+      "usage": {
+        "en": "reference",
+        "fr": "accent-dependent",
+        "de": "outside-profile"
+      },
+      "note": "French /ɑ/ contrasts with /a/ only in some varieties. The present /ɑ/ target uses American English examples."
+    },
+    {
+      "symbol": "h",
+      "target_id": "ipa-68",
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "k",
+      "target_id": "ipa-6b",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "p",
+      "target_id": "ipa-70",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "b",
+      "target_id": "ipa-62",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ʊ",
+      "target_id": "upsilon",
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "m",
+      "target_id": "bilabial-nasal",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "n",
+      "target_id": "alveolar-nasal",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "l",
+      "target_id": "alveolar-lateral",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ɡ",
+      "target_id": "voiced-velar-stop",
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ʁ",
+      "target_id": "uvular-fricative",
+      "usage": {
+        "en": "outside-profile",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": "French and German rhotics vary by speaker and context; this row covers uvular realizations."
+    },
+    {
+      "symbol": "ɥ",
+      "target_id": "labial-palatal-approximant",
+      "usage": {
+        "en": "outside-profile",
+        "fr": "reference",
+        "de": "outside-profile"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ʏ",
+      "target_id": "near-close-front-rounded",
+      "usage": {
+        "en": "outside-profile",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": "German short rounded vowel, contrasted with /yː/."
+    },
+    {
+      "symbol": "ŋ",
+      "target_id": null,
+      "usage": {
+        "en": "reference",
+        "fr": "loanwords",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ɹ",
+      "target_id": null,
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "outside-profile"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "j",
+      "target_id": null,
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "w",
+      "target_id": null,
+      "usage": {
+        "en": "reference",
+        "fr": "reference",
+        "de": "outside-profile"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "uː",
+      "target_id": null,
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": "Length-bearing English GOOSE and German long /uː/ need language-specific lessons."
+    },
+    {
+      "symbol": "ɚ",
+      "target_id": null,
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "outside-profile"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ɝ",
+      "target_id": null,
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "outside-profile"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "eɪ",
+      "target_id": null,
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "outside-profile"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "oʊ",
+      "target_id": null,
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "outside-profile"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "aɪ",
+      "target_id": null,
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "aʊ",
+      "target_id": null,
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ɔɪ",
+      "target_id": null,
+      "usage": {
+        "en": "reference",
+        "fr": "outside-profile",
+        "de": "outside-profile"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ɲ",
+      "target_id": null,
+      "usage": {
+        "en": "outside-profile",
+        "fr": "reference",
+        "de": "outside-profile"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "œ̃",
+      "target_id": null,
+      "usage": {
+        "en": "outside-profile",
+        "fr": "accent-dependent",
+        "de": "outside-profile"
+      },
+      "note": "French /œ̃/ is retained in some varieties and merged with /ɛ̃/ in others."
+    },
+    {
+      "symbol": "yː",
+      "target_id": null,
+      "usage": {
+        "en": "outside-profile",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "eː",
+      "target_id": null,
+      "usage": {
+        "en": "outside-profile",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ɛː",
+      "target_id": null,
+      "usage": {
+        "en": "outside-profile",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "øː",
+      "target_id": null,
+      "usage": {
+        "en": "outside-profile",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "aː",
+      "target_id": null,
+      "usage": {
+        "en": "outside-profile",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "oː",
+      "target_id": null,
+      "usage": {
+        "en": "outside-profile",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ɐ",
+      "target_id": null,
+      "usage": {
+        "en": "outside-profile",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": ""
+    },
+    {
+      "symbol": "ɔʏ",
+      "target_id": null,
+      "usage": {
+        "en": "outside-profile",
+        "fr": "outside-profile",
+        "de": "reference"
+      },
+      "note": "German diphthong notation varies across transcription systems."
+    }
+  ]
+}

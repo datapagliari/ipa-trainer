@@ -258,5 +258,356 @@
       "p",
       "b"
     ]
+  },
+  {
+    "id": "ipa-73",
+    "symbol": "s",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "ʃ",
+      "z",
+      "θ"
+    ]
+  },
+  {
+    "id": "ipa-292",
+    "symbol": "ʒ",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "ʃ",
+      "dʒ",
+      "z"
+    ]
+  },
+  {
+    "id": "ipa-64",
+    "symbol": "d",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "t",
+      "ð",
+      "b"
+    ]
+  },
+  {
+    "id": "ipa-66",
+    "symbol": "f",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "v",
+      "θ",
+      "pf"
+    ]
+  },
+  {
+    "id": "ipa-74",
+    "symbol": "t",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "d",
+      "θ",
+      "ts"
+    ]
+  },
+  {
+    "id": "ipa-7a",
+    "symbol": "z",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "s",
+      "ʒ",
+      "ð"
+    ]
+  },
+  {
+    "id": "ipa-76",
+    "symbol": "v",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "f",
+      "z",
+      "ð"
+    ]
+  },
+  {
+    "id": "ipa-65",
+    "symbol": "e",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "ɛ",
+      "i",
+      "ə"
+    ]
+  },
+  {
+    "id": "ipa-69",
+    "symbol": "i",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "ɪ",
+      "y",
+      "e"
+    ]
+  },
+  {
+    "id": "ipa-25b",
+    "symbol": "ɛ",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "e",
+      "æ",
+      "œ"
+    ]
+  },
+  {
+    "id": "ipa-61",
+    "symbol": "a",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "ɑ",
+      "æ",
+      "ʌ"
+    ]
+  },
+  {
+    "id": "ipa-254",
+    "symbol": "ɔ",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "o",
+      "ɑ",
+      "ʌ"
+    ]
+  },
+  {
+    "id": "ipa-75",
+    "symbol": "u",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "y",
+      "ʊ",
+      "o"
+    ]
+  },
+  {
+    "id": "ipa-6f",
+    "symbol": "o",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "ɔ",
+      "u",
+      "ø"
+    ]
+  },
+  {
+    "id": "ipa-251",
+    "symbol": "ɑ",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "a",
+      "ɔ",
+      "ʌ"
+    ]
+  },
+  {
+    "id": "ipa-68",
+    "symbol": "h",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "ç",
+      "x",
+      "f"
+    ]
+  },
+  {
+    "id": "ipa-6b",
+    "symbol": "k",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "x",
+      "t",
+      "p"
+    ]
+  },
+  {
+    "id": "ipa-70",
+    "symbol": "p",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "b",
+      "pf",
+      "t"
+    ]
+  },
+  {
+    "id": "ipa-62",
+    "symbol": "b",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "p",
+      "d",
+      "v"
+    ]
+  },
+  {
+    "id": "upsilon",
+    "symbol": "ʊ",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "expanded",
+    "prerequisites": [],
+    "confusers": [
+      "u",
+      "ɪ",
+      "ɔ"
+    ]
+  },
+  {
+    "id": "bilabial-nasal",
+    "symbol": "m",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "language-coverage",
+    "prerequisites": [],
+    "confusers": [
+      "n",
+      "b",
+      "p"
+    ]
+  },
+  {
+    "id": "alveolar-nasal",
+    "symbol": "n",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "language-coverage",
+    "prerequisites": [],
+    "confusers": [
+      "m",
+      "d",
+      "l"
+    ]
+  },
+  {
+    "id": "alveolar-lateral",
+    "symbol": "l",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "language-coverage",
+    "prerequisites": [],
+    "confusers": [
+      "n",
+      "ʁ",
+      "d"
+    ]
+  },
+  {
+    "id": "voiced-velar-stop",
+    "symbol": "ɡ",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "language-coverage",
+    "prerequisites": [],
+    "confusers": [
+      "k",
+      "d",
+      "b"
+    ]
+  },
+  {
+    "id": "uvular-fricative",
+    "symbol": "ʁ",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "language-coverage",
+    "prerequisites": [],
+    "confusers": [
+      "x",
+      "ʒ",
+      "l"
+    ]
+  },
+  {
+    "id": "labial-palatal-approximant",
+    "symbol": "ɥ",
+    "kind": "consonant",
+    "objective": "consonant",
+    "chapter": "language-coverage",
+    "prerequisites": [],
+    "confusers": [
+      "y",
+      "u",
+      "ʁ"
+    ]
+  },
+  {
+    "id": "near-close-front-rounded",
+    "symbol": "ʏ",
+    "kind": "vowel",
+    "objective": "vowel",
+    "chapter": "language-coverage",
+    "prerequisites": [],
+    "confusers": [
+      "y",
+      "ɪ",
+      "ʊ"
+    ]
   }
 ]

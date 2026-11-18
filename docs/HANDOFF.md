@@ -1,101 +1,109 @@
-# Agent handoff: IPA Lab
+# IPA Trainer handoff
 
-Prepared on 2026-11-11 for continuation by GPT Astra or another coding agent. Read this file, [ROADMAP.md](ROADMAP.md), and [the README](../README.md) before implementing the next stage.
+Updated 2026-11-18. Read README.md and ROADMAP.md for product scope and setup.
 
-## Scope and user decisions
+## Current local game
 
-- The long-term goal is a learning path through the full standard IPA chart. English, French, and German are starter examples, not an inventory limit.
-- Work locally and keep the app playable. Do not introduce design tools, hosting, frameworks, or cloud services for the planned work.
-- Repository documentation, game text, definitions, source comments, and tool messages are in English. Conversation with the owner is in Spanish.
-- Preserve the current sage/charcoal/lime dashboard layout, navigation, sound collection, audio controls, green correct answers, red wrong answers, and word definitions in Sound Notes.
-- The owner will add a README screenshot later. Do not automatically add a screenshot to GitHub.
-- This handoff request authorizes a local commit, not a push or publication. Keep audio excluded from Git unless the owner explicitly changes that decision.
+- 47 stable learning targets, 115 examples and 94 distinct words across English,
+  French and German. All words have local audio. Symbol previews exist for
+  41 targets; /m n l ɡ ʁ ʏ/ remain in the Commons download queue.
+- 24 targets are initially unlocked. Three consecutive correct answers for a
+  target mark it learned, reduce its relative selection weight to 1/3, and grant
+  a permanent one-time unlock reward. A mistake resets that target's streak and
+  weight. Relearning does not grant another reward.
+- The ten most recently presented target sounds are excluded in the same tab,
+  including across mode/filter changes and reloads. Small pools can exhaust
+  eligible targets and offer a return to the full visual pool.
+- Symbol quiz supports highlighted word to symbol, word audio to symbol, and
+  symbol to word audio. Same or different and Sort by sound are also playable
+  from the left rail. These two modes update only the session streak.
+- Autoplay audio remembers its setting. Comparison words play in sequence.
+  Next is above the question and stays near the exercise during scrolling.
+- Dark/light themes, correct/wrong colors, definitions, and post-answer
+  distractor tooltips are implemented.
+- Right-click a playback control to report its exact recording. Browser notes
+  automatically sync to data/audio_reports.json. This file is available to
+  agents and excluded from Git. Do not discard user reports.
+- The reported feu and vin clips were replaced with human recordings.
+  Replacement review is pending. Details are in AUDIO_FIXES.md.
 
-## Repository and starting state
+## Runtime and saved data
 
-- Independent repository at `experimental/ipa_trainer` inside the larger patocodes workspace. It has its own `.git`; do not stage from the parent repository.
-- Remote: `https://github.com/datapagliari/ipa-trainer.git` (private, owner confirmed).
-- Branch: `main`.
-- The previous pushed commit is `7507611` (dashboard refresh, word definitions, green correct-answer feedback).
-- This handoff commit adds the agreed one-third review rule, learned badges, tests, roadmap, and continuation notes. Inspect `git status` and `git log` when resuming; do not assume remote synchronization.
-- Follow the parent AGENTS.md as well as any applicable project instructions. Preserve existing local changes, saved progress, and audio files.
+Use start.bat to serve and open the browser, or start.cmd for server only.
+Both use scripts/launch.py and scripts/local_server.py on loopback port 8765.
+The earlier python -m http.server launcher cannot persist report files.
+Restart an old server to enable the report API.
 
-## Implemented gameplay rule
+The report API merges immutable IDs with atomic writes and serializes concurrent
+updates. Browser backups and JSON exports remain available. Repeated uploads
+do not duplicate reports. Existing browser-only notes migrate after the owner
+opens the same origin in the same browser.
 
-1. Locked targets do not enter the question pool.
-2. Available, unlearned targets all have selection weight 1.
-3. Three consecutive correct answers for that target mark it learned: a green tile with a small check mark.
-4. Learned targets have selection weight 1/3 relative to unlearned targets in the same eligible pool.
-5. A wrong answer resets only that target's streak to zero, removes its learned state, and restores weight 1.
-6. Each target grants one unlock reward only on its first learning milestone. Unlocks remain available after mistakes; relearning does not grant another reward.
-7. The session streak is independent of target learning and resets on reload or a wrong answer.
+Player progress uses localStorage key ipa-lab-progress-v2. The original v1 save
+remains as a backup. dataset/legacy_targets.json maps old entry IDs one-to-one.
+The session history uses sessionStorage; theme, autoplay and report backups use
+their own localStorage keys. Preserve these records during changes.
 
-`dataset/config.json` has `approved_weight_multiplier: 0.3333333333333333`. The app now passes this setting into `chooseWeighted`; set it to 1 to disable the reduction without clearing progress. This is a relative weight, not an absolute 33% selection probability. The three-answer threshold is currently hard-coded in several core/UI functions despite the historical `approval_streak` config field; keep the accepted threshold at three during the refactor.
+## Content and acquisition
 
-There are 20 current target entries and six initially available targets: /ʃ/, /θ/, /ɪ/, /y/, /ç/, /pf/. Older player progress can expose more than six because previously practiced entries are preserved. Do not reset the owner's progress to demonstrate a clean initial state.
+The language matrix is dataset/language_coverage.json, rendered by
+scripts/language_coverage.py into docs/LANGUAGE_COVERAGE.md. It distinguishes
+reference usage, contextual realizations, regional contrasts, loanwords and
+notation variants from actual example coverage. Recording accent validation is
+incomplete. It is a working scope, not an exhaustive survey of every dialect.
 
-## Runtime and files
+Audio combines Commons recordings and free Magpie TTS samples. Most recordings
+still need listening and exact IPA/accent review. File presence and decoding
+do not establish phonetic accuracy. Avoid questions with multiple valid answers.
 
-Buildless HTML/CSS/JavaScript with Python's static server. No package installation is required.
+The large archive was supplied at D:/wiktionary-audios.tar. It was unavailable
+in the most recent environment, so check its presence before an archive scan.
+The local shortlist, metadata caches and candidates are under data/word_sample/.
+Do not extract the entire archive. Exact-word selection must reject compounds
+that merely end in the requested word.
 
-```powershell
-# Run from the project directory.
-python -m http.server 8765 --bind 127.0.0.1
-# Open http://localhost:8765, or use start.cmd.
-```
+A Windows task named IPA Trainer - Commons phonemes was configured to run
+scripts/download_symbols.py every 15 minutes while the user is logged in.
+Check Task Scheduler and data/phoneme_downloads/requests.log before assuming it
+is active in another environment. The downloader attempts one mapped target per
+run and persists backoff after errors. Respect Wikimedia rate limits.
 
-Do not open index.html through file://. Check whether port 8765 is already serving the project before starting another process. A server may have been left running for the owner's local preview; do not assume it is still running in a new session.
+Magpie generation used the authenticated official NVIDIA Hugging Face demo.
+Credentials are stored outside the repository. Free quotas have repeatedly
+limited batches. Paid generation has not been authorized.
 
-- `index.html`: dashboard shell and accessible controls.
-- `web/style.css`: responsive sage/charcoal/lime styling and feedback states.
-- `web/app.js`: data loading, question UI, definitions, playback, credits, filters, and browser storage.
-- `web/core.mjs`: weighting, per-target progress, unlocks, and manually curated written segments.
-- `dataset/sounds.json`: 20 records combining a symbol, language, word, definition, note, transcription, distractors, and word-audio reference.
-- `dataset/config.json`: six initial targets, multiplier, and unlock order.
-- `dataset/audio_manifest.json`: four word recordings and attribution metadata.
-- `dataset/symbol_audio.json`: two phonetic demonstrations and attribution metadata.
-- `scripts/download_audio.py`, `scripts/download_symbols.py`: Commons download helpers.
-- `scripts/test_game.mjs`: current regression checks.
-- `scripts/validate_dataset.py`: dataset shape/definition checks; missing media and source URLs are warnings.
-- `docs/PLAN.md`: historical proposal with obsolete half-weight examples; ROADMAP.md and README take precedence.
+## Next work
 
-Cache versions in index.html and the core import in app.js were advanced to `v=9`. Reload after editing; advance versions consistently if browser caching retains old assets.
+1. Review the owner's audio reports and test replacement clips.
+2. Complete the six missing isolated previews and verify their pronunciation.
+3. Add examples to missing language cells in the coverage matrix.
+4. Visually verify the newer modes, report dialog, autoplay and desktop layout.
+5. Decide how alternate modes contribute to learning and unlocks.
+6. Implement the remaining agreed games: Odd one out, Find the sound in a word,
+   and Detect the transcription error.
 
-## Saved progress: migration is required
+Later work includes a dedicated mobile pass, articulation diagrams, Spanish
+examples and an Android app. Spanish variety, Android tooling and publication
+timing remain undecided. The owner will supply a README screenshot.
 
-The app stores JSON in localStorage under `ipa-lab-progress-v1`. Records are keyed by the current learning-entry ID, with fields `streak`, `correct`, `wrong`, `everApproved`, `unlockVersion`, and `legacyUnlocked`.
+## Repository and checks
 
-`data/user_progress.example.json` is a historical illustration, not the web app's live save. Do not delete or overwrite browser storage. Before a schema migration, provide a backup/export path or equivalent preservation strategy. Do not combine separate old streaks by addition and inadvertently approve a new target. Retain the one-time unlock history even when the current streak is zero.
+This is an independent repository inside experimental/ipa_trainer. Remote is
+the private datapagliari/ipa-trainer repository. Stage and commit from this
+project only. Audio, reports, caches and diagnostic outputs stay local.
+The owner authorized updating GitHub with source, documentation and metadata.
 
-## Audio status and limitations
+Run the following from the project directory:
 
-Four local word recordings: thin, tu, Ich, Pferd. Two phonetic demonstrations: /ʃ/ and /θ/. These total approximately 200 KB; exclusion is an existing repository policy, not a size limit.
+    node scripts/test_game.mjs
+    node --check web/app.js
+    node --check web/reports.mjs
+    python scripts/validate_dataset.py
+    python scripts/test_reports.py
+    python scripts/audio_inventory.py
+    python scripts/language_coverage.py
 
-- Files remain ignored under `audio/**/*.ogg`, `*.wav`, and `*.mp3`; do not force-add them.
-- Listening validation is pending for all six files. A valid Ogg header does not establish phonetic accuracy.
-- Some demonstrations contain supporting vowels, not isolated consonants.
-- The /θ/ manifest currently has an empty author field. Source-page attribution must be reviewed before any release.
-- Commons returned HTTP 429 during bulk acquisition. Do not repeatedly hammer endpoints or bypass limits. Use serial requests, informative identification, retry instructions/backoff, metadata caching, and resumable downloads.
-- The word downloader skips existing files. The **symbol downloader currently skips symbols already present in its manifest even when the local file is missing**. This means a fresh clone cannot reliably restore the two recorded symbols yet; fix this during the audio-preparation stage.
-- Candidate Commons filenames in the symbol downloader are search candidates, not proof that every target has a usable recording.
-- Audio modes use whole words; word highlights are written correspondences, not time-aligned audio segments.
-- Visual and listening practice currently share progress. Limited word recordings allow memorization; learned is a game state, not verified lasting mastery.
-- Before adding more word-audio options, validate the actual sounds in each word: a word can contain several target sounds. Filtering candidates only by their target symbol does not guarantee an unambiguous question.
-
-## Current continuation point
-
-Stage 1 is implemented locally. The earlier sections describe the pre-migration baseline.
-Use the current README for file roles and storage keys. The target catalog has 20
-stable IDs and 21 examples. The extra visual example, *shoe*, shares /ʃ/ with *ship*.
-The old entries map one-to-one through `dataset/legacy_targets.json`. No streaks
-are combined. The original v1 save remains available after writing v2.
-
-Word recording records live in `audio_manifest.json`. Entries marked
-`available: false` reserve a path for a pending recording and do not enable
-audio practice. A null example recording reference also means audio is pending.
-Phonetic previews use `symbol_audio.json`, with a nullable supporting-vowels flag.
-
-Next implement Stage 2 in ROADMAP.md. Inventory all recordings needed by the six
-starter targets, including distractors. Repair restoration on a fresh clone,
-review attribution and listen to each recording. Keep local audio outside Git.
-Run the game tests and dataset validator as documented in the README.
+Game checks currently need the local audio files. Report tests use temporary
+files and a temporary loopback server. Fresh-clone audio restoration remains
+incomplete, especially for synthetic and processed clips. Most recent UI
+verification used a simulated DOM; a full browser playthrough is still pending.

@@ -66,3 +66,24 @@ export function loadProgress(storage, legacyTargets) {
  const previous = storage.getItem('ipa-lab-progress-v1');
  return previous === null ? {} : migrateProgress(JSON.parse(previous), legacyTargets);
 }
+
+export function freshTargets(pool, history) {
+ const recent = new Set(history.slice(-10));
+ return pool.filter(target => !recent.has(target.symbol));
+}
+
+export function comparisonPartners(target, pool, same) {
+ return pool.filter(other => (other.symbol === target.symbol) === same)
+  .flatMap(other => other.examples.map(example => ({...example, ...other, exampleId: example.id})))
+  .filter(example => example.example_word !== target.example_word &&
+   example.recording_id !== target.recording_id && example.language === target.language &&
+   (example.segment[2].includes('vowel') === target.segment[2].includes('vowel')));
+}
+
+export function classificationPool(pool, history) {
+ return freshTargets(pool, history).map(target => ({
+  ...target,
+  examples: target.examples.filter(example =>
+   comparisonPartners({...example, ...target}, pool, false).length > 0)
+ })).filter(target => target.examples.length > 0);
+}

@@ -40,7 +40,9 @@ Deliverables:
 
 **Complete when:** the current 20 entries still work with their highlights and definitions, saved progress survives migration, and adding an example does not change a target's selection weight or grant an extra unlock.
 
-## Stage 2 — Finish the six-target starter chapter
+## Stage 2 — Finish the six-target starter audio chapter
+
+This audio acquisition batch covers six targets. New and reset games unlock the first ten targets in the configured order. Prefer consonant demonstrations in Ca and aCa contexts where available. Preview isolated vowels twice with a short pause.
 
 **Purpose:** deliver a small learning loop with complete reviewed audio.
 
@@ -133,3 +135,94 @@ Deliverables:
 5. Expand through the chart chapters, then modifiers and prosody.
 
 No hosting, external accounts, new design tools, or cloud runtime are required for these stages. Work remains local unless a repository upload or publication is requested.
+
+## Word expansion update
+
+Added feet, petit, feu, peur and Buch with synthetic audio. Map and sun now have audio. Listening review is pending. Zahn generation reached the authenticated demo quota and remains pending.
+
+## Expanded playtest catalog
+
+The local catalog now has 40 objectives and 24 initially unlocked targets.
+The original target IDs and unlock order prefix are preserved. Added 19 symbols
+previously used only as distractors, plus /ʊ/. Each has a visual word example.
+Additional highlighted segments reuse existing word recordings. Four archive
+words (bed, hat, cat and book) are integrated with source and license metadata;
+listening and exact accent review remain pending. Other targets still need word
+audio and further vocabulary. Ten-turn exclusion and one-third learned weight
+continue to apply.
+
+## Audio coverage update
+
+All 40 target previews and all 55 distinct words in the 66-example catalog now
+have local audio. Imported 27 exact-word archive recordings with Commons credits.
+Generated six remaining words with the authenticated free Magpie demo.
+Added /ʊ/, three nasal vowels and a German /iː/ demonstration. New recordings
+retain pending listening/accent review. Presence and decoding are verified;
+phonetic quality still needs playtesting. Existing reviewed recordings remain
+available. Run scripts/audio_inventory.py for the current file availability.
+
+## Expanded archive vocabulary and report storage
+
+The catalog now contains 88 examples across 77 distinct words, with local audio
+for every word and all 40 target previews. Added 22 words from the reviewed
+archive shortlist, retaining source attribution and pending listening/accent
+review. This includes fish, cheese, good, beurre, blanc, Milch and Zahn.
+
+Audio reports now sync to data/audio_reports.json through scripts/local_server.py.
+Launch through start.bat or start.cmd. Old browser notes upload automatically on
+page load from the same browser and origin. Each report ID is stored once even
+when requests are retried. Browser backups and manual exports remain available.
+File notes are local user data and are excluded from Git. Future agents should
+read this file when investigating reported recordings.
+
+## Long-term goal: Android app
+
+The owner would like IPA Trainer to become an Android app in the distant future.
+First stabilize the desktop web game, review audio quality and content, and
+complete a dedicated mobile layout and touch interaction pass. When Android
+work begins, evaluate packaging and distribution options against the mature web
+app, with offline audio, portable progress and audio reports in mind.
+Implementation technology and release timing remain undecided.
+
+## Vocabulary coverage update — 2026-11-18
+
+Added pain, jeu, zip, van, nez, lit, mer and chat with the free Magpie quota.
+Added bol, tout, mot, calm and head from Commons with source attribution.
+The catalog now has 101 examples and 90 words with audio. Every target has
+at least two distinct word examples. New audio remains pending listening and
+accent review. The Magpie quota was exhausted after eight clips in this batch.
+
+## Future feature: articulation diagrams
+
+Provide an image, drawing or diagram for each learning target showing how to
+produce the sound. Include a side view of tongue position and relevant contact
+points, a front view of lip shape when useful, and airflow or voicing indications
+where appropriate. Affricates need a sequence showing closure and release;
+nasal sounds need an indication of nasal airflow.
+
+Make the illustrations available from Sound notes and the collection. Keep
+them optional during exercises so they can serve as hints or post-answer
+explanations. Prioritize a consistent, legible style and verify anatomical and
+phonetic accuracy against reliable references. Record source and license for
+reused illustrations. Review each diagram before treating it as instruction.
+
+## Coverage matrix and seven added objectives
+
+Added /m n l ɡ ʁ ɥ ʏ/ with two word examples each. Existing example recordings
+serve the first five objectives. French huit/huile and German Hütte/Mütter
+have Commons recordings. The seven objectives append to the existing unlock
+order; the initial 24 and earned progress are preserved.
+
+dataset/language_coverage.json records a working inventory by reference language
+profile. scripts/language_coverage.py derives current example/audio counts for
+docs/LANGUAGE_COVERAGE.md. Usage can be contextual, accent-dependent, from
+loanwords or a notation variant. Unknown recording accents remain marked for
+review. The matrix is a working segmental scope, with further narrow detail and
+prosody still to define.
+
+## Wishlist: Spanish
+
+Add Spanish as a future example language. Choose the target varieties and
+document regional pronunciation before selecting recordings. Reuse shared IPA
+targets and add missing objectives as needed. Spanish is planned; examples
+and the game language selector currently cover English, French and German.

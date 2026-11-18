@@ -31,24 +31,24 @@ assert.equal(session,0);assert.equal(mixed.b.streak,0);assert.equal(mixed.a.stre
 console.log('OK: session streak across interleaved targets and reset on error.');
 
 const config=JSON.parse(readFileSync(new URL('dataset/config.json',root),'utf8'));
-let fresh={};assert.equal(unlockedIds(sounds,fresh,config).size,6);
+let fresh={};assert.equal(unlockedIds(sounds,fresh,config).size,config.initial_active_count);
 const first=config.unlock_order[0];for(let i=0;i<3;i++)fresh=recordAnswer(fresh,first,true);
-assert.equal(unlockedIds(sounds,fresh,config).size,7);
-fresh=recordAnswer(fresh,first,false);assert.equal(unlockedIds(sounds,fresh,config).size,7);
+assert.equal(unlockedIds(sounds,fresh,config).size,config.initial_active_count+1);
+fresh=recordAnswer(fresh,first,false);assert.equal(unlockedIds(sounds,fresh,config).size,config.initial_active_count+1);
 for(let i=0;i<3;i++)fresh=recordAnswer(fresh,first,true);
-assert.equal(unlockedIds(sounds,fresh,config).size,7);
+assert.equal(unlockedIds(sounds,fresh,config).size,config.initial_active_count+1);
 const legacy={...fresh,[config.unlock_order.at(-1)]:{streak:1,correct:1,wrong:0}};
 assert.ok(unlockedIds(sounds,legacy,config).has(config.unlock_order.at(-1)));
-assert.equal(unlockedIds(sounds,legacy,config).size,8);
+assert.equal(unlockedIds(sounds,legacy,config).size,config.initial_active_count+2);
 const symbols=JSON.parse(readFileSync(new URL('dataset/symbol_audio.json',root),'utf8'));
 for(const m of Object.values(symbols)){assert.equal(readFileSync(new URL(m.audio,root)).subarray(0,4).toString(),'OggS');assert.ok(m.license&&m.source_url);}
-console.log('OK: 6 initial targets, permanent unlocks, unique rewards, legacy progress, and symbol audio.');
+console.log('OK: configured initial targets, permanent unlocks, unique rewards, legacy progress, and symbol audio.');
 
 let journey={};for(let i=0;i<3;i++)journey=recordAnswer(journey,first,true);
-journey=recordAnswer(journey,config.unlock_order[6],true);
-assert.equal(unlockedIds(sounds,journey,config).size,7,'Practicing a newly unlocked target does not unlock another');
-for(let i=0;i<2;i++)journey=recordAnswer(journey,config.unlock_order[6],true);
-assert.equal(unlockedIds(sounds,journey,config).size,8);
+journey=recordAnswer(journey,config.unlock_order[config.initial_active_count],true);
+assert.equal(unlockedIds(sounds,journey,config).size,config.initial_active_count+1,'Practicing a newly unlocked target does not unlock another');
+for(let i=0;i<2;i++)journey=recordAnswer(journey,config.unlock_order[config.initial_active_count],true);
+assert.equal(unlockedIds(sounds,journey,config).size,config.initial_active_count+2);
 console.log('OK: unlocking requires learning, not just practicing.');
 
 // A learned target has one third of an active target's weight.
@@ -78,9 +78,12 @@ const migrated=loadProgress(browserStorage,mapping);
 assert.equal(migrated.esh.everApproved,true);
 assert.equal(migrated.esh.streak,0);
 assert.equal(migrated['ts-affricate'].legacyUnlocked,true);
-const oldOrder=config.unlock_order.map(id=>Object.keys(mapping).find(key=>mapping[key]===id));
-const oldUnlocked=unlockedIds(Object.keys(mapping).map(id=>({id})),oldSave,{...config,unlock_order:oldOrder});
-assert.deepEqual(unlockedIds(sounds,migrated,config),new Set([...oldUnlocked].map(id=>mapping[id])));
+const originalTargets=Object.values(mapping).map(id=>({id}));
+const oldConfig={...config,initial_active_count:14,unlock_order:config.unlock_order.filter(id=>Object.values(mapping).includes(id))};
+const beforeExpansion=unlockedIds(originalTargets,migrated,oldConfig);
+const afterExpansion=unlockedIds(sounds,migrated,config);
+for(const id of beforeExpansion)assert.ok(afterExpansion.has(id));
+assert.equal(migrated.esh.everApproved,true);
 storage.set(progressKey,'{}');
 assert.deepEqual(loadProgress(browserStorage,mapping),{});
 assert.deepEqual(JSON.parse(storage.get('ipa-lab-progress-v1')),oldSave);
@@ -88,17 +91,70 @@ assert.deepEqual(JSON.parse(storage.get('ipa-lab-progress-v1')),oldSave);
 const available=unlockedIds(sounds,{},config);
 const visual=practicePool(sounds,examples,available,'all',recordings,'visual');
 const original=practicePool(sounds,examples.filter(e=>e.id!=='en_esh_shoe'),available,'all',recordings,'visual');
-assert.equal(visual.length,6);
+assert.equal(visual.length,config.initial_active_count);
 for(let i=0;i<100;i++)assert.equal(chooseWeighted(visual,migrated,()=>i/100).id,chooseWeighted(original,migrated,()=>i/100).id);
 const sh=visual.find(s=>s.id==='esh');
-const ship=withExample(sh,()=>0),shoe=withExample(sh,()=>.99);
+const ship=withExample(sh,()=>0),shoe=withExample(sh,()=>(sh.examples.findIndex(e=>e.example_word==='shoe')+.5)/sh.examples.length);
 assert.equal(ship.example_word,'ship');assert.equal(shoe.example_word,'shoe');
 let practice={};
 for(const item of [ship,shoe,ship,shoe])practice=recordAnswer(practice,item.id,true);
-assert.equal(practice.esh.streak,3);assert.equal(unlockedIds(sounds,practice,config).size,7);
+assert.equal(practice.esh.streak,3);assert.equal(unlockedIds(sounds,practice,config).size,config.initial_active_count+1);
 for(const mode of ['listen','sound']){
  const german=practicePool(sounds,examples,available,'de',recordings,mode);
- assert.equal(german.length,2);
+ assert.ok(german.length>=2);
  for(const item of german)assert.ok(recordings[withExample(item).recording_id]);
 }
 console.log('OK: v1 backup, v2 precedence, unlock migration, multiple examples and filtered audio modes.');
+
+const {freshTargets}=await import('../web/core.mjs');
+for(const mode of ['visual','listen','sound']){
+ const pool=practicePool(sounds,examples,available,'all',recordings,mode);
+ assert.ok(pool.length>10);
+ const history=[];
+ for(let i=0;i<200;i++){
+  const next=chooseWeighted(freshTargets(pool,history),{},()=>0.5);
+  assert.ok(next && !history.slice(-10).includes(next.symbol));
+  history.push(next.symbol);
+ }
+}
+assert.deepEqual(freshTargets([{symbol:'a'}],['a']),[]);
+console.log('OK: ten intervening targets in each mode and strict exhaustion for small pools.');
+
+const {comparisonPartners}=await import('../web/core.mjs');
+const listening=practicePool(sounds,examples,available,'all',recordings,'listen');
+let pairCount=0;
+for(const target of listening){
+ for(const example of target.examples){
+  const word={...example,...target};
+  for(const same of [true,false]){
+   for(const partner of comparisonPartners(word,listening,same)){
+    assert.equal(partner.symbol===word.symbol,same);
+    assert.equal(partner.language,word.language);
+    assert.notEqual(partner.example_word,word.example_word);
+    assert.notEqual(partner.recording_id,word.recording_id);
+    pairCount++;
+   }
+  }
+ }
+}
+assert.ok(pairCount>0);
+console.log('OK: comparison pairs use distinct words and recordings in the same language.');
+
+assert.equal(new Set(sounds.map(t=>t.symbol)).size,sounds.length);
+assert.ok(sounds.length>=40);
+const notes=JSON.parse(readFileSync(new URL('dataset/option_notes.json',root),'utf8'));
+for(const target of sounds)for(const option of target.confusers)assert.ok(sounds.some(t=>t.symbol===option)||notes[option]);
+console.log('OK: expanded catalog preserves earned availability and covers every answer option.');
+
+const {classificationPool}=await import('../web/core.mjs');
+const recent=['ʃ','θ','ɪ'];
+const sorting=classificationPool(listening,recent);
+assert.ok(sorting.length);
+for(const target of sorting){
+ assert.ok(!recent.includes(target.symbol));
+ for(const example of target.examples){
+  assert.ok(comparisonPartners({...example,...target},listening,false).length);
+ }
+}
+assert.deepEqual(classificationPool([],recent),[]);
+console.log('OK: sorting uses recorded examples with an eligible contrasting sound and respects recent targets.');

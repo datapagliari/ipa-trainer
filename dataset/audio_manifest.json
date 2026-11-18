@@ -69,10 +69,14 @@
   },
   "en_ee_sheep": {
     "audio": "audio/en/sheep__ee.ogg",
-    "source_url": "",
-    "license": "",
-    "available": false,
-    "listening_validated": false
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": true,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
   },
   "en_ae_cat": {
     "audio": "audio/en/cat__ae.ogg",
@@ -143,5 +147,1068 @@
     "license": "",
     "available": false,
     "listening_validated": false
+  },
+  "en_esh_shoe": {
+    "audio": "audio/en/shoe.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": true,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "en_theta_bath": {
+    "audio": "audio/en/bath.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "fr_y_lune": {
+    "audio": "audio/fr/lune.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "de_ich_licht": {
+    "audio": "audio/de/licht.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "de_pf_pfanne": {
+    "audio": "audio/de/pfanne.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "en_chair": {
+    "audio": "audio/en/chair.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "en_jam": {
+    "audio": "audio/en/jam.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "en_they": {
+    "audio": "audio/en/they.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "en_map": {
+    "audio": "audio/en/map.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "en_sun": {
+    "audio": "audio/en/sun.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "en_feet": {
+    "audio": "audio/en/feet.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "fr_petit": {
+    "audio": "audio/fr/petit.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "fr_feu": {
+    "audio": "audio/fr/feu.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": false,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis",
+    "replaced_by": "review-fr-feu-v2"
+  },
+  "fr_peur": {
+    "audio": "audio/fr/peur.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "de_buch": {
+    "audio": "audio/de/buch.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "archive-en-bed": {
+    "audio": "audio/en/archive-bed.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:En-us-bed.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [
+      "General-American"
+    ]
+  },
+  "archive-en-hat": {
+    "audio": "audio/en/archive-en-hat.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEn-us-hat.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/En-us-hat.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-en-cat": {
+    "audio": "audio/en/archive-en-cat.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEn-us-cat.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/En-us-cat.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-en-book": {
+    "audio": "audio/en/archive-en-book.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEn-us-book.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/En-us-book.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-en-chip": {
+    "audio": "audio/en/archive-en-chip.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEn-us-chip.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/En-us-chip.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-en-judge": {
+    "audio": "audio/en/archive-en-judge.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEn-us-judge.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/En-us-judge.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-en-this": {
+    "audio": "audio/en/archive-en-this.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEn-us-this.ogg",
+    "author": "Not specified in source metadata",
+    "license": "Public domain",
+    "license_url": "",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/En-us-this.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-en-cut": {
+    "audio": "audio/en/archive-en-cut.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEn-us-cut.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/En-us-cut.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-en-about": {
+    "audio": "audio/en/archive-en-about.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEn-us-about.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/En-us-about.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-fr-s-ur": {
+    "audio": "audio/fr/archive-fr-s-ur.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AFr-s%C5%93ur.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/Fr-s%C5%93ur.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-fr-sans": {
+    "audio": "audio/fr/archive-fr-sans.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AFr-sans.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/Fr-sans.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-fr-vin": {
+    "audio": "audio/fr/archive-fr-vin.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AFr-vin.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/Fr-vin.ogg",
+    "transcription_review": "Pending listening/accent review",
+    "available": false,
+    "replaced_by": "review-fr-vin-v2"
+  },
+  "archive-fr-bon": {
+    "audio": "audio/fr/archive-fr-bon.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AFr-bon.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/Fr-bon.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-de-bach": {
+    "audio": "audio/de/archive-de-bach.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3ADe-Bach.ogg",
+    "author": "Hans-Joachim Fröde; alias Acf; native speaker",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/De-Bach.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-de-zeit": {
+    "audio": "audio/de/archive-de-zeit.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3ADe-Zeit.ogg",
+    "author": "Dinock90",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/De-Zeit.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-fr-jour": {
+    "audio": "audio/fr/archive-fr-jour.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AFr-jour.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/Fr-jour.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-en-dog": {
+    "audio": "audio/en/archive-en-dog.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEn-us-dog.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/En-us-dog.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-en-fin": {
+    "audio": "audio/en/archive-en-fin.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEn-us-fin.ogg",
+    "author": "Not specified in source metadata",
+    "license": "Public domain",
+    "license_url": "",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/En-us-fin.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-en-ten": {
+    "audio": "audio/en/archive-en-ten.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEn-us-ten.ogg",
+    "author": "No machine-readable author provided. TheDaveRoss assumed (based on copyright claims).",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/En-us-ten.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-en-zoo": {
+    "audio": "audio/en/archive-en-zoo.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEn-us-zoo.ogg",
+    "author": "No machine-readable author provided. Neoglitch assumed (based on copyright claims).",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/En-us-zoo.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-fr-sel": {
+    "audio": "audio/fr/archive-fr-sel.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AFr-sel.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/Fr-sel.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-fr-patte": {
+    "audio": "audio/fr/archive-fr-patte.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AFr-patte.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/Fr-patte.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-fr-porte": {
+    "audio": "audio/fr/archive-fr-porte.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AFr-porte.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/Fr-porte.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-fr-roue": {
+    "audio": "audio/fr/archive-fr-roue.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AFr-roue.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/Fr-roue.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-en-father": {
+    "audio": "audio/en/archive-en-father.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEn-us-father.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/En-us-father.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-en-key": {
+    "audio": "audio/en/archive-en-key.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEn-us-key.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/En-us-key.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-en-pen": {
+    "audio": "audio/en/archive-en-pen.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEn-us-pen.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/En-us-pen.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "archive-en-bin": {
+    "audio": "audio/en/archive-en-bin.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEn-us-bin.ogg",
+    "author": "Not specified in source metadata",
+    "license": "Public domain",
+    "license_url": "",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "archive_member": "audios/En-us-bin.ogg",
+    "transcription_review": "Pending listening/accent review"
+  },
+  "magpie-fr-deux": {
+    "audio": "audio/fr/magpie-fr-deux.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "magpie-en-sip": {
+    "audio": "audio/en/magpie-en-sip.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "magpie-en-vet": {
+    "audio": "audio/en/magpie-en-vet.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "magpie-fr-ete": {
+    "audio": "audio/fr/magpie-fr-ete.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "magpie-fr-si": {
+    "audio": "audio/fr/magpie-fr-si.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "magpie-fr-eau": {
+    "audio": "audio/fr/magpie-fr-eau.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "sample-en-ago": {
+    "audio": "audio/en/sample-en-ago.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:En-us-ago.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [
+      "US"
+    ],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-en-big": {
+    "audio": "audio/en/sample-en-big.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:En-us-big.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [
+      "US"
+    ],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-en-blue": {
+    "audio": "audio/en/sample-en-blue.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:En-us-blue.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [
+      "US"
+    ],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-en-cheese": {
+    "audio": "audio/en/sample-en-cheese.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:En-us-cheese.ogg",
+    "author": "No machine-readable author provided. Dvortygirl assumed (based on copyright claims).",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [
+      "US"
+    ],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-en-cup": {
+    "audio": "audio/en/sample-en-cup.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:En-us-cup.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [
+      "General-American"
+    ],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-en-fish": {
+    "audio": "audio/en/sample-en-fish.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:En-us-fish.ogg",
+    "author": "Not specified in source metadata",
+    "license": "Public domain",
+    "license_url": "",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [
+      "General-American"
+    ],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-en-food": {
+    "audio": "audio/en/sample-en-food.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:En-uk-food.ogg",
+    "author": "Association Shtooka, Judith Franck",
+    "license": "CC BY 3.0 us",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [
+      "London"
+    ],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-en-good": {
+    "audio": "audio/en/sample-en-good.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:En-us-good.ogg",
+    "author": "Not specified in source metadata",
+    "license": "Public domain",
+    "license_url": "",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [
+      "General-American"
+    ],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-en-juice": {
+    "audio": "audio/en/sample-en-juice.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:En-us-juice.ogg",
+    "author": "No machine-readable author provided. Dominic assumed (based on copyright claims).",
+    "license": "Public domain",
+    "license_url": "",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [
+      "US"
+    ],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-fr-beurre": {
+    "audio": "audio/fr/sample-fr-beurre.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fr-beurre.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [
+      "France"
+    ],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-fr-blanc": {
+    "audio": "audio/fr/sample-fr-blanc.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fr-blanc.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [
+      "France"
+    ],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-fr-bleu": {
+    "audio": "audio/fr/sample-fr-bleu.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fr-bleu.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-fr-grand": {
+    "audio": "audio/fr/sample-fr-grand.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fr-grand.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-fr-nom": {
+    "audio": "audio/fr/sample-fr-nom.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fr-nom.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [
+      "Paris"
+    ],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-fr-peu": {
+    "audio": "audio/fr/sample-fr-peu.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fr-peu.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-fr-pont": {
+    "audio": "audio/fr/sample-fr-pont.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fr-pont.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [
+      "Paris"
+    ],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-de-dach": {
+    "audio": "audio/de/sample-de-dach.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:De-Dach.ogg",
+    "author": "Sicherlich",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-de-milch": {
+    "audio": "audio/de/sample-de-milch.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:De-H-Milch.ogg",
+    "author": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-de-nacht": {
+    "audio": "audio/de/sample-de-nacht.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:De-Nacht.ogg",
+    "author": "Kampy",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [
+      "Germany"
+    ],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-de-zahn": {
+    "audio": "audio/de/sample-de-zahn.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:De-Zahn.ogg",
+    "author": "Kampy",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-de-nicht": {
+    "audio": "audio/de/sample-de-nicht.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:De-nicht.ogg",
+    "author": "joni",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "sample-de-zehn": {
+    "audio": "audio/de/sample-de-zehn.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:De-Zehn.ogg",
+    "author": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false,
+    "accent_tags": [],
+    "transcription_review": "Pending listening/accent review"
+  },
+  "review-fr-feu-v2": {
+    "audio": "audio/fr/review-fr-feu-v2.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fr-feu.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "synthetic": false,
+    "listening_validated": false,
+    "transcription_review": "Replacement awaiting user listening review"
+  },
+  "review-fr-vin-v2": {
+    "audio": "audio/fr/review-fr-vin-v2.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-GrandCelinien-vin.wav",
+    "author": "Speaker: GrandCelinien\nRecorder: GrandCelinien",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "Converted to Ogg Vorbis",
+    "synthetic": false,
+    "listening_validated": false,
+    "transcription_review": "Replacement awaiting user listening review"
+  },
+  "magpie-fr-pain": {
+    "audio": "audio/fr/magpie-fr-pain.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "magpie-fr-jeu": {
+    "audio": "audio/fr/magpie-fr-jeu.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "magpie-en-zip": {
+    "audio": "audio/en/magpie-en-zip.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "magpie-en-van": {
+    "audio": "audio/en/magpie-en-van.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "magpie-fr-nez": {
+    "audio": "audio/fr/magpie-fr-nez.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "magpie-fr-lit": {
+    "audio": "audio/fr/magpie-fr-lit.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "magpie-fr-mer": {
+    "audio": "audio/fr/magpie-fr-mer.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "magpie-fr-chat": {
+    "audio": "audio/fr/magpie-fr-chat.ogg",
+    "source_url": "https://huggingface.co/spaces/nvidia/magpie_tts_multilingual_demo",
+    "license": "Model license",
+    "available": true,
+    "listening_validated": false,
+    "author": "NVIDIA MagpieTTS Multilingual (Aria, synthetic)",
+    "license_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+    "synthetic": true,
+    "changes": "Converted to Ogg Vorbis"
+  },
+  "commons-fr-bol": {
+    "audio": "audio/fr/commons-fr-bol.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fr-bol.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "synthetic": false,
+    "listening_validated": false
+  },
+  "commons-fr-tout": {
+    "audio": "audio/fr/commons-fr-tout.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fr-tout.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "synthetic": false,
+    "listening_validated": false
+  },
+  "commons-fr-mot": {
+    "audio": "audio/fr/commons-fr-mot.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fr-mot.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "synthetic": false,
+    "listening_validated": false
+  },
+  "commons-en-calm": {
+    "audio": "audio/en/commons-en-calm.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:En-us-calm.ogg",
+    "author": "Dvortygirl",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "synthetic": false,
+    "listening_validated": false
+  },
+  "commons-en-head": {
+    "audio": "audio/en/commons-en-head.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:En-us-head.ogg",
+    "author": "No machine-readable author provided. Dvortygirl assumed (based on copyright claims).",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "None",
+    "synthetic": false,
+    "listening_validated": false
+  },
+  "coverage-huit": {
+    "audio": "audio/fr/coverage-huit.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fr-huit.ogg",
+    "author": "Bouillaguet Flora, Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false
+  },
+  "coverage-huile": {
+    "audio": "audio/fr/coverage-huile.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fr-huile.ogg",
+    "author": "Vion Nicolas",
+    "license": "CC BY 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false
+  },
+  "coverage-huette": {
+    "audio": "audio/de/coverage-huette.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:De-H%C3%BCtte.ogg",
+    "author": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false
+  },
+  "coverage-muetter": {
+    "audio": "audio/de/coverage-muetter.ogg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:De-M%C3%BCtter.ogg",
+    "author": "Bleibein",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "None",
+    "listening_validated": false,
+    "synthetic": false
   }
 }
